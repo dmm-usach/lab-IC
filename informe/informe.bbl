@@ -1,0 +1,857 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{antal2014dataset}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=639d061778197e0f3109caeab91951c9}{%
+           family={Antal},
+           familyi={A\bibinitperiod},
+           given={Bálint},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=84fabcba700b7ad6de9e4096cb9fe6d8}{%
+           family={Hajdu},
+           familyi={H\bibinitperiod},
+           given={András},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{fullhash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{fullhashraw}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{bibnamehash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{authorbibnamehash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{authornamehash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{authorfullhash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{authorfullhashraw}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \field{extraname}{1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{UCI Machine Learning Repository}
+      \field{title}{Diabetic Retinopathy Debrecen}
+      \field{year}{2014}
+      \verb{doi}
+      \verb 10.24432/C5XP4P
+      \endverb
+      \verb{urlraw}
+      \verb https://archive.ics.uci.edu/dataset/329/diabetic+retinopathy+debrecen+dataset
+      \endverb
+      \verb{url}
+      \verb https://archive.ics.uci.edu/dataset/329/diabetic+retinopathy+debrecen+dataset
+      \endverb
+    \endentry
+    \entry{antal2014ensemble}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=639d061778197e0f3109caeab91951c9}{%
+           family={Antal},
+           familyi={A\bibinitperiod},
+           given={Bálint},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=84fabcba700b7ad6de9e4096cb9fe6d8}{%
+           family={Hajdu},
+           familyi={H\bibinitperiod},
+           given={András},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{fullhash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{fullhashraw}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{bibnamehash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{authorbibnamehash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{authornamehash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{authorfullhash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{authorfullhashraw}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Knowledge-Based Systems}
+      \field{title}{An ensemble-based system for automatic screening of diabetic retinopathy}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.knosys.2014.01.007
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.knosys.2014.01.007
+      \endverb
+    \endentry
+    \entry{casanova2014application}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=aa85d8f98bf7b50f89f4966b522d0787}{%
+           family={Casanova},
+           familyi={C\bibinitperiod},
+           given={Ramon},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d368e9abc57e36e98c29a415dee8aa09}{%
+           family={Saldana},
+           familyi={S\bibinitperiod},
+           given={Santiago},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3c8cc7da20406bfc0f7b7f77bac07dae}{%
+           family={Chew},
+           familyi={C\bibinitperiod},
+           given={Emily\bibnamedelima Y},
+           giveni={E\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d41208da91e251989f5c0d4e5a7761b}{%
+           family={Danis},
+           familyi={D\bibinitperiod},
+           given={Ronald\bibnamedelima P},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=024e86789cd88b8a933be56158cd131c}{%
+           family={Greven},
+           familyi={G\bibinitperiod},
+           given={Craig\bibnamedelima M},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ee0739d069d14f55354ef44b35ac4e97}{%
+           family={Ambrosius},
+           familyi={A\bibinitperiod},
+           given={Walter\bibnamedelima T},
+           giveni={W\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Public Library of Science}%
+      }
+      \strng{namehash}{4bc5414c85075063cc91ed05123349f7}
+      \strng{fullhash}{01b915911b4338657a495ee5b3965e5d}
+      \strng{fullhashraw}{01b915911b4338657a495ee5b3965e5d}
+      \strng{bibnamehash}{01b915911b4338657a495ee5b3965e5d}
+      \strng{authorbibnamehash}{01b915911b4338657a495ee5b3965e5d}
+      \strng{authornamehash}{4bc5414c85075063cc91ed05123349f7}
+      \strng{authorfullhash}{01b915911b4338657a495ee5b3965e5d}
+      \strng{authorfullhashraw}{01b915911b4338657a495ee5b3965e5d}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PLoS ONE}
+      \field{number}{6}
+      \field{title}{Application of Random Forests Methods to Diabetic Retinopathy Classification Analyses}
+      \field{volume}{9}
+      \field{year}{2014}
+      \field{pages}{e98587}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0098587
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1371/journal.pone.0098587
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1371/journal.pone.0098587
+      \endverb
+    \endentry
+    \entry{chacon2026laboratorio1}{manual}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=faf5280c54703f138225618613731ef5}{%
+           family={Chacón\bibnamedelima Pacheco},
+           familyi={C\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=44c8e875f00da15b5c37927dec9eb6db}{%
+           family={Chavez\bibnamedelima Orellana},
+           familyi={C\bibinitperiod\bibinitdelim O\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Santiago, Chile}%
+      }
+      \list{organization}{1}{%
+        {Universidad de Santiago de Chile}%
+      }
+      \strng{namehash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
+      \strng{fullhash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
+      \strng{fullhashraw}{98439d5ecbcdf3b2b43ad284df9b4bc5}
+      \strng{bibnamehash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
+      \strng{authorbibnamehash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
+      \strng{authornamehash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
+      \strng{authorfullhash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
+      \strng{authorfullhashraw}{98439d5ecbcdf3b2b43ad284df9b4bc5}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Documento de cátedra para el curso de Inteligencia Computacional}
+      \field{title}{Laboratorio 1: Análisis Estadístico Descriptivo e Inferencial}
+      \field{year}{2026}
+    \endentry
+    \entry{chavez2026presentacion1}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=44c8e875f00da15b5c37927dec9eb6db}{%
+           family={Chavez\bibnamedelima Orellana},
+           familyi={C\bibinitperiod\bibinitdelim O\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{44c8e875f00da15b5c37927dec9eb6db}
+      \strng{fullhash}{44c8e875f00da15b5c37927dec9eb6db}
+      \strng{fullhashraw}{44c8e875f00da15b5c37927dec9eb6db}
+      \strng{bibnamehash}{44c8e875f00da15b5c37927dec9eb6db}
+      \strng{authorbibnamehash}{44c8e875f00da15b5c37927dec9eb6db}
+      \strng{authornamehash}{44c8e875f00da15b5c37927dec9eb6db}
+      \strng{authorfullhash}{44c8e875f00da15b5c37927dec9eb6db}
+      \strng{authorfullhashraw}{44c8e875f00da15b5c37927dec9eb6db}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Material docente, Universidad de Santiago de Chile}
+      \field{note}{Apunte de apoyo para la implementación técnica}
+      \field{title}{Presentación Laboratorio 1: Análisis Estadístico Descriptivo e Inferencial}
+      \field{year}{2026}
+    \endentry
+    \entry{ucimlrepo2023}{misc}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=a7329407a8c3dfd4caf0c75102a7adb6}{%
+           family={Kelly},
+           familyi={K\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c39d4a0ee797ac03f1f0e718628c0a09}{%
+           family={Longjohn},
+           familyi={L\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eff80e80dd957f184bee2911eb67628b}{%
+           family={Nottingham},
+           familyi={N\bibinitperiod},
+           given={Kenton},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {GitHub}%
+      }
+      \strng{namehash}{70185410334b214b5a9ec96013980e85}
+      \strng{fullhash}{7e24474cbee3426fb377893e4beb27d4}
+      \strng{fullhashraw}{7e24474cbee3426fb377893e4beb27d4}
+      \strng{bibnamehash}{7e24474cbee3426fb377893e4beb27d4}
+      \strng{authorbibnamehash}{7e24474cbee3426fb377893e4beb27d4}
+      \strng{authornamehash}{70185410334b214b5a9ec96013980e85}
+      \strng{authorfullhash}{7e24474cbee3426fb377893e4beb27d4}
+      \strng{authorfullhashraw}{7e24474cbee3426fb377893e4beb27d4}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{GitHub repository}
+      \field{title}{ucimlrepo: Python wrapper for the UCI Machine Learning Repository}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://github.com/uci-ml-repo/ucimlrepo
+      \endverb
+      \verb{url}
+      \verb https://github.com/uci-ml-repo/ucimlrepo
+      \endverb
+    \endentry
+    \entry{reback2020pandas}{software}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2abe4cf3ffefa3229f3decdd579c9f69}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={The\bibnamedelimb Pandas\bibnamedelima Development},
+           giveni={T\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Zenodo}%
+      }
+      \strng{namehash}{2abe4cf3ffefa3229f3decdd579c9f69}
+      \strng{fullhash}{2abe4cf3ffefa3229f3decdd579c9f69}
+      \strng{fullhashraw}{2abe4cf3ffefa3229f3decdd579c9f69}
+      \strng{bibnamehash}{2abe4cf3ffefa3229f3decdd579c9f69}
+      \strng{authorbibnamehash}{2abe4cf3ffefa3229f3decdd579c9f69}
+      \strng{authornamehash}{2abe4cf3ffefa3229f3decdd579c9f69}
+      \strng{authorfullhash}{2abe4cf3ffefa3229f3decdd579c9f69}
+      \strng{authorfullhashraw}{2abe4cf3ffefa3229f3decdd579c9f69}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{2}
+      \field{title}{pandas-dev/pandas: Pandas}
+      \field{version}{latest}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.5281/zenodo.3509134
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.5281/zenodo.3509134
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.5281/zenodo.3509134
+      \endverb
+    \endentry
+    \entry{virtanen2020scipy}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=18703a2bb6a62484483c193a212da2f8}{%
+           family={Virtanen},
+           familyi={V\bibinitperiod},
+           given={Pauli},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=646fbfe08374cc41c2f9bd971d8c4725}{%
+           family={Gommers},
+           familyi={G\bibinitperiod},
+           given={Ralf},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d500f4849030f34359cdb3e1513acf83}{%
+           family={Oliphant},
+           familyi={O\bibinitperiod},
+           given={Travis\bibnamedelima E.},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f252038edd7f112d75da3bf0c1edecbc}
+      \strng{fullhash}{2614ea043823efadef6a201c96446be0}
+      \strng{fullhashraw}{2614ea043823efadef6a201c96446be0}
+      \strng{bibnamehash}{2614ea043823efadef6a201c96446be0}
+      \strng{authorbibnamehash}{2614ea043823efadef6a201c96446be0}
+      \strng{authornamehash}{f252038edd7f112d75da3bf0c1edecbc}
+      \strng{authorfullhash}{2614ea043823efadef6a201c96446be0}
+      \strng{authorfullhashraw}{2614ea043823efadef6a201c96446be0}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Methods}
+      \field{title}{{SciPy} 1.0: Fundamental Algorithms for Scientific Computing in {Python}}
+      \field{volume}{17}
+      \field{year}{2020}
+      \field{pages}{261\bibrangedash 272}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1038/s41592-019-0686-2
+      \endverb
+    \endentry
+    \entry{Waskom2021}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0c809239417dcb9aef9b906eff53933d}{%
+           family={Waskom},
+           familyi={W\bibinitperiod},
+           given={Michael\bibnamedelima L.},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {The Open Journal}%
+      }
+      \strng{namehash}{0c809239417dcb9aef9b906eff53933d}
+      \strng{fullhash}{0c809239417dcb9aef9b906eff53933d}
+      \strng{fullhashraw}{0c809239417dcb9aef9b906eff53933d}
+      \strng{bibnamehash}{0c809239417dcb9aef9b906eff53933d}
+      \strng{authorbibnamehash}{0c809239417dcb9aef9b906eff53933d}
+      \strng{authornamehash}{0c809239417dcb9aef9b906eff53933d}
+      \strng{authorfullhash}{0c809239417dcb9aef9b906eff53933d}
+      \strng{authorfullhashraw}{0c809239417dcb9aef9b906eff53933d}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Open Source Software}
+      \field{number}{60}
+      \field{title}{seaborn: statistical data visualization}
+      \field{volume}{6}
+      \field{year}{2021}
+      \field{pages}{3021}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.21105/joss.03021
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.21105/joss.03021
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.21105/joss.03021
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{antal2014dataset}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=639d061778197e0f3109caeab91951c9}{%
+           family={Antal},
+           familyi={A\bibinitperiod},
+           given={Bálint},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=84fabcba700b7ad6de9e4096cb9fe6d8}{%
+           family={Hajdu},
+           familyi={H\bibinitperiod},
+           given={András},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{fullhash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{fullhashraw}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{bibnamehash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{authorbibnamehash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{authornamehash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{authorfullhash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{authorfullhashraw}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \field{extraname}{1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{UCI Machine Learning Repository}
+      \field{title}{Diabetic Retinopathy Debrecen}
+      \field{year}{2014}
+      \verb{doi}
+      \verb 10.24432/C5XP4P
+      \endverb
+      \verb{urlraw}
+      \verb https://archive.ics.uci.edu/dataset/329/diabetic+retinopathy+debrecen+dataset
+      \endverb
+      \verb{url}
+      \verb https://archive.ics.uci.edu/dataset/329/diabetic+retinopathy+debrecen+dataset
+      \endverb
+    \endentry
+    \entry{antal2014ensemble}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=639d061778197e0f3109caeab91951c9}{%
+           family={Antal},
+           familyi={A\bibinitperiod},
+           given={Bálint},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=84fabcba700b7ad6de9e4096cb9fe6d8}{%
+           family={Hajdu},
+           familyi={H\bibinitperiod},
+           given={András},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{fullhash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{fullhashraw}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{bibnamehash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{authorbibnamehash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{authornamehash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{authorfullhash}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \strng{authorfullhashraw}{5784c7dab9d7f2aeb9d72fa2b3e65305}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Knowledge-Based Systems}
+      \field{title}{An ensemble-based system for automatic screening of diabetic retinopathy}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.knosys.2014.01.007
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.knosys.2014.01.007
+      \endverb
+    \endentry
+    \entry{casanova2014application}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=aa85d8f98bf7b50f89f4966b522d0787}{%
+           family={Casanova},
+           familyi={C\bibinitperiod},
+           given={Ramon},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d368e9abc57e36e98c29a415dee8aa09}{%
+           family={Saldana},
+           familyi={S\bibinitperiod},
+           given={Santiago},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3c8cc7da20406bfc0f7b7f77bac07dae}{%
+           family={Chew},
+           familyi={C\bibinitperiod},
+           given={Emily\bibnamedelima Y},
+           giveni={E\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d41208da91e251989f5c0d4e5a7761b}{%
+           family={Danis},
+           familyi={D\bibinitperiod},
+           given={Ronald\bibnamedelima P},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=024e86789cd88b8a933be56158cd131c}{%
+           family={Greven},
+           familyi={G\bibinitperiod},
+           given={Craig\bibnamedelima M},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ee0739d069d14f55354ef44b35ac4e97}{%
+           family={Ambrosius},
+           familyi={A\bibinitperiod},
+           given={Walter\bibnamedelima T},
+           giveni={W\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Public Library of Science}%
+      }
+      \strng{namehash}{4bc5414c85075063cc91ed05123349f7}
+      \strng{fullhash}{01b915911b4338657a495ee5b3965e5d}
+      \strng{fullhashraw}{01b915911b4338657a495ee5b3965e5d}
+      \strng{bibnamehash}{01b915911b4338657a495ee5b3965e5d}
+      \strng{authorbibnamehash}{01b915911b4338657a495ee5b3965e5d}
+      \strng{authornamehash}{4bc5414c85075063cc91ed05123349f7}
+      \strng{authorfullhash}{01b915911b4338657a495ee5b3965e5d}
+      \strng{authorfullhashraw}{01b915911b4338657a495ee5b3965e5d}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PLoS ONE}
+      \field{number}{6}
+      \field{title}{Application of Random Forests Methods to Diabetic Retinopathy Classification Analyses}
+      \field{volume}{9}
+      \field{year}{2014}
+      \field{pages}{e98587}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0098587
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1371/journal.pone.0098587
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1371/journal.pone.0098587
+      \endverb
+    \endentry
+    \entry{chacon2026laboratorio1}{manual}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=faf5280c54703f138225618613731ef5}{%
+           family={Chacón\bibnamedelima Pacheco},
+           familyi={C\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=44c8e875f00da15b5c37927dec9eb6db}{%
+           family={Chavez\bibnamedelima Orellana},
+           familyi={C\bibinitperiod\bibinitdelim O\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Santiago, Chile}%
+      }
+      \list{organization}{1}{%
+        {Universidad de Santiago de Chile}%
+      }
+      \strng{namehash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
+      \strng{fullhash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
+      \strng{fullhashraw}{98439d5ecbcdf3b2b43ad284df9b4bc5}
+      \strng{bibnamehash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
+      \strng{authorbibnamehash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
+      \strng{authornamehash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
+      \strng{authorfullhash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
+      \strng{authorfullhashraw}{98439d5ecbcdf3b2b43ad284df9b4bc5}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Documento de cátedra para el curso de Inteligencia Computacional}
+      \field{title}{Laboratorio 1: Análisis Estadístico Descriptivo e Inferencial}
+      \field{year}{2026}
+    \endentry
+    \entry{chavez2026presentacion1}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=44c8e875f00da15b5c37927dec9eb6db}{%
+           family={Chavez\bibnamedelima Orellana},
+           familyi={C\bibinitperiod\bibinitdelim O\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{44c8e875f00da15b5c37927dec9eb6db}
+      \strng{fullhash}{44c8e875f00da15b5c37927dec9eb6db}
+      \strng{fullhashraw}{44c8e875f00da15b5c37927dec9eb6db}
+      \strng{bibnamehash}{44c8e875f00da15b5c37927dec9eb6db}
+      \strng{authorbibnamehash}{44c8e875f00da15b5c37927dec9eb6db}
+      \strng{authornamehash}{44c8e875f00da15b5c37927dec9eb6db}
+      \strng{authorfullhash}{44c8e875f00da15b5c37927dec9eb6db}
+      \strng{authorfullhashraw}{44c8e875f00da15b5c37927dec9eb6db}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Material docente, Universidad de Santiago de Chile}
+      \field{note}{Apunte de apoyo para la implementación técnica}
+      \field{title}{Presentación Laboratorio 1: Análisis Estadístico Descriptivo e Inferencial}
+      \field{year}{2026}
+    \endentry
+    \entry{ucimlrepo2023}{misc}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=a7329407a8c3dfd4caf0c75102a7adb6}{%
+           family={Kelly},
+           familyi={K\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c39d4a0ee797ac03f1f0e718628c0a09}{%
+           family={Longjohn},
+           familyi={L\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eff80e80dd957f184bee2911eb67628b}{%
+           family={Nottingham},
+           familyi={N\bibinitperiod},
+           given={Kenton},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {GitHub}%
+      }
+      \strng{namehash}{70185410334b214b5a9ec96013980e85}
+      \strng{fullhash}{7e24474cbee3426fb377893e4beb27d4}
+      \strng{fullhashraw}{7e24474cbee3426fb377893e4beb27d4}
+      \strng{bibnamehash}{7e24474cbee3426fb377893e4beb27d4}
+      \strng{authorbibnamehash}{7e24474cbee3426fb377893e4beb27d4}
+      \strng{authornamehash}{70185410334b214b5a9ec96013980e85}
+      \strng{authorfullhash}{7e24474cbee3426fb377893e4beb27d4}
+      \strng{authorfullhashraw}{7e24474cbee3426fb377893e4beb27d4}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{GitHub repository}
+      \field{title}{ucimlrepo: Python wrapper for the UCI Machine Learning Repository}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://github.com/uci-ml-repo/ucimlrepo
+      \endverb
+      \verb{url}
+      \verb https://github.com/uci-ml-repo/ucimlrepo
+      \endverb
+    \endentry
+    \entry{reback2020pandas}{software}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2abe4cf3ffefa3229f3decdd579c9f69}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={The\bibnamedelimb Pandas\bibnamedelima Development},
+           giveni={T\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Zenodo}%
+      }
+      \strng{namehash}{2abe4cf3ffefa3229f3decdd579c9f69}
+      \strng{fullhash}{2abe4cf3ffefa3229f3decdd579c9f69}
+      \strng{fullhashraw}{2abe4cf3ffefa3229f3decdd579c9f69}
+      \strng{bibnamehash}{2abe4cf3ffefa3229f3decdd579c9f69}
+      \strng{authorbibnamehash}{2abe4cf3ffefa3229f3decdd579c9f69}
+      \strng{authornamehash}{2abe4cf3ffefa3229f3decdd579c9f69}
+      \strng{authorfullhash}{2abe4cf3ffefa3229f3decdd579c9f69}
+      \strng{authorfullhashraw}{2abe4cf3ffefa3229f3decdd579c9f69}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{2}
+      \field{title}{pandas-dev/pandas: Pandas}
+      \field{version}{latest}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.5281/zenodo.3509134
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.5281/zenodo.3509134
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.5281/zenodo.3509134
+      \endverb
+    \endentry
+    \entry{virtanen2020scipy}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=18703a2bb6a62484483c193a212da2f8}{%
+           family={Virtanen},
+           familyi={V\bibinitperiod},
+           given={Pauli},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=646fbfe08374cc41c2f9bd971d8c4725}{%
+           family={Gommers},
+           familyi={G\bibinitperiod},
+           given={Ralf},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d500f4849030f34359cdb3e1513acf83}{%
+           family={Oliphant},
+           familyi={O\bibinitperiod},
+           given={Travis\bibnamedelima E.},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f252038edd7f112d75da3bf0c1edecbc}
+      \strng{fullhash}{2614ea043823efadef6a201c96446be0}
+      \strng{fullhashraw}{2614ea043823efadef6a201c96446be0}
+      \strng{bibnamehash}{2614ea043823efadef6a201c96446be0}
+      \strng{authorbibnamehash}{2614ea043823efadef6a201c96446be0}
+      \strng{authornamehash}{f252038edd7f112d75da3bf0c1edecbc}
+      \strng{authorfullhash}{2614ea043823efadef6a201c96446be0}
+      \strng{authorfullhashraw}{2614ea043823efadef6a201c96446be0}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Methods}
+      \field{title}{{SciPy} 1.0: Fundamental Algorithms for Scientific Computing in {Python}}
+      \field{volume}{17}
+      \field{year}{2020}
+      \field{pages}{261\bibrangedash 272}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1038/s41592-019-0686-2
+      \endverb
+    \endentry
+    \entry{Waskom2021}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0c809239417dcb9aef9b906eff53933d}{%
+           family={Waskom},
+           familyi={W\bibinitperiod},
+           given={Michael\bibnamedelima L.},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {The Open Journal}%
+      }
+      \strng{namehash}{0c809239417dcb9aef9b906eff53933d}
+      \strng{fullhash}{0c809239417dcb9aef9b906eff53933d}
+      \strng{fullhashraw}{0c809239417dcb9aef9b906eff53933d}
+      \strng{bibnamehash}{0c809239417dcb9aef9b906eff53933d}
+      \strng{authorbibnamehash}{0c809239417dcb9aef9b906eff53933d}
+      \strng{authornamehash}{0c809239417dcb9aef9b906eff53933d}
+      \strng{authorfullhash}{0c809239417dcb9aef9b906eff53933d}
+      \strng{authorfullhashraw}{0c809239417dcb9aef9b906eff53933d}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Open Source Software}
+      \field{number}{60}
+      \field{title}{seaborn: statistical data visualization}
+      \field{volume}{6}
+      \field{year}{2021}
+      \field{pages}{3021}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.21105/joss.03021
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.21105/joss.03021
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.21105/joss.03021
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

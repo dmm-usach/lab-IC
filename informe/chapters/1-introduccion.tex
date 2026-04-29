@@ -1,0 +1,66 @@
+\section{Introducción}
+
+\subsection{Contextualización y Antecedentes}
+
+La retinopatía diabética (RD) representa una de las principales causas de pérdida de visión a nivel mundial y es considerada una ``enfermedad silenciosa'', ya que a menudo progresa sin síntomas detectables hasta que las opciones de tratamiento son limitadas \parencite{casanova2014application}. La detección temprana es fundamental para permitir intervenciones terapéuticas eficaces, pero los métodos tradicionales de examen clínico enfrentan barreras como la variabilidad entre observadores y la falta de especialistas en zonas rurales \parencite{casanova2014application}. Esto ha impulsado el desarrollo de sistemas automatizados de tamizaje que utilizan técnicas de procesamiento de imágenes y aprendizaje de máquinas para identificar lesiones retinales de manera objetiva \parencite{antal2014ensemble}.
+
+Para el desarrollo de este laboratorio, se analiza el conjunto de datos \textit{Diabetic Retinopathy Debrecen}, el cual consiste en 1.151 instancias y 19 atributos extraídos del conjunto de imágenes Messidor \parencite{antal2014dataset}. Estos atributos capturan características críticas para el diagnóstico, incluyendo el conteo de microaneurismas en diversos niveles de confianza, la cantidad normalizada de exudados y descriptores anatómicos como la distancia entre la mácula y el disco óptico \parencite{antal2014dataset}. La literatura científica sugiere que el conteo de microaneurismas es el factor de mayor peso para discriminar la presencia de la enfermedad en modelos computacionales \parencite{casanova2014application}.
+
+\subsection{Objetivos del Laboratorio}
+
+\textbf{General}: Estudiar e interpretar los datos del dataset seleccionado para comprender el significado de sus atributos y su relación con la detección de la RD \parencite{antal2014dataset}.
+
+\textbf{Específicos}:
+
+\begin{enumerate}
+    \item Realizar un análisis estadístico descriptivo para resumir las características fundamentales del conjunto de datos.
+    \item Aplicar técnicas de estadística inferencial, incluyendo pruebas de normalidad y de hipótesis, para determinar la significación de los resultados obtenidos.
+    \item Identificar qué variables presentan diferencias significativas entre pacientes sanos y aquellos con signos de la patología.
+\end{enumerate}
+
+\subsection{Formulación de Hipótesis}
+
+Se postula que las variables relacionadas con el conteo de lesiones, específicamente los microaneurismas (\texttt{ma1} a \texttt{ma6}), presentarán distribuciones significativamente distintas entre las clases de control y de enfermedad. Se espera que estas variables, junto con los exudados, actúen como los principales indicadores para la clasificación, dada su relevancia clínica documentada en el diagnóstico de la severidad de la retinopatía.
+
+\section{Descripción del Problema}
+
+\subsection{Descripción de la Base de Datos (Diabetic Retinopathy Debrecen)}
+
+Este conjunto de datos contiene atributos extraídos del set de imágenes Messidor \parencite{antal2014dataset}. Consta de 1.151 instancias y 19 atributos que representan lesiones detectadas, rasgos anatómicos (distancia mácula-disco óptico) y descriptores de nivel de imagen \parencite{antal2014dataset}. El dataset es de naturaleza multivariada y se utiliza principalmente para tareas de clasificación binaria (clase 1 para signos de RD y clase 0 para ausencia) \parencite{antal2014dataset}.
+
+\subsection{Descripción de Clases y Variables}
+
+A continuación, se detalla la naturaleza y relevancia de cada una de las 19 variables del conjunto de datos:
+
+\subsubsection{Variables de Calidad y Pre-procesamiento}
+
+\begin{itemize}
+    \item \texttt{quality}: Atributo binario que indica el resultado de la evaluación de calidad de la imagen de fondo de ojo (0 = calidad insuficiente, 1 = calidad suficiente para el diagnóstico).
+    \item \texttt{pre\_screening}: Variable binaria de pre-cribado donde el valor 1 señala la presencia de una anomalía retiniana grave y 0 su ausencia.
+    \item \texttt{am\_fm\_classification}: Resultado binario derivado de un sistema de clasificación automatizado basado en métodos de AM/FM.
+\end{itemize}
+
+\subsubsection{Detección de Lesiones y Niveles de Confianza}
+
+\begin{itemize}
+    \item \texttt{ma1} a \texttt{ma6} (Microaneurismas): Representan el conteo de microaneurismas (MA) detectados mediante algoritmos de procesamiento de imágenes. La literatura identifica a los microaneurismas como el factor de mayor importancia para discriminar la presencia de la enfermedad.
+    \begin{itemize}
+        \item \textbf{Nota técnica sobre los niveles de confianza}: La distinción entre estas seis variables radica en el nivel de confianza ($\alpha$) del detector, que escala desde $\alpha = 0{,}5$ (\texttt{ma1}) hasta $\alpha = 1{,}0$ (\texttt{ma6}). Un nivel de confianza más elevado implica criterios de detección más estrictos, lo que reduce la probabilidad de falsos positivos pero incrementa el riesgo de omitir lesiones reales y sutiles.
+    \end{itemize}
+    \item \texttt{exudate1} a \texttt{exudate8}: Corresponden a la detección de exudados duros (depósitos de lípidos). A diferencia de los MA, estos valores están normalizados dividiendo el número de lesiones por el diámetro de la Región de Interés (ROI) para compensar las variaciones en el tamaño de las imágenes.
+\end{itemize}
+
+\subsubsection{Descriptores Anatómicos}
+
+\begin{itemize}
+    \item \texttt{euclidean\_distance}: Distancia euclidiana normalizada entre el centro de la mácula y el centro del disco óptico. Proporciona información crítica sobre la condición anatómica del paciente.
+    \item \texttt{optic\_disc\_diameter}: Medida del diámetro del disco óptico extraída de la imagen.
+\end{itemize}
+
+\subsubsection{Variable de Clase (Objetivo)}
+
+\texttt{Class}: Etiqueta binaria de salida que define el estado diagnóstico del paciente.
+\begin{itemize}
+    \item 1: Indica que la imagen presenta signos de retinopatía diabética (corresponde a una etiqueta acumulativa de las clases 1, 2 y 3 de la base Messidor).
+    \item 0: Indica la ausencia total de signos de la patología.
+\end{itemize}

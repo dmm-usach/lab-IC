@@ -1,0 +1,36 @@
+\section{Marco Teórico}
+
+\subsection{Retinopatía Diabética e Importancia Médica de las Lesiones}
+
+La retinopatía diabética (RD) es una de las principales causas de ceguera en el mundo y se caracteriza por ser una ``enfermedad silenciosa'' que a menudo progresa sin síntomas hasta etapas críticas \parencite{casanova2014application}. La detección temprana es vital para la eficacia del tratamiento. Clínicamente, el diagnóstico se basa en la identificación de lesiones en la retina:
+
+\begin{itemize}
+    \item \textbf{Microaneurismas (MA)}: Son las primeras lesiones detectables y se consideran el factor de mayor importancia para discriminar la presencia de la enfermedad en análisis computacionales \parencite{casanova2014application}.
+    \item \textbf{Exudados}: Depósitos de lípidos que filtran de vasos dañados \parencite{casanova2014application}. En el análisis de datos, estos se normalizan según el diámetro de la Región de Interés (ROI) para compensar variaciones en el tamaño de las imágenes \parencite{antal2014dataset}.
+\end{itemize}
+
+\subsection{Fundamentos de Estadística Descriptiva y Forma de Distribución}
+
+El análisis descriptivo permite resumir las características fundamentales de los datos para proporcionar una visión clara del conjunto \parencite{chacon2026laboratorio1}.
+
+\begin{itemize}
+    \item \textbf{Medidas de tendencia central y dispersión}: Incluyen la media aritmética, la desviación estándar para medir la dispersión respecto a la media, y la mediana como medida robusta de centro \parencite{chavez2026presentacion1}.
+    \item \textbf{Forma de la distribución}: La asimetría (\textit{skewness}) indica la falta de simetría, mientras que la curtosis mide si la distribución es más puntiaguda o aplanada que una normal \parencite{chavez2026presentacion1}.
+    \item \textbf{Detección de valores atípicos}: Se fundamenta en el método de Tukey, que utiliza el Rango Intercuartílico (IQR) para establecer límites inferiores y superiores, identificando observaciones que podrían sesgar el análisis \parencite{chavez2026presentacion1}.
+\end{itemize}
+
+\subsection{Fundamentos de Estadística Inferencial y Pruebas de Hipótesis}
+
+La estadística inferencial busca obtener conclusiones sobre la población a partir de la muestra mediante pruebas de significación \parencite{chavez2026presentacion1}.
+
+\begin{itemize}
+    \item \textbf{Prueba de normalidad (Shapiro-Wilk)}: Evalúa si los datos siguen una distribución normal. Un p-valor menor a 0,05 permite rechazar la hipótesis nula de normalidad \parencite{chavez2026presentacion1}.
+    \item \textbf{Comparación de grupos (prueba t de Student)}: Se utiliza para determinar si existe una diferencia significativa entre las medias de dos grupos independientes (ej. sanos vs. enfermos) \parencite{chavez2026presentacion1}.
+    \item \textbf{Homocedasticidad}: Pruebas como el test de Bartlett evalúan si las varianzas de los grupos son iguales, un requisito previo para la validez de muchas pruebas paramétricas \parencite{chavez2026presentacion1}.
+\end{itemize}
+
+Para el desarrollo técnico se emplean bibliotecas estándar de la industria que garantizan la reproducibilidad \parencite{chavez2026presentacion1}: \textit{Pandas} \parencite{reback2020pandas} para estructuras de datos y estadísticas descriptivas, \textit{SciPy} (\texttt{scipy.stats}) \parencite{virtanen2020scipy} para pruebas estadísticas inferenciales, y \textit{ucimlrepo} \parencite{ucimlrepo2023} para la importación directa de datasets desde el repositorio UCI Machine Learning.
+
+
+
+

@@ -1,0 +1,15 @@
+\section{Conclusiones}
+
+El análisis estadístico e inferencial realizado sobre el dataset \textbf{Diabetic Retinopathy Debrecen} permitió validar las hipótesis fundamentales sobre la naturaleza de la patología y la relevancia de sus biomarcadores.
+
+\subsection{Síntesis de Hallazgos Principales}
+
+Se confirmó matemáticamente la \textbf{no normalidad} de las variables de lesiones y una marcada asimetría positiva, coherente con la distribución clínica de la enfermedad. La validación de outliers mediante el método de Tukey fue determinante: el 100\% de los valores extremos \textbf{pertenecen a la Clase 1}, demostrando que los recuentos elevados de microaneurismas son indicadores inequívocos de estadios severos de la RD.
+
+\subsection{Discusión de Resultados y Desempeño del Modelo}
+
+Las pruebas de \textbf{Mann-Whitney U} y la \textbf{Regresión Logística} coinciden en señalar a los microaneurismas (\texttt{ma1}) como la variable de mayor peso diagnóstico (p < 0,05), respaldando lo expuesto por \textcite{casanova2014application}. No obstante, la evaluación de desempeño reveló limitaciones críticas: una sensibilidad del 58,5\% y un AUC de 0,64. Estos valores indican que, aunque la carga lesional es un indicador estadísticamente significativo, un modelo logístico lineal no es suficiente para discriminar con precisión entre clases, especialmente en etapas tempranas donde el solapamiento de datos es alto (según se observó en los diagramas de caja).
+
+\subsection{Limitaciones y Proyecciones Futuras}
+
+La principal limitación radica en la incapacidad del modelo lineal para capturar la variabilidad total del diagnóstico (Pseudo $R^{2} = 0{,}087$). Como proyección futura, se hace imperativo el uso de algoritmos de inteligencia computacional no lineales, como \textit{Random Forests} o redes neuronales, que puedan explotar la alta colinealidad detectada en el mapa de calor y mejorar la tasa de detección de casos positivos, acercándose a los niveles de sensibilidad clínica exigidos para sistemas de cribado automático.
