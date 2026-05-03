@@ -172,18 +172,37 @@ El mapa de calor valida la hipótesis de que las lesiones retinales, específica
 
 \subsection{Comparación de Grupos (Prueba Mann-Whitney U)}
 
-Tras confirmar en la sección anterior que las variables de microaneurismas (\texttt{ma1} a \texttt{ma6}) no siguen una distribución normal según el test de Shapiro-Wilk, se procedió a realizar un análisis inferencial de comparación de grupos mediante la prueba de Mann-Whitney U. Esta prueba no paramétrica permite determinar si existen diferencias estadísticamente significativas en las medianas de los conteos de lesiones entre pacientes sanos (Clase 0) y pacientes con diagnóstico de retinopatía (Clase 1).
+Habiendo establecido en la sección anterior que las variables de microaneurismas
+(\texttt{ma1} a \texttt{ma6}) no siguen una distribución normal, la comparación entre
+grupos requiere necesariamente un enfoque no paramétrico. La pregunta clínica central
+de este estudio es si el recuento de microaneurismas distingue de manera estadísticamente
+confiable a los pacientes con retinopatía diabética (Clase 1) de aquellos sin la
+enfermedad (Clase 0). Responder esta pregunta mediante una prueba paramétrica clásica
+como la $t$ de Student habría invalidado los resultados, dado que el supuesto de
+normalidad fue rechazado con p-valores del orden de $10^{-20}$ en todos los niveles.
+
+Por esta razón, se seleccionó la \textbf{prueba de Mann-Whitney U} \parencite{mann1947test},
+cuya hipótesis operativa no requiere normalidad y compara las distribuciones de ambos
+grupos evaluando si los valores de un grupo tienden sistemáticamente a ser mayores
+que los del otro. Esta propiedad la hace especialmente adecuada para datos biomédicos
+con distribuciones asimétricas, donde las medianas son más representativas de la
+tendencia central que las medias.
 
 \subsubsection{Planteamiento de Hipótesis}
 
 \begin{itemize}
-    \item Hipótesis Nula ($H_{0}$): No existe una diferencia significativa en la distribución del conteo de microaneurismas entre el grupo sano y el grupo con retinopatía diabética.
-    \item Hipótesis Alternativa ($H_{1}$): Existe una diferencia significativa en la distribución del conteo de microaneurismas entre ambos grupos.
+    \item \textbf{Hipótesis Nula} ($H_{0}$): La distribución del recuento de microaneurismas
+    es idéntica en pacientes sanos (Clase 0) y en pacientes con retinopatía diabética
+    (Clase 1); cualquier diferencia observada es atribuible al azar.
+    \item \textbf{Hipótesis Alternativa} ($H_{1}$): Existe una diferencia sistemática
+    y estadísticamente significativa en la distribución de microaneurismas entre ambos
+    grupos, siendo consistentemente más elevada en la Clase 1.
 \end{itemize}
 
 \subsubsection{Resultados de la Prueba}
 
-Los estadísticos obtenidos mediante la librería \texttt{scipy.stats} se detallan en la siguiente tabla:
+Los estadísticos obtenidos mediante la librería \texttt{scipy.stats} \parencite{virtanen2020scipy}
+se detallan en la siguiente tabla:
 
 \begin{table}[htbp]
 \centering
@@ -204,24 +223,66 @@ ma6 & 139938 & $8{,}62 \times 10^{-06}$ & Sí \\
 
 \subsubsection{Interpretación de los Hallazgos}
 
-El análisis de los resultados permite extraer las siguientes conclusiones fundamentales para el estudio:
-
 \begin{enumerate}
-    \item \textbf{Rechazo de la hipótesis nula}: En todos los niveles de confianza ($\alpha$ de 0,5 a 1,0), los p-valores son extremadamente bajos (siendo el mayor $8{,}61 \times 10^{-6}$ para \texttt{ma6}), situándose muy por debajo del umbral de significancia de 0,05. Esto permite rechazar $H_{0}$ y confirmar que las diferencias observadas entre pacientes sanos y enfermos no son producto del azar.
-    \item \textbf{Sensibilidad del diagnóstico}: Se observa que la significancia estadística es más aguda en los niveles de confianza iniciales (\texttt{ma1} y \texttt{ma2}). El p-valor más bajo se registró en \texttt{ma1} ($1{,}25 \times 10^{-21}$), lo que sugiere que el conteo de lesiones detectadas incluso con una sensibilidad moderada ($\alpha = 0{,}5$) es un potente discriminador de la enfermedad.
-    \item \textbf{Consistencia con la literatura}: Estos resultados validan empíricamente lo expuesto por \textcite{casanova2014application}, quienes identifican al conteo de microaneurismas como el rasgo de mayor importancia diagnóstica entre todas las variables extraídas de imágenes de fondo de ojo.
-    \item \textbf{Confirmación de biomarcadores}: La prueba estadística ratifica lo observado visualmente en los diagramas de caja y en el análisis de valores atípicos, consolidando al recuento de MA como un biomarcador clínico robusto para la clasificación automatizada en este dataset.
+    \item \textbf{Rechazo unánime de la hipótesis nula}: En todos los niveles de
+    confianza ($\alpha$ de 0,5 a 1,0), los p-valores se ubican varios órdenes de
+    magnitud por debajo del umbral convencional de 0,05. El valor más conservador,
+    obtenido en \texttt{ma6} ($8{,}62 \times 10^{-6}$), es en sí mismo una evidencia
+    contundente de diferencia real entre grupos. Este resultado descarta enfáticamente
+    que las diferencias observadas se deban a fluctuaciones muestrales.
+
+    \item \textbf{Gradiente de significancia y su interpretación clínica}: La
+    significancia estadística disminuye progresivamente desde \texttt{ma1} hasta
+    \texttt{ma6}, en correspondencia directa con el aumento del umbral de confianza
+    en la detección de lesiones. \texttt{ma1} registra el p-valor más bajo
+    ($1{,}25 \times 10^{-21}$), lo que indica que incluso los microaneurismas
+    detectados con sensibilidad moderada ($\alpha = 0{,}5$) son potentes
+    discriminadores de la enfermedad. Desde el punto de vista clínico, esto sugiere
+    que no se requiere un umbral de detección estricto para obtener una señal
+    diagnóstica significativa: la presencia temprana de lesiones ya distingue
+    de forma sólida a los pacientes afectados. Conforme aumenta el umbral ($\alpha$),
+    el detector retiene únicamente las lesiones más evidentes, reduciendo el
+    contraste entre grupos y, con ello, la potencia estadística de la comparación.
+    Este patrón apoya el uso de \texttt{ma1} como variable primaria en el modelamiento
+    posterior.
+
+    \item \textbf{Significancia estadística versus magnitud del efecto}: Si bien los
+    p-valores obtenidos son extremadamente pequeños, su interpretación debe realizarse
+    con cautela. La significancia estadística es sensible al tamaño muestral y no
+    cuantifica por sí sola la magnitud de la diferencia entre grupos. Para este
+    análisis, una limitación reconocida es la ausencia de una medida de tamaño de
+    efecto, como la correlación de rango biserial ($r_{biserial}$) o el estadístico
+    $\hat{A}_{12}$ de Vargha-Delaney \parencite{vargha2000critique}, que permitirían
+    determinar qué fracción de los casos de Clase 1 supera a los de Clase 0. Su
+    incorporación en estudios futuros fortalecería la relevancia práctica y clínica
+    de estos resultados.
+
+    \item \textbf{Coherencia con evidencia previa}: Los hallazgos son consistentes
+    con lo reportado por \textcite{casanova2014application}, quienes identifican el
+    conteo de microaneurismas como la variable de mayor importancia diagnóstica entre
+    todos los descriptores extraídos de imágenes de fondo de ojo, consolidando a este
+    biomarcador como el indicador más robusto de la patología en este dataset.
 \end{enumerate}
 
 \subsection{Homogeneidad de Varianzas (Test de Levene)}
 
-Tras confirmar la no normalidad de los datos, se aplicó el \textbf{Test de Levene} para evaluar si las varianzas de los microaneurismas son homogéneas entre pacientes sanos (Clase 0) y con retinopatía (Clase 1). A diferencia de la Prueba F clásica, el test de Levene no asume normalidad en los datos, siendo el método adecuado para este caso.
+La evaluación de la homogeneidad de varianzas se realizó mediante el \textbf{Test de
+Levene} con un propósito estrictamente exploratorio: caracterizar la estructura de
+variabilidad intragrupal y comprender la heterogeneidad clínica de los grupos comparados.
+Es importante aclarar que este análisis no constituye un requisito técnico para la prueba
+de Mann-Whitney U, ya que ésta es robusta frente a la heterocedasticidad y no presupone
+igualdad de varianzas. El valor del test de Levene en este contexto radica en su capacidad
+para revelar si ambos grupos exhiben no solo medianas distintas, sino también grados de
+dispersión cualitativamente diferentes, lo cual tiene implicaciones clínicas directas.
 
 \subsubsection{Planteamiento de Hipótesis}
 
 \begin{itemize}
-    \item Hipótesis Nula ($H_{0}$): Las varianzas de ambos grupos son iguales (homocedasticidad).
-    \item Hipótesis Alternativa ($H_{1}$): Las varianzas de ambos grupos son significativamente distintas (heterocedasticidad).
+    \item \textbf{Hipótesis Nula} ($H_{0}$): Las varianzas del recuento de microaneurismas
+    son iguales entre pacientes sanos (Clase 0) y con retinopatía (Clase 1)
+    (homocedasticidad).
+    \item \textbf{Hipótesis Alternativa} ($H_{1}$): Las varianzas difieren
+    significativamente entre ambos grupos (heterocedasticidad).
 \end{itemize}
 
 \subsubsection{Resultados}
@@ -245,60 +306,174 @@ ma6 &  4.5424 & $3{,}33 \times 10^{-2}$  & No (varianzas distintas) \\
 
 \subsubsection{Interpretación}
 
-En todas las variables de microaneurismas se rechaza la hipótesis nula (p < 0,05), lo que confirma que las varianzas entre pacientes sanos y con retinopatía son significativamente distintas. La heterocedasticidad es más pronunciada en los niveles de confianza bajos (\texttt{ma1}, estadístico = 35,99) y se atenúa a medida que aumenta el umbral de detección (\texttt{ma6}, estadístico = 4,54), aunque sin llegar a ser homogéneas en ningún caso. Este hallazgo es consistente con los boxplots previos, donde la Clase 1 mostró mayor dispersión en el conteo de lesiones, y refuerza la evidencia de que la retinopatía no solo eleva el promedio de microaneurismas sino también su variabilidad dentro del grupo de pacientes afectados.
+En todas las variables se rechaza la hipótesis nula (p $<$ 0,05), confirmando que los
+grupos difieren no solo en sus medianas, sino también en su dispersión interna. La
+heterocedasticidad es más pronunciada en \texttt{ma1} (estadístico = 35,99) y se atenúa
+gradualmente hacia \texttt{ma6} (estadístico = 4,54), aunque sin alcanzar la
+homocedasticidad en ningún nivel.
+
+Desde una perspectiva clínica, este hallazgo tiene una interpretación directa y relevante:
+la Clase 0 (pacientes sanos) exhibe un recuento de microaneurismas relativamente estable
+y predecible, mientras que la Clase 1 (pacientes con RD) muestra una variabilidad
+considerablemente mayor. Esta heterogeneidad refleja la naturaleza propia de la
+enfermedad: la retinopatía diabética no es un estado uniforme, sino un espectro que
+abarca desde etapas incipientes con escasas lesiones hasta formas proliferativas con
+compromiso extenso. En consecuencia, la dispersión elevada en el grupo afectado no
+constituye ruido estadístico, sino una manifestación auténtica de la variedad de
+estadios clínicos presentes en la muestra.
+
+Adicionalmente, el patrón decreciente del estadístico de Levene a medida que aumenta
+el umbral de confianza ($\alpha$) es coherente con el argumento expuesto en las secciones
+previas: los detectores de mayor exigencia capturan únicamente lesiones altamente
+evidentes, reduciendo la separación entre grupos y homogeneizando relativamente las
+distribuciones. El gradiente observado entre \texttt{ma1} y \texttt{ma6} ilustra, por
+tanto, un continuo entre la máxima sensibilidad diagnóstica y la mayor especificidad del
+sistema de detección, siendo \texttt{ma1} el nivel en que las diferencias estructurales
+entre grupos son más pronunciadas en ambas dimensiones: tendencia central y dispersión.
 
 \subsection{Modelamiento mediante Regresión Logística}
 
-Para modelar la probabilidad de presencia de retinopatía diabética en función de los descriptores clínicos y anatómicos, se implementó un modelo de Regresión Logística. A diferencia de la regresión lineal, este método es el estándar estadístico adecuado para variables dependientes binarias, como la variable \texttt{Class} de este estudio (0 = Sano, 1 = RD), permitiendo identificar qué factores incrementan significativamente el riesgo de padecer la patología.
+El objetivo de esta sección es construir un modelo de clasificación binaria que
+cuantifique la relación entre los descriptores clínicos y la probabilidad de presencia
+de retinopatía diabética. Se adoptó la \textbf{Regresión Logística} como modelo de
+referencia (\textit{baseline}), por ser el método estándar para variables dependientes
+binarias y por ofrecer coeficientes interpretables que permiten vincular directamente
+cada predictor con el diagnóstico. Su inclusión en este estudio no busca obtener el
+clasificador de mayor precisión posible —objetivo que requeriría métodos no lineales
+de mayor complejidad—, sino establecer un umbral de desempeño mínimo a partir del
+cual evaluar el aporte de enfoques más sofisticados.
 
 \subsubsection{Justificación de la Selección de Atributos}
 
-Para este modelo se seleccionó un subconjunto representativo de cuatro variables: \texttt{ma1}, \texttt{exudate1}, \texttt{macula\_opticdisc\_distance} y \texttt{opticdisc\_diameter}. Se excluyeron los 15 atributos restantes por los siguientes criterios técnicos:
+Para construir un modelo estadísticamente válido, se seleccionó un subconjunto
+representativo de cuatro variables: \texttt{ma1}, \texttt{exudate1},
+\texttt{macula\_opticdisc\_distance} y \texttt{opticdisc\_diameter}. Esta decisión
+responde a criterios metodológicos rigurosos y no a una simplificación arbitraria:
 
 \begin{itemize}
-    \item \textbf{Prevención de la multicolinealidad}: El análisis de correlación previo demostró una colinealidad casi perfecta ($r \approx 1{,}0$) entre las variables de microaneurismas (\texttt{ma1}--\texttt{ma6}) y entre los niveles de exudados. Incluir variables altamente redundantes inflaría los errores estándar, invalidando la significancia de los coeficientes. Se seleccionaron \texttt{ma1} y \texttt{exudate1} como representantes de la carga lesional.
-    \item \textbf{Representación dimensional}: El subconjunto elegido permite evaluar las tres dimensiones críticas del dataset: lesiones vasculares (MAs), depósitos lipídicos (exudados) y rasgos anatómicos estructurales (distancia y diámetro del disco).
-    \item \textbf{Parsimonia y relevancia clínica}: Siguiendo los hallazgos de \textcite{casanova2014application}, se priorizaron los microaneurismas por ser la variable de mayor importancia para la discriminación de la enfermedad, buscando un modelo eficiente que evite el ``ruido'' de variables con nulo aporte lineal.
+    \item \textbf{Control de la multicolinealidad}: El análisis de correlación previo
+    evidenció colinealidad casi perfecta entre las variables \texttt{ma1}--\texttt{ma6}
+    ($r \approx 1{,}00$) y entre los niveles de exudados. En modelos de regresión,
+    la inclusión de predictores altamente correlacionados infla los errores estándar
+    de los coeficientes, produciendo estimaciones inestables e invalidando las pruebas
+    de significancia individuales. Dado que \texttt{ma1} concentra la mayor correlación
+    con \texttt{Class} ($r = 0{,}29$) y el mayor poder discriminante según la prueba
+    de Mann-Whitney U, se utilizó como representante canónico del grupo de
+    microaneurismas. De forma análoga, \texttt{exudate1} representa la dimensión de
+    los depósitos lipídicos.
+
+    \item \textbf{Representación multidimensional}: El subconjunto seleccionado abarca
+    las tres dimensiones diagnósticas del dataset: lesiones microvasculares
+    (\texttt{ma1}), depósitos de lípidos (\texttt{exudate1}) y rasgos anatómicos
+    estructurales (\texttt{macula\_opticdisc\_distance} y \texttt{opticdisc\_diameter}).
+    Su inclusión permite verificar empíricamente si las características geométricas
+    del ojo aportan valor predictivo adicional más allá de las lesiones detectables,
+    hipótesis que será evaluada mediante la significancia de sus coeficientes.
+
+    \item \textbf{Parsimonia y relevancia clínica}: Siguiendo el principio de parsimonia
+    estadística, se privilegió un modelo con pocos predictores pero bien justificados,
+    en línea con los hallazgos de \textcite{casanova2014application}, quienes priorizan
+    los microaneurismas como el rasgo de mayor importancia para la discriminación
+    automatizada de la enfermedad.
 \end{itemize}
 
 \subsubsection{Evaluación Global y Bondad de Ajuste}
 
-El modelo fue evaluado sobre un conjunto de prueba del 20\% (231 instancias), obteniendo un área bajo la curva \textbf{AUC de 0,65}, lo que indica una capacidad predictiva moderada. Esto sugiere que, si bien el modelo identifica patrones relevantes, la relación entre los predictores y el diagnóstico presenta una complejidad que un modelo lineal simple no logra capturar en su totalidad.
+El modelo fue evaluado sobre un conjunto de prueba del 20\% (231 instancias). El área
+bajo la curva ROC obtenida fue de \textbf{AUC = 0,65} y el pseudo-$R^{2}$ de McFadden
+alcanzó un valor de \textbf{0,087}.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{images/1-matrix-rocauc.png}
-\caption{Matriz de confusión y Curva ROC-AUC.}
+\caption{Matriz de confusión y Curva ROC-AUC del modelo de regresión logística.}
 \end{figure}
+
+Un AUC de 0,65 debe interpretarse con precisión académica: supera al clasificador
+aleatorio (AUC = 0,50) y confirma que el modelo captura información diagnóstica real,
+pero se ubica muy por debajo de los estándares de utilidad clínica. En el contexto del
+cribado automatizado de retinopatía diabética, la literatura reporta valores de AUC
+superiores a 0,95 mediante métodos de aprendizaje automático no lineales
+\parencite{casanova2014application}, lo que pone en perspectiva la limitación intrínseca
+del enfoque lineal. El pseudo-$R^{2}$ de 0,087 refuerza esta conclusión: el modelo
+logístico explica aproximadamente el 8,7\% de la varianza en la variable de diagnóstico,
+lo que indica que la relación entre los predictores seleccionados y la clase no es
+capturada adecuadamente mediante una función de decisión lineal. Estos resultados no
+constituyen un fracaso del análisis, sino una evidencia metodológicamente valiosa: la
+complejidad del problema de clasificación supera la capacidad representacional de un
+modelo lineal, señalando la dirección que debe tomar el desarrollo futuro.
 
 \subsubsection{Interpretación de los Coeficientes y Significancia}
 
-Al analizar los resultados individuales de la regresión, se extraen las siguientes conclusiones:
+Al analizar los resultados individuales de la regresión, se extraen las siguientes
+conclusiones:
 
 \begin{itemize}
-    \item \textbf{Significancia crítica de microaneurismas (\texttt{ma1})}: Con un p-valor de 0,000 y un coeficiente positivo (0,0307), se confirma que el aumento en el conteo de lesiones vasculares eleva significativamente la probabilidad de diagnóstico positivo. Este hallazgo valida empíricamente la tesis de \textcite{casanova2014application}, situando a los MAs como el biomarcador más robusto para la clasificación automatizada.
-    \item \textbf{Impacto de exudados (\texttt{exudate1})}: Esta variable también resultó ser un predictor significativo (p-valor = 0,000), reafirmando que la presencia de depósitos de lípidos es un indicador primario de la patología en este dataset.
-    \item \textbf{Irrelevancia de rasgos anatómicos}: Tanto la distancia mácula-disco ($p = 0{,}632$) como el diámetro del disco ($p = 0{,}330$) no mostraron significancia estadística. Esto sugiere que, para este conjunto de datos, las lesiones retinales son predictores mucho más potentes de la enfermedad que las variaciones en la estructura geométrica básica del ojo.
+    \item \textbf{Significancia crítica de microaneurismas (\texttt{ma1})}: Con un
+    p-valor de 0,000 y un coeficiente positivo de 0,0307, se confirma que cada unidad
+    de incremento en el recuento de microaneurismas eleva significativamente la
+    probabilidad estimada de diagnóstico positivo. Este resultado valida empíricamente
+    la hipótesis central del estudio y es coherente con todas las pruebas inferenciales
+    previas, posicionando a \texttt{ma1} como el biomarcador más robusto del dataset.
+
+    \item \textbf{Impacto de exudados (\texttt{exudate1})}: La significancia estadística
+    de esta variable (p-valor = 0,000) confirma que la presencia de depósitos de
+    lípidos constituye un predictor primario independiente de la patología, aportando
+    información diagnóstica complementaria a la de los microaneurismas.
+
+    \item \textbf{Irrelevancia de rasgos anatómicos estructurales}: La distancia
+    mácula-disco ($p = 0{,}632$) y el diámetro del disco óptico ($p = 0{,}330$) no
+    alcanzaron significancia estadística. Este hallazgo es clínicamente coherente: la
+    retinopatía diabética en estadios evaluables por imágenes de fondo de ojo se
+    manifiesta principalmente a través de lesiones vasculares y exudados, mientras que
+    los cambios estructurales macroscópicos del nervio óptico son característicos de
+    otras patologías como el glaucoma.
 \end{itemize}
 
 \subsubsection{Evaluación de Desempeño (Matriz de Confusión y ROC)}
 
-La capacidad de clasificación del modelo se evaluó mediante los resultados en el conjunto de prueba:
+La capacidad de clasificación del modelo se evaluó mediante los resultados en el conjunto
+de prueba:
 
 \begin{enumerate}
     \item \textbf{Matriz de Confusión}:
     \begin{itemize}
-        \item \textbf{Verdaderos Positivos (TP)}: 79 pacientes con RD correctamente identificados.
-        \item \textbf{Verdaderos Negativos (TN)}: 58 pacientes sanos correctamente identificados.
-        \item \textbf{Falsos Negativos (FN)}: 49 casos de RD no detectados, lo que arroja una sensibilidad del 61,7\%.
-        \item \textbf{Falsos Positivos (FP)}: 45 casos sanos clasificados erróneamente, resultando en una especificidad del 56,3\%.
+        \item \textbf{Verdaderos Positivos (TP)}: 79 pacientes con RD correctamente
+        identificados.
+        \item \textbf{Verdaderos Negativos (TN)}: 58 pacientes sanos correctamente
+        identificados.
+        \item \textbf{Falsos Negativos (FN)}: 49 casos de RD no detectados, resultando
+        en una \textbf{sensibilidad del 61,7\%}.
+        \item \textbf{Falsos Positivos (FP)}: 45 casos sanos clasificados erróneamente,
+        resultando en una \textbf{especificidad del 56,3\%}.
     \end{itemize}
-    \item \textbf{Curva ROC-AUC}: El valor obtenido de 0,65 sitúa el desempeño del modelo por encima del azar (0,5), pero significativamente por debajo de los estándares de alta precisión clínica, como el 0,989 alcanzado por sistemas de ensamble en la literatura \parencite{casanova2014application}. Esto confirma que las cuatro variables seleccionadas son necesarias pero insuficientes para un diagnóstico automatizado de alta fidelidad, requiriendo modelos de inteligencia computacional más robustos.
+
+    \item \textbf{Análisis crítico del desempeño clínico}: La sensibilidad del 61,7\%
+    implica que el modelo no detecta aproximadamente 4 de cada 10 pacientes con RD,
+    lo cual es inaceptable para un sistema de cribado clínico donde minimizar los
+    falsos negativos es prioritario para evitar la progresión inadvertida de la
+    enfermedad hacia la ceguera. La especificidad del 56,3\% agrava esta situación,
+    ya que más de la mitad de los pacientes sanos recibirían una derivación innecesaria.
+    Estas métricas evidencian que el modelo logístico, tal como está formulado, no
+    alcanza el umbral de utilidad clínica y debe entenderse exclusivamente como un
+    punto de partida cuantitativo para la comparación con modelos más complejos.
+
+    \item \textbf{Curva ROC-AUC}: El valor de 0,65 sitúa el desempeño del modelo en
+    la categoría de ``discriminación débil'' según los criterios convencionales
+    \parencite{hosmer2013applied}, confirmando que las cuatro variables seleccionadas,
+    aunque estadísticamente significativas como predictores individuales, son
+    insuficientes para sostener un clasificador de alta fidelidad bajo una arquitectura
+    lineal. El valor de referencia de la literatura para sistemas de cribado automatizado
+    de RD supera el AUC de 0,989 \parencite{casanova2014application}, lo que cuantifica
+    el margen de mejora que los métodos no lineales deben cubrir.
 \end{enumerate}
 
 \subsubsection{Validación de Residuos}
 
-Como complemento al análisis de desempeño, se examinó la distribución de los residuos del modelo, calculados como la diferencia entre la clase real y la probabilidad predicha. Un modelo bien ajustado debería presentar residuos centrados en cero y sin sesgos sistemáticos.
+Como complemento al análisis de desempeño, se examinó la distribución de los residuos
+del modelo, calculados como la diferencia entre la clase real y la probabilidad predicha.
+Un modelo bien ajustado debería presentar residuos centrados en cero y sin sesgos
+sistemáticos.
 
 \begin{figure}[htbp]
 \centering
@@ -306,4 +481,11 @@ Como complemento al análisis de desempeño, se examinó la distribución de los
 \caption{Histograma de residuos del modelo de regresión logística con curva de densidad superpuesta.}
 \end{figure}
 
-La distribución muestra dos agrupaciones características de la regresión logística binaria: una concentración negativa (pacientes sanos clasificados con alta probabilidad de RD) y una positiva (pacientes con RD clasificados con baja probabilidad). La curva de densidad confirma que los residuos no siguen una distribución normal, lo cual es esperado en modelos de clasificación binaria y no constituye una violación de los supuestos del método.
+La distribución exhibe las dos agrupaciones características de la clasificación logística
+binaria: una concentración en valores negativos (casos de Clase 0 a los que el modelo
+asigna alta probabilidad de RD) y una en valores positivos (casos de Clase 1 clasificados
+con baja probabilidad). La ausencia de normalidad en los residuos es un comportamiento
+esperado y válido en modelos de clasificación binaria, por lo que no constituye una
+violación de los supuestos del método. Sin embargo, la amplitud de ambas agrupaciones y
+su solapamiento reflejan visualmente el nivel de incertidumbre del modelo en la zona de
+decisión, coherente con el AUC de 0,65 obtenido.
