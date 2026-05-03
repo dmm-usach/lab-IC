@@ -1,15 +1,78 @@
 \section{Conclusiones}
 
-El análisis estadístico e inferencial realizado sobre el dataset \textbf{Diabetic Retinopathy Debrecen} permitió validar las hipótesis fundamentales sobre la naturaleza de la patología y la relevancia de sus biomarcadores.
+El análisis estadístico e inferencial realizado sobre el dataset \textbf{Diabetic
+Retinopathy Debrecen} permitió caracterizar la naturaleza distribucional de los
+biomarcadores de microaneurismas, validar la existencia de diferencias sistemáticas
+entre grupos y evaluar la capacidad predictiva de un modelo lineal de referencia.
+Los resultados obtenidos responden de manera coherente a la pregunta clínica central
+del estudio y establecen una base metodológica sólida para el desarrollo de
+clasificadores de mayor complejidad.
 
 \subsection{Síntesis de Hallazgos Principales}
 
-Se confirmó matemáticamente la \textbf{no normalidad} de las variables de lesiones y una marcada asimetría positiva, coherente con la distribución clínica de la enfermedad. La validación de outliers mediante el método de Tukey fue determinante: el 100\% de los valores extremos \textbf{pertenecen a la Clase 1}, demostrando que los recuentos elevados de microaneurismas son indicadores inequívocos de estadios severos de la RD.
+Se confirmó la \textbf{no normalidad} de todas las variables de microaneurismas mediante
+la prueba de Shapiro-Wilk, con p-valores del orden de $10^{-20}$ que justifican
+inequívocamente el uso de estadística no paramétrica en el análisis inferencial. Esta
+característica distribucional, junto con la asimetría positiva documentada, es
+clínicamente coherente: en una población que incluye tanto pacientes sanos como
+afectados, la mayoría de los individuos presentan recuentos bajos de lesiones, mientras
+que una minoría con enfermedad avanzada genera la cola derecha de la distribución.
+
+La validación de valores atípicos mediante el método de Tukey reforzó esta interpretación:
+la práctica totalidad de los outliers identificados corresponde a la Clase 1, confirmando
+que los recuentos extremos de microaneurismas son manifestaciones clínicas genuinas de
+estadios severos de retinopatía diabética y no errores de medición. La única excepción
+(índice 14, Clase 0, \texttt{ma6}) es explicable por la naturaleza probabilística del
+sistema de detección al operar con umbral $\alpha = 1{,}0$.
 
 \subsection{Discusión de Resultados y Desempeño del Modelo}
 
-Las pruebas de \textbf{Mann-Whitney U} y la \textbf{Regresión Logística} coinciden en señalar a los microaneurismas (\texttt{ma1}) como la variable de mayor peso diagnóstico (p < 0,05), respaldando lo expuesto por \textcite{casanova2014application}. No obstante, la evaluación de desempeño reveló limitaciones críticas: una sensibilidad del 61,7\% y un AUC de 0,65. Estos valores indican que, aunque la carga lesional es un indicador estadísticamente significativo, un modelo logístico lineal no es suficiente para discriminar con precisión entre clases, especialmente en etapas tempranas donde el solapamiento de datos es alto (según se observó en los diagramas de caja).
+La prueba de \textbf{Mann-Whitney U} demostró diferencias estadísticamente significativas
+entre grupos en todos los niveles de confianza (p $<$ 0,05 en todos los casos), siendo
+\texttt{ma1} la variable con mayor potencia discriminatoria ($p = 1{,}25 \times 10^{-21}$).
+El gradiente de significancia observado desde \texttt{ma1} hasta \texttt{ma6} evidencia
+que los detectores de menor umbral capturan la señal clínica más nítidamente, respaldando
+su uso prioritario en sistemas de cribado temprano. El \textbf{Test de Levene} añadió
+una dimensión clínica relevante a este análisis: los grupos difieren no solo en tendencia
+central, sino también en dispersión, lo que refleja la heterogeneidad inherente al
+espectro de severidad de la retinopatía diabética.
+
+El modelo de \textbf{Regresión Logística}, concebido explícitamente como clasificador
+de referencia (\textit{baseline}), confirmó la significancia individual de \texttt{ma1}
+y \texttt{exudate1} como predictores primarios (p = 0,000 en ambos casos), mientras que
+los rasgos anatómicos estructurales no mostraron aporte predictivo lineal. No obstante,
+el desempeño global del modelo evidenció limitaciones críticas: una sensibilidad del
+61,7\%, una especificidad del 56,3\% y un AUC de 0,65. Estos valores confirman que,
+si bien los biomarcadores seleccionados contienen información diagnóstica real, la
+relación entre predictores y diagnóstico presenta una complejidad no lineal que no puede
+ser adecuadamente capturada mediante una función de decisión lineal. El pseudo-$R^{2}$
+de McFadden de 0,087 cuantifica esta limitación: el modelo explica menos del 9\% de la
+varianza en el diagnóstico, subrayando que el problema de clasificación involucra
+interacciones entre variables y patrones de alta dimensionalidad que escapan al alcance
+de la regresión logística estándar.
 
 \subsection{Limitaciones y Proyecciones Futuras}
 
-La principal limitación radica en la incapacidad del modelo lineal para capturar la variabilidad total del diagnóstico (Pseudo $R^{2} = 0{,}087$). Como proyección futura, se hace imperativo el uso de algoritmos de inteligencia computacional no lineales, como \textit{Random Forests} o redes neuronales, que puedan explotar la alta colinealidad detectada en el mapa de calor y mejorar la tasa de detección de casos positivos, acercándose a los niveles de sensibilidad clínica exigidos para sistemas de cribado automático.
+Las principales limitaciones de este análisis son de dos órdenes. En primer lugar, de
+naturaleza metodológica: la ausencia de medidas de tamaño de efecto en la comparación
+de grupos impide cuantificar la magnitud práctica de las diferencias detectadas más
+allá de su significancia estadística; su incorporación mediante métricas como la
+correlación de rango biserial o el estadístico $\hat{A}_{12}$ fortalecería la
+interpretabilidad clínica de los resultados. En segundo lugar, de naturaleza estructural:
+la alta colinealidad entre las variables MA ($r \approx 1{,}00$), aunque gestionada
+mediante la selección de \texttt{ma1} como representante del grupo, sugiere que el
+espacio de características podría beneficiarse de una reducción de dimensionalidad
+formal, como el Análisis de Componentes Principales (PCA), preservando la varianza
+diagnóstica con menor redundancia.
+
+Como proyección futura, los resultados de este estudio señalan de forma inequívoca la
+necesidad de algoritmos de inteligencia computacional no lineales. Métodos como
+\textit{Random Forests}, \textit{Gradient Boosting} o redes neuronales convolucionales
+aplicadas directamente sobre imágenes de fondo de ojo están en capacidad de explotar la
+alta colinealidad detectada como información complementaria, modelar interacciones no
+lineales entre lesiones y rasgos anatómicos, y alcanzar los niveles de sensibilidad
+($>$90\%) y AUC ($>$0,95) exigidos para sistemas de cribado automatizado con
+aplicabilidad clínica real, tal como documentan \textcite{casanova2014application}. El
+modelo logístico desarrollado en este trabajo proporciona el umbral de comparación
+cuantitativo indispensable para evaluar el beneficio marginal de esos enfoques más
+sofisticados.
