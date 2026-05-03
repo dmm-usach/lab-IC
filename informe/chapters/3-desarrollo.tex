@@ -83,7 +83,7 @@ Dado que en todos los casos el \textbf{p-valor < 0,05}, se rechaza la hipótesis
 
 \subsection{Detección de Valores Atípicos (Outliers)}
 
-Para garantizar la robustez del análisis y comprender la variabilidad extrema en los datos, se realizó la detección de valores atípicos mediante el \textbf{método de Tukey} \parencite{chacon2026laboratorio1}. Esta técnica es preferida en estudios clínicos debido a que utiliza medidas de posición no sensibles a los extremos, permitiendo identificar observaciones que se desvían significativamente del comportamiento central del grupo.
+Para garantizar la robustez del análisis y comprender la variabilidad extrema en los datos, se realizó la detección de valores atípicos mediante el \textbf{método de Tukey}. Esta técnica es preferida en estudios clínicos debido a que utiliza medidas de posición no sensibles a los extremos, permitiendo identificar observaciones que se desvían significativamente del comportamiento central del grupo.
 
 \subsubsection{Metodología de Tukey}
 
@@ -118,7 +118,7 @@ ma6 & 3 & [14, 271, 648] \\
 
 \paragraph{Validación Clínica y Correlación con la Patología}
 
-Un hallazgo crítico de este análisis fue la validación de la etiqueta de diagnóstico para los valores extremos. Al verificar la variable objetivo (Class), se determinó que \textbf{el 100\% de los índices evaluados (129, 280, 332, 339, 575 y 1077) pertenecen a la Clase 1}, correspondiente a pacientes con signos de retinopatía diabética. Esta coincidencia absoluta permite concluir que los outliers detectados no son errores de medición o ruido en los datos, sino \textbf{manifestaciones clínicas de alta severidad}. Esto respalda lo expuesto por \textcite{casanova2014application}, quienes establecen que el conteo de microaneurismas es la variable de mayor importancia para discriminar la presencia de la enfermedad. La disminución del número de outliers a medida que aumenta el nivel de confianza ($\alpha$) sugiere que solo las lesiones más evidentes y voluminosas persisten bajo criterios de detección estrictos.
+Al verificar la variable objetivo (\texttt{Class}) para cada outlier detectado, se determinó que \textbf{la gran mayoría pertenece a la Clase 1} (pacientes con signos de retinopatía diabética), lo que permite concluir que estos valores extremos representan \textbf{manifestaciones clínicas de alta severidad} y no errores de medición. La única excepción es el índice 14, identificado como outlier en \texttt{ma6} ($\alpha = 1{,}0$), que corresponde a un paciente de la \textbf{Clase 0} (sano). Este caso aislado puede explicarse porque, bajo el criterio de mayor confianza, el detector captura conteos elevados que no necesariamente implican patología confirmada, lo que refleja la naturaleza probabilística del sistema de clasificación automatizado. Esto respalda lo expuesto por \textcite{casanova2014application}, quienes establecen que el conteo de microaneurismas es la variable de mayor importancia para discriminar la presencia de la enfermedad. La disminución del número de outliers a medida que aumenta el nivel de confianza ($\alpha$) sugiere que solo las lesiones más evidentes y voluminosas persisten bajo criterios de detección estrictos.
 
 \subsubsection{Visualización mediante Boxplots por Clase}
 
@@ -172,7 +172,7 @@ El mapa de calor valida la hipótesis de que las lesiones retinales, específica
 
 \subsection{Comparación de Grupos (Prueba Mann-Whitney U)}
 
-Tras confirmar en la sección anterior que las variables de microaneurismas (\texttt{ma1} a \texttt{ma6}) no siguen una distribución normal según el test de Shapiro-Wilk, se procedió a realizar un análisis inferencial de comparación de grupos mediante la prueba de Mann-Whitney U \parencite{chacon2026laboratorio1}. Esta prueba no paramétrica permite determinar si existen diferencias estadísticamente significativas en las medianas de los conteos de lesiones entre pacientes sanos (Clase 0) y pacientes con diagnóstico de retinopatía (Clase 1).
+Tras confirmar en la sección anterior que las variables de microaneurismas (\texttt{ma1} a \texttt{ma6}) no siguen una distribución normal según el test de Shapiro-Wilk, se procedió a realizar un análisis inferencial de comparación de grupos mediante la prueba de Mann-Whitney U. Esta prueba no paramétrica permite determinar si existen diferencias estadísticamente significativas en las medianas de los conteos de lesiones entre pacientes sanos (Clase 0) y pacientes con diagnóstico de retinopatía (Clase 1).
 
 \subsubsection{Planteamiento de Hipótesis}
 
@@ -213,6 +213,40 @@ El análisis de los resultados permite extraer las siguientes conclusiones funda
     \item \textbf{Confirmación de biomarcadores}: La prueba estadística ratifica lo observado visualmente en los diagramas de caja y en el análisis de valores atípicos, consolidando al recuento de MA como un biomarcador clínico robusto para la clasificación automatizada en este dataset.
 \end{enumerate}
 
+\subsection{Homogeneidad de Varianzas (Test de Levene)}
+
+Tras confirmar la no normalidad de los datos, se aplicó el \textbf{Test de Levene} para evaluar si las varianzas de los microaneurismas son homogéneas entre pacientes sanos (Clase 0) y con retinopatía (Clase 1). A diferencia de la Prueba F clásica, el test de Levene no asume normalidad en los datos, siendo el método adecuado para este caso.
+
+\subsubsection{Planteamiento de Hipótesis}
+
+\begin{itemize}
+    \item Hipótesis Nula ($H_{0}$): Las varianzas de ambos grupos son iguales (homocedasticidad).
+    \item Hipótesis Alternativa ($H_{1}$): Las varianzas de ambos grupos son significativamente distintas (heterocedasticidad).
+\end{itemize}
+
+\subsubsection{Resultados}
+
+\begin{table}[htbp]
+\centering
+\caption{Resultados del Test de Levene para microaneurismas.}
+\begin{tabular}{lrrl}
+\toprule
+Variable & Estadístico & p\_value & Homocedasticidad \\
+\midrule
+ma1 & 35.9975 & $2{,}64 \times 10^{-9}$  & No (varianzas distintas) \\
+ma2 & 23.6750 & $1{,}30 \times 10^{-6}$  & No (varianzas distintas) \\
+ma3 & 16.6036 & $4{,}92 \times 10^{-5}$  & No (varianzas distintas) \\
+ma4 & 10.6155 & $1{,}15 \times 10^{-3}$  & No (varianzas distintas) \\
+ma5 &  5.9695 & $1{,}47 \times 10^{-2}$  & No (varianzas distintas) \\
+ma6 &  4.5424 & $3{,}33 \times 10^{-2}$  & No (varianzas distintas) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Interpretación}
+
+En todas las variables de microaneurismas se rechaza la hipótesis nula (p < 0,05), lo que confirma que las varianzas entre pacientes sanos y con retinopatía son significativamente distintas. La heterocedasticidad es más pronunciada en los niveles de confianza bajos (\texttt{ma1}, estadístico = 35,99) y se atenúa a medida que aumenta el umbral de detección (\texttt{ma6}, estadístico = 4,54), aunque sin llegar a ser homogéneas en ningún caso. Este hallazgo es consistente con los boxplots previos, donde la Clase 1 mostró mayor dispersión en el conteo de lesiones, y refuerza la evidencia de que la retinopatía no solo eleva el promedio de microaneurismas sino también su variabilidad dentro del grupo de pacientes afectados.
+
 \subsection{Modelamiento mediante Regresión Logística}
 
 Para modelar la probabilidad de presencia de retinopatía diabética en función de los descriptores clínicos y anatómicos, se implementó un modelo de Regresión Logística. A diferencia de la regresión lineal, este método es el estándar estadístico adecuado para variables dependientes binarias, como la variable \texttt{Class} de este estudio (0 = Sano, 1 = RD), permitiendo identificar qué factores incrementan significativamente el riesgo de padecer la patología.
@@ -229,7 +263,7 @@ Para este modelo se seleccionó un subconjunto representativo de cuatro variable
 
 \subsubsection{Evaluación Global y Bondad de Ajuste}
 
-El modelo es estadísticamente significativo en su conjunto (\textbf{Prob (LLR)} de $4{,}091 \times 10^{-23}$). Sin embargo, el valor de \textbf{Pseudo R-squared} (0,0874) y el área bajo la curva AUC de 0,64 indican una capacidad predictiva moderada. Esto sugiere que, si bien el modelo identifica patrones relevantes, la relación entre los predictores y el diagnóstico presenta una complejidad que un modelo lineal simple no logra capturar en su totalidad.
+El modelo fue evaluado sobre un conjunto de prueba del 20\% (231 instancias), obteniendo un área bajo la curva \textbf{AUC de 0,65}, lo que indica una capacidad predictiva moderada. Esto sugiere que, si bien el modelo identifica patrones relevantes, la relación entre los predictores y el diagnóstico presenta una complejidad que un modelo lineal simple no logra capturar en su totalidad.
 
 \begin{figure}[htbp]
 \centering
@@ -254,10 +288,22 @@ La capacidad de clasificación del modelo se evaluó mediante los resultados en 
 \begin{enumerate}
     \item \textbf{Matriz de Confusión}:
     \begin{itemize}
-        \item \textbf{Verdaderos Positivos (TP)}: 72 pacientes con RD correctamente identificados.
-        \item \textbf{Verdaderos Negativos (TN)}: 66 pacientes sanos correctamente identificados.
-        \item \textbf{Falsos Negativos (FN)}: 51 casos de RD no detectados, lo que arroja una sensibilidad del 58,5\%.
-        \item \textbf{Falsos Positivos (FP)}: 42 casos sanos clasificados erróneamente, resultando en una especificidad del 61,1\%.
+        \item \textbf{Verdaderos Positivos (TP)}: 79 pacientes con RD correctamente identificados.
+        \item \textbf{Verdaderos Negativos (TN)}: 58 pacientes sanos correctamente identificados.
+        \item \textbf{Falsos Negativos (FN)}: 49 casos de RD no detectados, lo que arroja una sensibilidad del 61,7\%.
+        \item \textbf{Falsos Positivos (FP)}: 45 casos sanos clasificados erróneamente, resultando en una especificidad del 56,3\%.
     \end{itemize}
-    \item \textbf{Curva ROC-AUC}: El valor obtenido de 0,64 sitúa el desempeño del modelo por encima del azar (0,5), pero significativamente por debajo de los estándares de alta precisión clínica, como el 0,989 alcanzado por sistemas de ensamble en la literatura \parencite{casanova2014application}. Esto confirma que las cuatro variables seleccionadas son necesarias pero insuficientes para un diagnóstico automatizado de alta fidelidad, requiriendo modelos de inteligencia computacional más robustos.
+    \item \textbf{Curva ROC-AUC}: El valor obtenido de 0,65 sitúa el desempeño del modelo por encima del azar (0,5), pero significativamente por debajo de los estándares de alta precisión clínica, como el 0,989 alcanzado por sistemas de ensamble en la literatura \parencite{casanova2014application}. Esto confirma que las cuatro variables seleccionadas son necesarias pero insuficientes para un diagnóstico automatizado de alta fidelidad, requiriendo modelos de inteligencia computacional más robustos.
 \end{enumerate}
+
+\subsubsection{Validación de Residuos}
+
+Como complemento al análisis de desempeño, se examinó la distribución de los residuos del modelo, calculados como la diferencia entre la clase real y la probabilidad predicha. Un modelo bien ajustado debería presentar residuos centrados en cero y sin sesgos sistemáticos.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\linewidth]{images/1-histograms.png}
+\caption{Histograma de residuos del modelo de regresión logística con curva de densidad superpuesta.}
+\end{figure}
+
+La distribución muestra dos agrupaciones características de la regresión logística binaria: una concentración negativa (pacientes sanos clasificados con alta probabilidad de RD) y una positiva (pacientes con RD clasificados con baja probabilidad). La curva de densidad confirma que los residuos no siguen una distribución normal, lo cual es esperado en modelos de clasificación binaria y no constituye una violación de los supuestos del método.

@@ -19,6 +19,55 @@
 
 \refsection{0}
   \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{abramoff2010retinal}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=a3f8b7e8d677f448d6f75440e5fe4139}{%
+           family={Abràmoff},
+           familyi={A\bibinitperiod},
+           given={Michael\bibnamedelima D},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7062724b2f996382b811de766a48ccd6}{%
+           family={Garvin},
+           familyi={G\bibinitperiod},
+           given={Mona\bibnamedelima K},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6556f80ba935e9e3980178d889753f1e}{%
+           family={Sonka},
+           familyi={S\bibinitperiod},
+           given={Milan},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{902588819aec2d7c55e3fa004949fd13}
+      \strng{fullhash}{48d3f1018d9f80856f982e4695c925a6}
+      \strng{fullhashraw}{48d3f1018d9f80856f982e4695c925a6}
+      \strng{bibnamehash}{48d3f1018d9f80856f982e4695c925a6}
+      \strng{authorbibnamehash}{48d3f1018d9f80856f982e4695c925a6}
+      \strng{authornamehash}{902588819aec2d7c55e3fa004949fd13}
+      \strng{authorfullhash}{48d3f1018d9f80856f982e4695c925a6}
+      \strng{authorfullhashraw}{48d3f1018d9f80856f982e4695c925a6}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Reviews in Biomedical Engineering}
+      \field{title}{Retinal imaging and image analysis}
+      \field{volume}{3}
+      \field{year}{2010}
+      \field{pages}{169\bibrangedash 208}
+      \range{pages}{40}
+      \verb{doi}
+      \verb 10.1109/RBME.2010.2084567
+      \endverb
+    \endentry
     \entry{antal2014dataset}{misc}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=639d061778197e0f3109caeab91951c9}{%
@@ -182,75 +231,6 @@
       \verb{url}
       \verb https://doi.org/10.1371/journal.pone.0098587
       \endverb
-    \endentry
-    \entry{chacon2026laboratorio1}{manual}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=faf5280c54703f138225618613731ef5}{%
-           family={Chacón\bibnamedelima Pacheco},
-           familyi={C\bibinitperiod\bibinitdelim P\bibinitperiod},
-           given={Max},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=44c8e875f00da15b5c37927dec9eb6db}{%
-           family={Chavez\bibnamedelima Orellana},
-           familyi={C\bibinitperiod\bibinitdelim O\bibinitperiod},
-           given={Sebastian},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {Santiago, Chile}%
-      }
-      \list{organization}{1}{%
-        {Universidad de Santiago de Chile}%
-      }
-      \strng{namehash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
-      \strng{fullhash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
-      \strng{fullhashraw}{98439d5ecbcdf3b2b43ad284df9b4bc5}
-      \strng{bibnamehash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
-      \strng{authorbibnamehash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
-      \strng{authornamehash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
-      \strng{authorfullhash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
-      \strng{authorfullhashraw}{98439d5ecbcdf3b2b43ad284df9b4bc5}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Documento de cátedra para el curso de Inteligencia Computacional}
-      \field{title}{Laboratorio 1: Análisis Estadístico Descriptivo e Inferencial}
-      \field{year}{2026}
-    \endentry
-    \entry{chavez2026presentacion1}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=44c8e875f00da15b5c37927dec9eb6db}{%
-           family={Chavez\bibnamedelima Orellana},
-           familyi={C\bibinitperiod\bibinitdelim O\bibinitperiod},
-           given={Sebastian},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{44c8e875f00da15b5c37927dec9eb6db}
-      \strng{fullhash}{44c8e875f00da15b5c37927dec9eb6db}
-      \strng{fullhashraw}{44c8e875f00da15b5c37927dec9eb6db}
-      \strng{bibnamehash}{44c8e875f00da15b5c37927dec9eb6db}
-      \strng{authorbibnamehash}{44c8e875f00da15b5c37927dec9eb6db}
-      \strng{authornamehash}{44c8e875f00da15b5c37927dec9eb6db}
-      \strng{authorfullhash}{44c8e875f00da15b5c37927dec9eb6db}
-      \strng{authorfullhashraw}{44c8e875f00da15b5c37927dec9eb6db}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{Material docente, Universidad de Santiago de Chile}
-      \field{note}{Apunte de apoyo para la implementación técnica}
-      \field{title}{Presentación Laboratorio 1: Análisis Estadístico Descriptivo e Inferencial}
-      \field{year}{2026}
     \endentry
     \entry{ucimlrepo2023}{misc}{}{}
       \name{author}{3}{}{%
@@ -432,10 +412,151 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.21105/joss.03021
+      \endverb
+    \endentry
+    \entry{wilkinson2003proposed}{article}{}{}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=58cd3cfa851e14b9206fec19529f13b9}{%
+           family={Wilkinson},
+           familyi={W\bibinitperiod},
+           given={C\bibnamedelima P},
+           giveni={C\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ef41116619ee17ea7710468c5b6b7fd}{%
+           family={Ferris\bibnamedelima III},
+           familyi={F\bibinitperiod\bibinitdelim I\bibinitperiod},
+           given={Frederick\bibnamedelima L},
+           giveni={F\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0721cf3fef4a14dc350ae12dd1ecf09b}{%
+           family={Klein},
+           familyi={K\bibinitperiod},
+           given={Ronald\bibnamedelima E},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa4b3cd95c9af6b9de16a42aa179fa4c}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Paul\bibnamedelima P},
+           giveni={P\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=18aa69d08e966500ba8f32a0f66887a1}{%
+           family={Agardh},
+           familyi={A\bibinitperiod},
+           given={Carl\bibnamedelima David},
+           giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0fb60f9e5d2180be71513866a5dcb244}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=980ecc0559a116aa1adcd8d970c59c9c}{%
+           family={Dills},
+           familyi={D\bibinitperiod},
+           given={Diana},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3a1a0a0d27860553166302826b87e41e}{%
+           family={Kampik},
+           familyi={K\bibinitperiod},
+           given={Anselm},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=05282a1364a9221fe96369fcb432f330}{%
+           family={Pararajasegaram},
+           familyi={P\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8e048c1c3ba44fac769f072ea8e9d8eb}{%
+           family={Verdaguer},
+           familyi={V\bibinitperiod},
+           given={Juan\bibnamedelima T},
+           giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{39983405212814558e5aeecc9d43a25e}
+      \strng{fullhash}{1c54bd5a0d3acfd67688225f9b5cf9bf}
+      \strng{fullhashraw}{1c54bd5a0d3acfd67688225f9b5cf9bf}
+      \strng{bibnamehash}{1c54bd5a0d3acfd67688225f9b5cf9bf}
+      \strng{authorbibnamehash}{1c54bd5a0d3acfd67688225f9b5cf9bf}
+      \strng{authornamehash}{39983405212814558e5aeecc9d43a25e}
+      \strng{authorfullhash}{1c54bd5a0d3acfd67688225f9b5cf9bf}
+      \strng{authorfullhashraw}{1c54bd5a0d3acfd67688225f9b5cf9bf}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ophthalmology}
+      \field{number}{9}
+      \field{title}{Proposed international clinical diabetic retinopathy and diabetic macular edema disease severity scales}
+      \field{volume}{110}
+      \field{year}{2003}
+      \field{pages}{1677\bibrangedash 1682}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1016/S0161-6420(03)00475-5
       \endverb
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global/global}
+    \entry{abramoff2010retinal}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=a3f8b7e8d677f448d6f75440e5fe4139}{%
+           family={Abràmoff},
+           familyi={A\bibinitperiod},
+           given={Michael\bibnamedelima D},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7062724b2f996382b811de766a48ccd6}{%
+           family={Garvin},
+           familyi={G\bibinitperiod},
+           given={Mona\bibnamedelima K},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6556f80ba935e9e3980178d889753f1e}{%
+           family={Sonka},
+           familyi={S\bibinitperiod},
+           given={Milan},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{902588819aec2d7c55e3fa004949fd13}
+      \strng{fullhash}{48d3f1018d9f80856f982e4695c925a6}
+      \strng{fullhashraw}{48d3f1018d9f80856f982e4695c925a6}
+      \strng{bibnamehash}{48d3f1018d9f80856f982e4695c925a6}
+      \strng{authorbibnamehash}{48d3f1018d9f80856f982e4695c925a6}
+      \strng{authornamehash}{902588819aec2d7c55e3fa004949fd13}
+      \strng{authorfullhash}{48d3f1018d9f80856f982e4695c925a6}
+      \strng{authorfullhashraw}{48d3f1018d9f80856f982e4695c925a6}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Reviews in Biomedical Engineering}
+      \field{title}{Retinal imaging and image analysis}
+      \field{volume}{3}
+      \field{year}{2010}
+      \field{pages}{169\bibrangedash 208}
+      \range{pages}{40}
+      \verb{doi}
+      \verb 10.1109/RBME.2010.2084567
+      \endverb
+    \endentry
     \entry{antal2014dataset}{misc}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=639d061778197e0f3109caeab91951c9}{%
@@ -599,75 +720,6 @@
       \verb{url}
       \verb https://doi.org/10.1371/journal.pone.0098587
       \endverb
-    \endentry
-    \entry{chacon2026laboratorio1}{manual}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=faf5280c54703f138225618613731ef5}{%
-           family={Chacón\bibnamedelima Pacheco},
-           familyi={C\bibinitperiod\bibinitdelim P\bibinitperiod},
-           given={Max},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=44c8e875f00da15b5c37927dec9eb6db}{%
-           family={Chavez\bibnamedelima Orellana},
-           familyi={C\bibinitperiod\bibinitdelim O\bibinitperiod},
-           given={Sebastian},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {Santiago, Chile}%
-      }
-      \list{organization}{1}{%
-        {Universidad de Santiago de Chile}%
-      }
-      \strng{namehash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
-      \strng{fullhash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
-      \strng{fullhashraw}{98439d5ecbcdf3b2b43ad284df9b4bc5}
-      \strng{bibnamehash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
-      \strng{authorbibnamehash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
-      \strng{authornamehash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
-      \strng{authorfullhash}{98439d5ecbcdf3b2b43ad284df9b4bc5}
-      \strng{authorfullhashraw}{98439d5ecbcdf3b2b43ad284df9b4bc5}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Documento de cátedra para el curso de Inteligencia Computacional}
-      \field{title}{Laboratorio 1: Análisis Estadístico Descriptivo e Inferencial}
-      \field{year}{2026}
-    \endentry
-    \entry{chavez2026presentacion1}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=44c8e875f00da15b5c37927dec9eb6db}{%
-           family={Chavez\bibnamedelima Orellana},
-           familyi={C\bibinitperiod\bibinitdelim O\bibinitperiod},
-           given={Sebastian},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{44c8e875f00da15b5c37927dec9eb6db}
-      \strng{fullhash}{44c8e875f00da15b5c37927dec9eb6db}
-      \strng{fullhashraw}{44c8e875f00da15b5c37927dec9eb6db}
-      \strng{bibnamehash}{44c8e875f00da15b5c37927dec9eb6db}
-      \strng{authorbibnamehash}{44c8e875f00da15b5c37927dec9eb6db}
-      \strng{authornamehash}{44c8e875f00da15b5c37927dec9eb6db}
-      \strng{authorfullhash}{44c8e875f00da15b5c37927dec9eb6db}
-      \strng{authorfullhashraw}{44c8e875f00da15b5c37927dec9eb6db}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{Material docente, Universidad de Santiago de Chile}
-      \field{note}{Apunte de apoyo para la implementación técnica}
-      \field{title}{Presentación Laboratorio 1: Análisis Estadístico Descriptivo e Inferencial}
-      \field{year}{2026}
     \endentry
     \entry{ucimlrepo2023}{misc}{}{}
       \name{author}{3}{}{%
@@ -849,6 +901,98 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.21105/joss.03021
+      \endverb
+    \endentry
+    \entry{wilkinson2003proposed}{article}{}{}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=58cd3cfa851e14b9206fec19529f13b9}{%
+           family={Wilkinson},
+           familyi={W\bibinitperiod},
+           given={C\bibnamedelima P},
+           giveni={C\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ef41116619ee17ea7710468c5b6b7fd}{%
+           family={Ferris\bibnamedelima III},
+           familyi={F\bibinitperiod\bibinitdelim I\bibinitperiod},
+           given={Frederick\bibnamedelima L},
+           giveni={F\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0721cf3fef4a14dc350ae12dd1ecf09b}{%
+           family={Klein},
+           familyi={K\bibinitperiod},
+           given={Ronald\bibnamedelima E},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa4b3cd95c9af6b9de16a42aa179fa4c}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Paul\bibnamedelima P},
+           giveni={P\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=18aa69d08e966500ba8f32a0f66887a1}{%
+           family={Agardh},
+           familyi={A\bibinitperiod},
+           given={Carl\bibnamedelima David},
+           giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0fb60f9e5d2180be71513866a5dcb244}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=980ecc0559a116aa1adcd8d970c59c9c}{%
+           family={Dills},
+           familyi={D\bibinitperiod},
+           given={Diana},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3a1a0a0d27860553166302826b87e41e}{%
+           family={Kampik},
+           familyi={K\bibinitperiod},
+           given={Anselm},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=05282a1364a9221fe96369fcb432f330}{%
+           family={Pararajasegaram},
+           familyi={P\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8e048c1c3ba44fac769f072ea8e9d8eb}{%
+           family={Verdaguer},
+           familyi={V\bibinitperiod},
+           given={Juan\bibnamedelima T},
+           giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{39983405212814558e5aeecc9d43a25e}
+      \strng{fullhash}{1c54bd5a0d3acfd67688225f9b5cf9bf}
+      \strng{fullhashraw}{1c54bd5a0d3acfd67688225f9b5cf9bf}
+      \strng{bibnamehash}{1c54bd5a0d3acfd67688225f9b5cf9bf}
+      \strng{authorbibnamehash}{1c54bd5a0d3acfd67688225f9b5cf9bf}
+      \strng{authornamehash}{39983405212814558e5aeecc9d43a25e}
+      \strng{authorfullhash}{1c54bd5a0d3acfd67688225f9b5cf9bf}
+      \strng{authorfullhashraw}{1c54bd5a0d3acfd67688225f9b5cf9bf}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ophthalmology}
+      \field{number}{9}
+      \field{title}{Proposed international clinical diabetic retinopathy and diabetic macular edema disease severity scales}
+      \field{volume}{110}
+      \field{year}{2003}
+      \field{pages}{1677\bibrangedash 1682}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1016/S0161-6420(03)00475-5
       \endverb
     \endentry
   \enddatalist

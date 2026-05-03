@@ -2,35 +2,61 @@
 
 \subsection{Retinopatía Diabética e Importancia Médica de las Lesiones}
 
-La retinopatía diabética (RD) es una de las principales causas de ceguera en el mundo y se caracteriza por ser una ``enfermedad silenciosa'' que a menudo progresa sin síntomas hasta etapas críticas \parencite{casanova2014application}. La detección temprana es vital para la eficacia del tratamiento. Clínicamente, el diagnóstico se basa en la identificación de lesiones en la retina:
+La retinopatía diabética (RD) es una de las principales causas de ceguera en el mundo y se caracteriza por ser una ``enfermedad silenciosa'' que progresa sin síntomas hasta etapas críticas \parencite{casanova2014application}. 
+
+Ya por el año 2003 el estudio de la retinopatía diabética hacia patente que esta enfermedad no se diagnostica por cambios de nervio optico, sino que por una serie de lesiones jerarquicas: primero aparecen los microaneurismas, luego las hemorragias y por ultimo los exudados. \parencite{wilkinson2003proposed}. En este punto entendemos la riqueza en la información proporcionada por el dataset utilizado. 
+
+Importante recalcar que gracias al procesamiento digital de imágenes retinales y a los modelos de aprendizaje automatico es que podemos llegar a saber que partes del ojo delatan esta enfermedad y tambien que tan avanzada esta.
+
+Existen dos indicadores clave para clasificar a un paciente como sano o enfermo: los microaneurismas y los exudados.
 
 \begin{itemize}
-    \item \textbf{Microaneurismas (MA)}: Son las primeras lesiones detectables y se consideran el factor de mayor importancia para discriminar la presencia de la enfermedad en análisis computacionales \parencite{casanova2014application}.
-    \item \textbf{Exudados}: Depósitos de lípidos que filtran de vasos dañados \parencite{casanova2014application}. En el análisis de datos, estos se normalizan según el diámetro de la Región de Interés (ROI) para compensar variaciones en el tamaño de las imágenes \parencite{antal2014dataset}.
+    \item \textbf{Microaneurismas (MA)}: Son las lesiones clínicas más tempranas de la RD. Consisten en pequeñas dilataciones en las paredes de los capilares retinales, causadas por el debilitamiento estructural provocado por niveles elevados de glucosa en la sangre. En imágenes de fondo de ojo (retinografía) se visualizan como puntos rojos diminutos y circulares con bordes bien definidos, es interesante indicar que el  contraste frente al fondo anaranjado de la retina permite su identificación mediante filtros morfológicos \parencite{antal2014ensemble}. Su conteo es el principal indicador de la etapa inicial de la enfermedad y el factor más relevante para discriminar computacionalmente la presencia de RD \parencite{casanova2014application}.
+
+    \item \textbf{Exudados}: Depósitos que aparecen cuando los vasos dañados filtran fluidos hacia el tejido retinal, indicando avance de la enfermedad hacia etapas moderadas o severas. En el análisis de datos, el área de los exudados se normaliza según el diámetro de la Región de Interés (ROI) para compensar variaciones en el tamaño de las imágenes \parencite{antal2014dataset}. Podemos encontrar dos tipos:
+    \begin{itemize}
+        \item \textbf{Exudados duros}: Son depósitos de lípidos (grasas) y proteínas que se filtran desde el torrente sanguíneo hacia la retina. Se presentan como manchas pequeñas, brillantes y de tono amarillento.
+        \item \textbf{Exudados blandos (manchas algodonosas)}: Áreas de infarto (isquemia) donde el tejido nervioso muere por falta de oxígeno. Podemos identificarlas como manchas blancas más grandes con bordes difusos, indicativas de un avance en la enfermedad más severo.
+    \end{itemize}
+    \textit{Nota metodológica:} La distinción clínica entre exudados duros y blandos se incluye en este trabajo con fines estrictamente informativos. Para efectos del análisis computacional y el procesamiento del dataset, se utiliza el bloque consolidado de variables que comprende desde \texttt{exudate1} hasta \texttt{exudate8}, las cuales capturan la densidad total de estas lesiones sin realizar una separación explícita en la clasificación del conjunto de datos.
 \end{itemize}
 
 \subsection{Fundamentos de Estadística Descriptiva y Forma de Distribución}
 
-El análisis descriptivo permite resumir las características fundamentales de los datos para proporcionar una visión clara del conjunto \parencite{chacon2026laboratorio1}.
+En estadística descriptiva buscamos indicadores que sean claves para comprender el comportamiento de las variables del conjunto de datos. En este analisis se responden preguntas como ¿dónde están concentrados los datos? ¿qué tan dispersos están? ¿hay valores extremos?
+
+\textit{``Este análisis descriptivo permitirá confirmar si la distribución de los microaneurismas y exudados presenta una variabilidad significativa entre pacientes sanos y enfermos, validando su importancia como indicadores diagnósticos''}
 
 \begin{itemize}
-    \item \textbf{Medidas de tendencia central y dispersión}: Incluyen la media aritmética, la desviación estándar para medir la dispersión respecto a la media, y la mediana como medida robusta de centro \parencite{chavez2026presentacion1}.
-    \item \textbf{Forma de la distribución}: La asimetría (\textit{skewness}) indica la falta de simetría, mientras que la curtosis mide si la distribución es más puntiaguda o aplanada que una normal \parencite{chavez2026presentacion1}.
-    \item \textbf{Detección de valores atípicos}: Se fundamenta en el método de Tukey, que utiliza el Rango Intercuartílico (IQR) para establecer límites inferiores y superiores, identificando observaciones que podrían sesgar el análisis \parencite{chavez2026presentacion1}.
+    \item \textbf{Medidas de tendencia central y dispersión}: Parametros basicos que nos permiten comprender que tan variados son los datos de nuestro conjunto, que tan diferentes son entre si, este analisis nos permite descubrir patrones de enfermedad. 
+    
+    \textbf{Media aritmética}: Es el promedio tradicional. Nos da una idea del valor "típico" de la variable sumando todos los casos y dividiendo por el total.
+
+    \textbf{Mediana}: Es el valor central cuando ordenamos los datos de menor a mayor. A diferencia de la media, es una medida robusta, lo que significa que no se ve afectada por valores extremadamente altos o bajos que no permitirian representar el comportamiento general de los datos.
+
+    \textbf{Desviación estándar}: Nos indica qué tan diferentes son los datos respecto al promedio. Una desviación alta significa que los datos están muy dispersos, que pueden existir valores atípicos con respecto al promedio; una baja, que están muy agrupados cerca del centro (promedio), valores que se asemejen más. Respondemos a la pregunta: ¿Qué tan diferentes son los pacientes entre sí respecto al promedio?
+
+    \item \textbf{Forma de la distribución}: No basta con saber el centro; hay que saber cómo se ``dibuja'' el conjunto de datos.
+
+    \textbf{Asimetría (\textit{Skewness})}: Nos dice si los datos se inclinan hacia un lado. Nos indica si la mayoría de los pacientes tienen valores bajos o altos de una lesión.  Se responde a la pregunta: ¿Hacia dónde se inclina la balanza de pacientes? (Sanos vs. Graves).
+
+    \textbf{Curtosis}: Esta medición nos sirve para encontrar las sorpresas en el conjunto de datos, como por ejemplo, si hay muchos pacientes con valores similares (alta curtosis) o concentración de datos, inferimos entonces que la mayoría de los pacientes tienen valores de la variable similares o iguales, pero hay una probabilidad real de encontrar casos con valores que salen de lo común y se van a los extremos. Es una medición que nos invita a fijarnos en los datos extremos para que podamos identificarlos y que estos no afecten nuestros cálculos. Podemos encontrar donde estan concentrados nuestros datos y también podamos saber si estos casos extremos son raros o son comunes dependiendo si el curtois es alto o bajo. 
+
+    \item \textbf{Detección de valores atípicos (\textit{Outliers})}: ¿Qué es un outlier? Es un valor que se aleja tanto del resto que puede parecer no pertenecer al mismo grupo o conjunto de datos. Una vez que la asimetría y la curtosis nos advierten que existen datos extremos, utilizamos el Método de Tukey para identificarlos con precisión.
+    
+    ¿Por qué importa detectarlos? Porque pueden distorsionar el análisis. Podriamos obtener el promedio de un conjunto de datos y no representar la realidad del mismo al considerar datos que salen de lo comun y son poco representativos con respecto al conjunto general.
+
+    Se basa en el \textbf{Rango Intercuartílico (IQR)}, que es la distancia entre el 25\% y el 75\% de los datos (el ``corazón'' del dataset). Se establecen límites (\textit{fences}) sumando o restando 1,5 veces el IQR a estos cuartiles. Todo lo que quede fuera de estos rangos se considera un valor atípico y debe ser analizado con cuidado para decidir si se mantiene o se elimina del estudio.
 \end{itemize}
 
 \subsection{Fundamentos de Estadística Inferencial y Pruebas de Hipótesis}
 
-La estadística inferencial busca obtener conclusiones sobre la población a partir de la muestra mediante pruebas de significación \parencite{chavez2026presentacion1}.
+La estadística inferencial busca obtener conclusiones sobre la población a partir de la muestra mediante pruebas de significación.
 
 \begin{itemize}
-    \item \textbf{Prueba de normalidad (Shapiro-Wilk)}: Evalúa si los datos siguen una distribución normal. Un p-valor menor a 0,05 permite rechazar la hipótesis nula de normalidad \parencite{chavez2026presentacion1}.
-    \item \textbf{Comparación de grupos (prueba t de Student)}: Se utiliza para determinar si existe una diferencia significativa entre las medias de dos grupos independientes (ej. sanos vs. enfermos) \parencite{chavez2026presentacion1}.
-    \item \textbf{Homocedasticidad}: Pruebas como el test de Bartlett evalúan si las varianzas de los grupos son iguales, un requisito previo para la validez de muchas pruebas paramétricas \parencite{chavez2026presentacion1}.
+    \item \textbf{Prueba de normalidad (Shapiro-Wilk)}: Evalúa si los datos siguen una distribución normal. Un p-valor menor a 0,05 permite rechazar la hipótesis nula de normalidad.
+    \item \textbf{Comparación de grupos (prueba Mann-Whitney U)}: Se utiliza para determinar si existe una diferencia significativa entre las distribuciones de dos grupos independientes cuando los datos no siguen una distribución normal.
+    \item \textbf{Homocedasticidad (Test de Levene)}: Evalúa si las varianzas de los grupos son iguales, siendo relevante para comprender la variabilidad de las lesiones entre pacientes sanos y enfermos.
 \end{itemize}
 
-Para el desarrollo técnico se emplean bibliotecas estándar de la industria que garantizan la reproducibilidad \parencite{chavez2026presentacion1}: \textit{Pandas} \parencite{reback2020pandas} para estructuras de datos y estadísticas descriptivas, \textit{SciPy} (\texttt{scipy.stats}) \parencite{virtanen2020scipy} para pruebas estadísticas inferenciales, y \textit{ucimlrepo} \parencite{ucimlrepo2023} para la importación directa de datasets desde el repositorio UCI Machine Learning.
-
-
-
-
+Para el desarrollo técnico se emplean las bibliotecas \textit{Pandas} \parencite{reback2020pandas} para estructuras de datos y estadísticas descriptivas, \textit{SciPy} (\texttt{scipy.stats}) \parencite{virtanen2020scipy} para pruebas estadísticas inferenciales, y \textit{ucimlrepo} \parencite{ucimlrepo2023} para la importación directa del dataset desde el repositorio UCI Machine Learning.

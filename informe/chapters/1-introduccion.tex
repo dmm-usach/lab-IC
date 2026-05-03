@@ -2,31 +2,39 @@
 
 \subsection{Contextualización y Antecedentes}
 
-La retinopatía diabética (RD) representa una de las principales causas de pérdida de visión a nivel mundial y es considerada una ``enfermedad silenciosa'', ya que a menudo progresa sin síntomas detectables hasta que las opciones de tratamiento son limitadas \parencite{casanova2014application}. La detección temprana es fundamental para permitir intervenciones terapéuticas eficaces, pero los métodos tradicionales de examen clínico enfrentan barreras como la variabilidad entre observadores y la falta de especialistas en zonas rurales \parencite{casanova2014application}. Esto ha impulsado el desarrollo de sistemas automatizados de tamizaje que utilizan técnicas de procesamiento de imágenes y aprendizaje de máquinas para identificar lesiones retinales de manera objetiva \parencite{antal2014ensemble}.
+Las personas con diabetes pueden tener una enfermedad ocular llamada retinopatía diabética. Esta enfermedad ocurre porque los niveles altos de azúcar en la sangre causan daño a los vasos sanguíneos en la retina. Estos vasos sanguíneos pueden hincharse y tener fugas de líquido. También pueden cerrarse e impedir que la sangre fluya. A veces, se generan nuevos vasos sanguíneos anormales en la retina. Todos estos cambios pueden hacerle perder la visión.
 
-Para el desarrollo de este laboratorio, se analiza el conjunto de datos \textit{Diabetic Retinopathy Debrecen}, el cual consiste en 1.151 instancias y 19 atributos extraídos del conjunto de imágenes Messidor \parencite{antal2014dataset}. Estos atributos capturan características críticas para el diagnóstico, incluyendo el conteo de microaneurismas en diversos niveles de confianza, la cantidad normalizada de exudados y descriptores anatómicos como la distancia entre la mácula y el disco óptico \parencite{antal2014dataset}. La literatura científica sugiere que el conteo de microaneurismas es el factor de mayor peso para discriminar la presencia de la enfermedad en modelos computacionales \parencite{casanova2014application}.
+La retinopatía diabética (RD) representa una de las principales causas de pérdida de visión a nivel mundial y es considerada una ``enfermedad silenciosa'', ya que a menudo progresa sin síntomas visibles hasta etapas avanzadas en que las posibilidades de recuperación visual son reducidas \parencite{casanova2014application}. 
+
+Puede tener retinopatía diabética y no saberlo. Esto se debe a que generalmente no presenta síntomas en sus etapas tempranas. A medida que empeora, podemos notar los siguientes síntomas: visión borrosa, visión que cambia de borrosa a clara, ver áreas en blanco o oscuras en el campo de visión, visión nocturna deficiente, notar que los colores se ven atenuados o apagados y perder la visión.
+
+La detección temprana es fundamental para permitir intervenciones terapéuticas eficaces, pero los métodos tradicionales de examen clínico enfrentan barreras como que una mismo examen de retina pueda ser analizado por diferentes medicos llegando a diferentes conclusiones y la falta de especialistas en zonas rurales, lo que imposibilita el acceso a estas personas a un diagnostico temprano de la enfermedad \parencite{casanova2014application}. Esto ha impulsado el desarrollo de sistemas computacionales que se encargan de analizar imágenes de retina de manera automática, entregando un diagnóstico objetivo y que a la vez le sirve al sistema para entrenar los modelos \parencite{antal2014ensemble}.
+
+Para el desarrollo de este laboratorio, se analiza el conjunto de datos \textit{Diabetic Retinopathy Debrecen}, el cual consiste en 1.151 fotografias de retina de diferentes pacientes y 19 atributos que fueron extraídos de todas esas fotografias. Los datos de estos atributos se obtuvieron gracias al conjunto de imágenes Messidor, que es una base de datos de imagenes retinales de hospitales franceces. \parencite{antal2014dataset}. Estos atributos capturan características críticas para el diagnóstico, incluyendo el conteo de microaneurismas detectados con distintos grados de confianza del algoritmo, la cantidad normalizada de exudados (depósitos de grasa que se acumulan en la retina cuando los vasos sanguíneos presentan daño) y descriptores anatómicos como la distancia entre la mácula y el disco óptico \parencite{antal2014dataset}. La libros cientificos sugieren que el conteo de microaneurismas es el factor de mayor peso para discriminar la presencia de la enfermedad en modelos computacionales \parencite{casanova2014application}, es por esto que existen 6 variables (ma1 a ma6) para analizar lo que puede llegar a ser un microaneurisma, estos niveles de confianza se conocen como confidence threshold o threshold de confianza.
 
 \subsection{Objetivos del Laboratorio}
 
-\textbf{General}: Estudiar e interpretar los datos del dataset seleccionado para comprender el significado de sus atributos y su relación con la detección de la RD \parencite{antal2014dataset}.
+\textbf{General}: Estudiar e interpretar los datos del dataset seleccionado para obtener información objetiva sobre como poder detectar la Retinopatía Diabética en un paciente, mas aun sabiendo que es un diagnostico dificil sino se analizan imagenenes retinales por sistemas computacionales. Ademas de lo anterior la información entregada por el dataset permite descubrir cuales atributos son mas importantes para el diagnostico objetivo de esta enfermedad. Por ultimo, este analisis permite conscientizar sobre una de las enfermedades con menos oportunidad de descubrimiento en etapas iniciales, lo cual nos hace reflexionar sobre lo importante que es contar con ayuda tecnologica para el bienestar y salud de pacientes que incluso ya cuentan con una enfermedad de base como lo es la diabetes.   \parencite{antal2014dataset} .
 
 \textbf{Específicos}:
 
 \begin{enumerate}
     \item Realizar un análisis estadístico descriptivo para resumir las características fundamentales del conjunto de datos.
-    \item Aplicar técnicas de estadística inferencial, incluyendo pruebas de normalidad y de hipótesis, para determinar la significación de los resultados obtenidos.
+    \item Aplicar técnicas de estadística inferencial, incluyendo pruebas de normalidad y de hipótesis, para obtener conclusiones de los resultados obtenidos.
     \item Identificar qué variables presentan diferencias significativas entre pacientes sanos y aquellos con signos de la patología.
 \end{enumerate}
 
 \subsection{Formulación de Hipótesis}
 
-Se postula que las variables relacionadas con el conteo de lesiones, específicamente los microaneurismas (\texttt{ma1} a \texttt{ma6}), presentarán distribuciones significativamente distintas entre las clases de control y de enfermedad. Se espera que estas variables, junto con los exudados, actúen como los principales indicadores para la clasificación, dada su relevancia clínica documentada en el diagnóstico de la severidad de la retinopatía.
+Basándose en la literatura científica \parencite{casanova2014application}, se postula que las variables relacionadas con el conteo de microaneurismas (\texttt{ma1} a
+  \texttt{ma6}) y la detección de exudados (\texttt{exudate1} a \texttt{exudate8}) constituyen los principales marcadores clínicos para discriminar entre pacientes sanos y         
+  pacientes con retinopatía diabética, superando incluso a las variables anatómicas estructurales como el diámetro del disco óptico, la distancia mácula-disco, entre otras.
 
 \section{Descripción del Problema}
 
 \subsection{Descripción de la Base de Datos (Diabetic Retinopathy Debrecen)}
 
-Este conjunto de datos contiene atributos extraídos del set de imágenes Messidor \parencite{antal2014dataset}. Consta de 1.151 instancias y 19 atributos que representan lesiones detectadas, rasgos anatómicos (distancia mácula-disco óptico) y descriptores de nivel de imagen \parencite{antal2014dataset}. El dataset es de naturaleza multivariada y se utiliza principalmente para tareas de clasificación binaria (clase 1 para signos de RD y clase 0 para ausencia) \parencite{antal2014dataset}.
+Este conjunto de datos contiene atributos extraídos del set de imágenes \textbf{Messidor} \parencite{antal2014dataset}. Messidor es una base de imágenes retinales desarrollada por hospitales universitarios de Francia, ampliamente utilizada como referencia en investigación de diagnóstico automatizado de retinopatía diabética. Consta de 1.151 retinografías y 19 atributos que representan lesiones detectadas, rasgos anatómicos (distancia mácula-disco óptico) y descriptores de nivel de imagen \parencite{antal2014dataset}. El dataset es de naturaleza multivariada, debido a que contamos con diferentes tipos de variables con las cuales podamos decidir si el paciente esta o no enfermo. Este conjunto de datos nos indica principalmente si existe o no enfermedad, es decir, la clasificación y analisis de variables da como resultado:  (clase 1 para signos de RD y clase 0 para ausencia) \parencite{antal2014dataset}.
 
 \subsection{Descripción de Clases y Variables}
 
@@ -35,32 +43,35 @@ A continuación, se detalla la naturaleza y relevancia de cada una de las 19 var
 \subsubsection{Variables de Calidad y Pre-procesamiento}
 
 \begin{itemize}
-    \item \texttt{quality}: Atributo binario que indica el resultado de la evaluación de calidad de la imagen de fondo de ojo (0 = calidad insuficiente, 1 = calidad suficiente para el diagnóstico).
-    \item \texttt{pre\_screening}: Variable binaria de pre-cribado donde el valor 1 señala la presencia de una anomalía retiniana grave y 0 su ausencia.
-    \item \texttt{am\_fm\_classification}: Resultado binario derivado de un sistema de clasificación automatizado basado en métodos de AM/FM.
+    \item \texttt{quality}: Indicador binario de la calidad de la retinografía (0 = calidad insuficiente para el diagnóstico, 1 = calidad suficiente).
+    \item \texttt{pre\_screening}: Indicador binario de una revisión preliminar automática de la imagen, donde el valor 1 señala la detección de una anomalía retiniana grave que justifica un análisis más profundo, y 0 indica ausencia de señales de alerta.
+    \item \texttt{am\_fm\_classification}: Resultado binario de un análisis matemático para detectar si hay estructuras que ``rompen'' el patrón normal de una retina sana. Si la señal AM-FM detecta muchas variaciones bruscas, es un indicador fuerte de que hay patología (lesiones).
 \end{itemize}
 
 \subsubsection{Detección de Lesiones y Niveles de Confianza}
 
 \begin{itemize}
-    \item \texttt{ma1} a \texttt{ma6} (Microaneurismas): Representan el conteo de microaneurismas (MA) detectados mediante algoritmos de procesamiento de imágenes. La literatura identifica a los microaneurismas como el factor de mayor importancia para discriminar la presencia de la enfermedad.
+    \item \texttt{ma1} a \texttt{ma6} (Microaneurismas): Representan el conteo de microaneurismas (MA) detectados mediante algoritmos de procesamiento de imágenes. La literatura identifica a los microaneurismas como el factor de mayor importancia para discriminar la presencia de la enfermedad. Podemos indicar aqui que un micraneurisma es un pequeño punto rojo, y que estas variables son el conteo fisico de esas lesiones.
     \begin{itemize}
-        \item \textbf{Nota técnica sobre los niveles de confianza}: La distinción entre estas seis variables radica en el nivel de confianza ($\alpha$) del detector, que escala desde $\alpha = 0{,}5$ (\texttt{ma1}) hasta $\alpha = 1{,}0$ (\texttt{ma6}). Un nivel de confianza más elevado implica criterios de detección más estrictos, lo que reduce la probabilidad de falsos positivos pero incrementa el riesgo de omitir lesiones reales y sutiles.
+        \item \textbf{Nota técnica sobre los niveles de confianza}: La distinción entre estas seis variables radica en el nivel de confianza ($\alpha$) del algoritmo, que escala desde $\alpha = 0{,}5$ (\texttt{ma1}) hasta $\alpha = 1{,}0$ (\texttt{ma6}). Un nivel de confianza más elevado indica criterios de detección más estrictos, lo que reduce la probabilidad de falsos positivos pero incrementa el riesgo de omitir lesiones reales y sutiles.
     \end{itemize}
-    \item \texttt{exudate1} a \texttt{exudate8}: Corresponden a la detección de exudados duros (depósitos de lípidos). A diferencia de los MA, estos valores están normalizados dividiendo el número de lesiones por el diámetro de la Región de Interés (ROI) para compensar las variaciones en el tamaño de las imágenes.
+    \item \texttt{exudate1} a \texttt{exudate8}: Representan la presencia de exudados (principalmente depósitos de lípidos y proteínas). A diferencia de los microaneurismas, estos valores no son conteos simples, sino que están normalizados: Se divide el número de lesiones detectadas por el diámetro de la Región de Interés (ROI). Esto permite identificar cuanta densidad de exudados existe en la retina, independiente de cuan cerca o lejos se tomo la imagen.
+    \begin{itemize}
+        \item \textbf{Nota sobre calidad del dataset}: El análisis exploratorio reveló que las columnas \texttt{exudate3} y \texttt{exudate4} son \textbf{idénticas} en todos los registros del dataset. Esta redundancia es una característica del conjunto de datos original publicado en UCI y es propio del diseño del algoritmo original y debe considerarse en futuros análisis de reducción de variables, para no dar mas peso a una variable que contiene el mismo dato.
+    \end{itemize}
 \end{itemize}
 
 \subsubsection{Descriptores Anatómicos}
 
 \begin{itemize}
-    \item \texttt{euclidean\_distance}: Distancia euclidiana normalizada entre el centro de la mácula y el centro del disco óptico. Proporciona información crítica sobre la condición anatómica del paciente.
-    \item \texttt{optic\_disc\_diameter}: Medida del diámetro del disco óptico extraída de la imagen.
+    \item \texttt{euclidean\_distance}: Mide qué tan lejos está el centro del ojo del nervio óptico. Es vital para localizar la fóvea (donde vemos con detalle).
+    \item \texttt{optic\_disc\_diameter}: Medida del diámetro del disco óptico.
 \end{itemize}
 
 \subsubsection{Variable de Clase (Objetivo)}
 
-\texttt{Class}: Etiqueta binaria de salida que define el estado diagnóstico del paciente.
+\texttt{Class}: Indica el estado del diagnóstico del paciente.
 \begin{itemize}
-    \item 1: Indica que la imagen presenta signos de retinopatía diabética (corresponde a una etiqueta acumulativa de las clases 1, 2 y 3 de la base Messidor).
-    \item 0: Indica la ausencia total de signos de la patología.
+    \item 1: Indica que la imagen presenta signos de retinopatía diabética. Este valor agrupa los grados 1, 2 y 3 de severidad de la base Messidor, que van desde la presencia de microaneurismas leves hasta hemorragias y formación de nuevos vasos sanguíneos. En este punto se hace una simplificación de la información de los grados de severidad. Importando solo que el paciente presenta signos de la enfermedad.
+    \item 0: Corresponde al grado 0 de Messidor, es decir, ausencia total de lesiones retinales detectables.
 \end{itemize}
