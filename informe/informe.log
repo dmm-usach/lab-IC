@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  3 MAY 2026 18:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  3 MAY 2026 21:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -633,12 +633,11 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = `informe.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'informe.bbl' not found.
-
-No file informe.bbl.
+Package biblatex Info: ... file 'informe.bbl' found.
+ (./informe.bbl)
 Package biblatex Info: Reference section=0 on input line 30.
 Package biblatex Info: Reference segment=0 on input line 30.
-(/usr/local/texlive/2025basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2025basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count449
 \scratchdimen=\dimen187
@@ -713,7 +712,7 @@ You tried to add a hook to '\@makecaption', but LaTeX was unable to patch the
 command because it can't be retokenized cleanly.
 
 
-<./images/Logo_Usach.pdf, id=180, 411.28355pt x 536.11491pt>
+<./images/Logo_Usach.pdf, id=184, 411.28355pt x 536.11491pt>
 File: ./images/Logo_Usach.pdf Graphic file (type pdf)
 <use ./images/Logo_Usach.pdf>
 Package pdftex.def Info: ./images/Logo_Usach.pdf  used on input line 38.
@@ -746,25 +745,6 @@ LaTeX Info: Redefining \% on input line 1.
 
  (./chapters/1-introduccion.tex
 
-LaTeX Warning: Citation 'casanova2014application' on page 1 undefined on input line 7.
-
-
-LaTeX Warning: Citation 'casanova2014application' on page 1 undefined on input line 11.
-
-
-LaTeX Warning: Citation 'antal2014ensemble' on page 1 undefined on input line 11.
-
-
-LaTeX Warning: Citation 'antal2014dataset' on page 1 undefined on input line 13.
-
-
-LaTeX Warning: Citation 'antal2014dataset' on page 1 undefined on input line 13.
-
-
-LaTeX Warning: Citation 'casanova2014application' on page 1 undefined on input line 13.
-
-
-
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
@@ -774,29 +754,12 @@ l.14
 
 ]
 
-LaTeX Warning: Citation 'antal2014dataset' on page 2 undefined on input line 17.
-
-
-
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.25 \end{enumerate}
                      [2]
-
-LaTeX Warning: Citation 'casanova2014application' on page 3 undefined on input line 29.
-
-
-LaTeX Warning: Citation 'antal2014dataset' on page 3 undefined on input line 37.
-
-
-LaTeX Warning: Citation 'antal2014dataset' on page 3 undefined on input line 37.
-
-
-LaTeX Warning: Citation 'antal2014dataset' on page 3 undefined on input line 37.
-
-
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
@@ -811,22 +774,6 @@ l.43 \subsubsection
 \openout2 = `chapters/2-MarcoTeorico.aux'.
 
  (./chapters/2-MarcoTeorico.tex
-
-LaTeX Warning: Citation 'casanova2014application' on page 6 undefined on input line 5.
-
-
-LaTeX Warning: Citation 'wilkinson2003proposed' on page 6 undefined on input line 7.
-
-
-LaTeX Warning: Citation 'antal2014ensemble' on page 6 undefined on input line 14.
-
-
-LaTeX Warning: Citation 'casanova2014application' on page 6 undefined on input line 14.
-
-
-LaTeX Warning: Citation 'antal2014dataset' on page 6 undefined on input line 16.
-
-
 
 [6
 
@@ -846,17 +793,9 @@ LaTeX Warning: Citation 'antal2014dataset' on page 6 undefined on input line 16.
 \openout2 = `chapters/3-desarrollo.aux'.
 
  (./chapters/3-desarrollo.tex
-
-LaTeX Warning: Citation 'reback2020pandas' on page 12 undefined on input line 3.
-
-
-LaTeX Warning: Citation 'virtanen2020scipy' on page 12 undefined on input line 3.
-
-
-LaTeX Warning: Citation 'ucimlrepo2023' on page 12 undefined on input line 3.
-
-
-LaTeX Warning: Citation 'casanova2014application' on page 12 undefined on input line 40.
+Underfull \hbox (badness 2726) in paragraph at lines 46--47
+[]\T1/cmr/bx/n/12 Estabilidad de va-ria-bles ana-tó-mi-cas\T1/cmr/m/n/12 : \T1/cmtt/m/n/12 macula_opticdisc_distance \T1/cmr/m/n/12 y
+ []
 
 
 
@@ -870,196 +809,117 @@ LaTeX Warning: Citation 'casanova2014application' on page 12 undefined on input 
 
 [14]
 
-LaTeX Warning: Citation 'casanova2014application' on page 15 undefined on input line 121.
-
-
-LaTeX Warning: Citation '' on page 15 undefined on input line 121.
-
-
-
 [15]
-<images/1-boxplot.png, id=354, 867.24pt x 361.35pt>
+
+[16]
+<images/1-boxplot.png, id=400, 867.24pt x 361.35pt>
 File: images/1-boxplot.png Graphic file (type png)
 <use images/1-boxplot.png>
-Package pdftex.def Info: images/1-boxplot.png  used on input line 129.
+Package pdftex.def Info: images/1-boxplot.png  used on input line 141.
 (pdftex.def)             Requested size: 443.57848pt x 184.8264pt.
 
 
-LaTeX Warning: Citation 'reback2020pandas' on page 16 undefined on input line 143.
-
-
-LaTeX Warning: Citation 'Waskom2021' on page 16 undefined on input line 143.
-
-
-
-[16 <./images/1-boxplot.png>]
-<images/1-heatmap.png, id=367, 1011.78pt x 794.97pt>
+[17 <./images/1-boxplot.png>]
+<images/1-heatmap.png, id=413, 1011.78pt x 794.97pt>
 File: images/1-heatmap.png Graphic file (type png)
 <use images/1-heatmap.png>
-Package pdftex.def Info: images/1-heatmap.png  used on input line 147.
+Package pdftex.def Info: images/1-heatmap.png  used on input line 159.
 (pdftex.def)             Requested size: 443.57848pt x 348.52634pt.
+
+
+[18 <./images/1-heatmap.png>]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 156.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 168.
 
-
-[17 <./images/1-heatmap.png>]
-
-LaTeX Warning: Citation 'casanova2014application' on page 18 undefined on input line 163.
-
-
-LaTeX Warning: Citation '' on page 18 undefined on input line 163.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
-[]\T1/cmr/m/it/12 Significancia\T1/cmr/m/n/12 : Es-te ha-llaz-go es cohe-ren-te con el es-tu-dio de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
 []\T1/cmr/bx/n/12 Independencia de Ras-gos Ana-tó-mi-cos\T1/cmr/m/n/12 : Atri-bu-tos co-mo
  []
 
 
-Underfull \hbox (badness 1281) in paragraph at lines 166--167
+Underfull \hbox (badness 1281) in paragraph at lines 178--179
 \T1/cmtt/m/n/12 macula_opticdisc_distance \T1/cmr/m/n/12 (0,01) y \T1/cmtt/m/n/12 optic_disc_diameter \T1/cmr/m/n/12 (-0,03) mues-
- []
-
-
-
-[18]
-
-LaTeX Warning: Citation 'casanova2014application' on page 19 undefined on input line 171.
-
-
-LaTeX Warning: Citation 'mann1947test' on page 19 undefined on input line 184.
-
-
-Underfull \hbox (badness 2744) in paragraph at lines 184--190
-[]\T1/cmr/m/n/12 Por es-ta ra-zón, se se-lec-cio-nó la \T1/cmr/bx/n/12 prue-ba de Mann-Whitney U
  []
 
 
 
 [19]
 
-LaTeX Warning: Citation 'virtanen2020scipy' on page 20 undefined on input line 204.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 204--206
-[]\T1/cmr/m/n/12 Los es-ta-dís-ti-cos ob-te-ni-dos me-dian-te la li-bre-ría \T1/cmtt/m/n/12 scipy.stats
- []
-
-
-
 [20]
-
-LaTeX Warning: Citation 'vargha2000critique' on page 21 undefined on input line 255.
-
-
-LaTeX Warning: Citation 'casanova2014application' on page 21 undefined on input line 261.
-
-
-LaTeX Warning: Citation '' on page 21 undefined on input line 261.
-
-
 
 [21]
 
 [22]
 
 [23]
-Underfull \hbox (badness 4913) in paragraph at lines 365--372
+
+[24]
+Underfull \hbox (badness 4913) in paragraph at lines 377--384
 []\T1/cmr/bx/n/12 Representación mul-ti-di-men-sio-nal\T1/cmr/m/n/12 : El sub-con-jun-to se-lec-cio-na-do abar-
  []
 
 
-Underfull \hbox (badness 1852) in paragraph at lines 365--372
+Underfull \hbox (badness 1852) in paragraph at lines 377--384
 \T1/cmr/m/n/12 ca las tres di-men-sio-nes diag-nós-ti-cas del da-ta-set: le-sio-nes mi-cro-vas-cu-la-res
  []
 
 
-Underfull \hbox (badness 1701) in paragraph at lines 365--372
+Underfull \hbox (badness 1701) in paragraph at lines 377--384
 \T1/cmr/m/n/12 (\T1/cmtt/m/n/12 ma1\T1/cmr/m/n/12 ), de-pó-si-tos de lí-pi-dos (\T1/cmtt/m/n/12 exudate1\T1/cmr/m/n/12 ) y ras-gos ana-tó-mi-cos es-truc-tu-ra-les
  []
 
 
-LaTeX Warning: Citation 'casanova2014application' on page 24 undefined on input line 375.
 
-
-LaTeX Warning: Citation '' on page 24 undefined on input line 375.
-
-
-
-[24]
-<images/1-matrix-rocauc.png, id=414, 867.24pt x 361.35pt>
+[25]
+<images/1-matrix-rocauc.png, id=471, 867.24pt x 361.35pt>
 File: images/1-matrix-rocauc.png Graphic file (type png)
 <use images/1-matrix-rocauc.png>
-Package pdftex.def Info: images/1-matrix-rocauc.png  used on input line 388.
+Package pdftex.def Info: images/1-matrix-rocauc.png  used on input line 400.
 (pdftex.def)             Requested size: 443.57848pt x 184.8264pt.
 
 
-LaTeX Warning: Citation 'casanova2014application' on page 25 undefined on input line 397.
-
-
-
-[25 <./images/1-matrix-rocauc.png>]
-
-[26]
-
-LaTeX Warning: Citation 'hosmer2013applied' on page 27 undefined on input line 463.
-
-
-LaTeX Warning: Citation 'casanova2014application' on page 27 undefined on input line 467.
-
-
-Underfull \hbox (badness 2941) in paragraph at lines 461--469
-[]\T1/cmr/bx/n/12 Curva ROC-AUC\T1/cmr/m/n/12 : El va-lor de 0,65 si-túa el de-sem-pe-ño del mo-de-lo
- []
-
-
+[26 <./images/1-matrix-rocauc.png>]
 
 [27]
-<images/1-histograms.png, id=433, 614.295pt x 396.0396pt>
+
+[28]
+<images/1-histograms.png, id=494, 614.295pt x 396.0396pt>
 File: images/1-histograms.png Graphic file (type png)
 <use images/1-histograms.png>
-Package pdftex.def Info: images/1-histograms.png  used on input line 480.
+Package pdftex.def Info: images/1-histograms.png  used on input line 492.
 (pdftex.def)             Requested size: 377.0444pt x 243.08247pt.
 )
 
-[28 <./images/1-histograms.png>]
+[29 <./images/1-histograms.png>]
 \openout2 = `chapters/4-conclusion.aux'.
 
  (./chapters/4-conclusion.tex
 
-[29
+[30
 
 
 
-]
-
-LaTeX Warning: Citation 'casanova2014application' on page 30 undefined on input line 75.
-
-
-LaTeX Warning: Citation '' on page 30 undefined on input line 75.
-
-)
-
-[30]
+])
 
 [31]
+
+[32]
 \openout2 = `chapters/5-Anexo.aux'.
 
  (./chapters/5-Anexo.tex)
 
-[32
+[33
 
 
 
 ]
 
-LaTeX Warning: Empty bibliography on input line 99.
+[34
 
-(./informe.aux
+
+
+]
+
+[35] (./informe.aux
 LaTeX Info: Redefining \sptext on input line 12.
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
@@ -1068,34 +928,25 @@ LaTeX Info: Redefining \% on input line 12.
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `informe.out' has not changed.
-(rerunfilecheck)             Checksum: 1E3DF86DB9517998555DB88DD963DB73;11114.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                informe
-(biblatex)                and rerun LaTeX afterwards.
-
+(rerunfilecheck)             Checksum: 0EDF27B64D20958A2604CA48F42F0BF1;11222.
 Package logreq Info: Writing requests to 'informe.run.xml'.
 \openout1 = `informe.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20893 strings out of 474662
- 365130 string characters out of 5751110
- 1297354 words of memory out of 5000000
- 43550 multiletter control sequences out of 15000+600000
- 572460 words of font info for 71 fonts, out of 8000000 for 9000
+ 21068 strings out of 474662
+ 370234 string characters out of 5751110
+ 1301220 words of memory out of 5000000
+ 43704 multiletter control sequences out of 15000+600000
+ 573224 words of font info for 72 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  66i,10n,81p,1434b,2803s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1200.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on informe.pdf (35 pages, 1369417 bytes).
+ </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1200.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on informe.pdf (38 pages, 1386855 bytes).
 PDF statistics:
- 919 PDF objects out of 1000 (max. 8388607)
- 466 compressed objects within 5 object streams
- 113 named destinations out of 1000 (max. 500000)
- 378 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1042 PDF objects out of 1200 (max. 8388607)
+ 561 compressed objects within 6 object streams
+ 131 named destinations out of 1000 (max. 500000)
+ 386 words of extra memory for PDF output out of 10000 (max. 10000000)
 

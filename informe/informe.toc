@@ -16,32 +16,33 @@
 \contentsline {subsection}{\numberline {3.3}Fundamentos de Estadística Inferencial y Pruebas de Hipótesis}{9}{subsection.3.3}%
 \contentsline {section}{\numberline {4}Análisis Estadístico e Inferencial}{12}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Resumen Estadístico Descriptivo}{12}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Análisis de la Forma de la Distribución (Asimetría y Curtosis)}{12}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Validación de Normalidad (Prueba de Shapiro-Wilk)}{12}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Detección de Valores Atípicos (Outliers)}{14}{subsection.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.1}Metodología de Tukey}{14}{subsubsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.2}Resultados de la Detección}{15}{subsubsection.4.4.2}%
-\contentsline {paragraph}{Validación Clínica y Correlación con la Patología}{15}{section*.2}%
-\contentsline {subsubsection}{\numberline {4.4.3}Visualización mediante Boxplots por Clase}{16}{subsubsection.4.4.3}%
-\contentsline {paragraph}{Interpretación de la Figura}{16}{section*.3}%
-\contentsline {subsection}{\numberline {4.5}Análisis de Correlación y Visualización (Heatmap)}{17}{subsection.4.5}%
-\contentsline {subsubsection}{\numberline {4.5.1}Interpretación del Mapa de Calor}{17}{subsubsection.4.5.1}%
-\contentsline {subsubsection}{\numberline {4.5.2}Conclusión del Análisis de Correlación}{19}{subsubsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.6}Comparación de Grupos (Prueba Mann-Whitney U)}{19}{subsection.4.6}%
-\contentsline {subsubsection}{\numberline {4.6.1}Planteamiento de Hipótesis}{20}{subsubsection.4.6.1}%
-\contentsline {subsubsection}{\numberline {4.6.2}Resultados de la Prueba}{20}{subsubsection.4.6.2}%
-\contentsline {subsubsection}{\numberline {4.6.3}Interpretación de los Hallazgos}{20}{subsubsection.4.6.3}%
-\contentsline {subsection}{\numberline {4.7}Homogeneidad de Varianzas (Test de Levene)}{22}{subsection.4.7}%
-\contentsline {subsubsection}{\numberline {4.7.1}Planteamiento de Hipótesis}{22}{subsubsection.4.7.1}%
-\contentsline {subsubsection}{\numberline {4.7.2}Resultados}{22}{subsubsection.4.7.2}%
-\contentsline {subsubsection}{\numberline {4.7.3}Interpretación}{23}{subsubsection.4.7.3}%
-\contentsline {subsection}{\numberline {4.8}Modelamiento mediante Regresión Logística}{23}{subsection.4.8}%
-\contentsline {subsubsection}{\numberline {4.8.1}Justificación de la Selección de Atributos}{24}{subsubsection.4.8.1}%
-\contentsline {subsubsection}{\numberline {4.8.2}Evaluación Global y Bondad de Ajuste}{25}{subsubsection.4.8.2}%
-\contentsline {subsubsection}{\numberline {4.8.3}Interpretación de los Coeficientes y Significancia}{26}{subsubsection.4.8.3}%
-\contentsline {subsubsection}{\numberline {4.8.4}Evaluación de Desempeño (Matriz de Confusión y ROC)}{26}{subsubsection.4.8.4}%
-\contentsline {subsubsection}{\numberline {4.8.5}Validación de Residuos}{27}{subsubsection.4.8.5}%
-\contentsline {section}{\numberline {5}Conclusiones}{29}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Síntesis de Hallazgos Principales}{29}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Discusión de Resultados y Desempeño del Modelo}{29}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Limitaciones y Proyecciones Futuras}{30}{subsection.5.3}%
+\contentsline {subsection}{\numberline {4.2}Análisis de la Forma de la Distribución (Asimetría y Curtosis)}{14}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Validación de Normalidad (Prueba de Shapiro-Wilk)}{15}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Detección de Valores Atípicos (Outliers)}{15}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Metodología de Tukey}{15}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Resultados de la Detección}{16}{subsubsection.4.4.2}%
+\contentsline {paragraph}{Validación Clínica y Correlación con la Patología}{16}{section*.2}%
+\contentsline {subsubsection}{\numberline {4.4.3}Visualización mediante Boxplots por Clase}{17}{subsubsection.4.4.3}%
+\contentsline {paragraph}{Interpretación de la Figura}{17}{section*.3}%
+\contentsline {subsection}{\numberline {4.5}Análisis de Correlación y Visualización (Heatmap)}{18}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Interpretación del Mapa de Calor}{19}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Conclusión del Análisis de Correlación}{20}{subsubsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.6}Comparación de Grupos (Prueba Mann-Whitney U)}{20}{subsection.4.6}%
+\contentsline {subsubsection}{\numberline {4.6.1}Planteamiento de Hipótesis}{21}{subsubsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.2}Resultados de la Prueba}{21}{subsubsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.3}Interpretación de los Hallazgos}{21}{subsubsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.7}Homogeneidad de Varianzas (Test de Levene)}{23}{subsection.4.7}%
+\contentsline {subsubsection}{\numberline {4.7.1}Planteamiento de Hipótesis}{23}{subsubsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.7.2}Resultados}{23}{subsubsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.3}Interpretación}{24}{subsubsection.4.7.3}%
+\contentsline {subsection}{\numberline {4.8}Modelamiento mediante Regresión Logística}{24}{subsection.4.8}%
+\contentsline {subsubsection}{\numberline {4.8.1}Justificación de la Selección de Atributos}{25}{subsubsection.4.8.1}%
+\contentsline {subsubsection}{\numberline {4.8.2}Evaluación Global y Bondad de Ajuste}{26}{subsubsection.4.8.2}%
+\contentsline {subsubsection}{\numberline {4.8.3}Interpretación de los Coeficientes y Significancia}{27}{subsubsection.4.8.3}%
+\contentsline {subsubsection}{\numberline {4.8.4}Evaluación de Desempeño (Matriz de Confusión y ROC)}{27}{subsubsection.4.8.4}%
+\contentsline {subsubsection}{\numberline {4.8.5}Validación de Residuos}{28}{subsubsection.4.8.5}%
+\contentsline {section}{\numberline {5}Conclusiones}{30}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Síntesis de Hallazgos Principales}{30}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Discusión de Resultados y Desempeño del Modelo}{30}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Limitaciones y Proyecciones Futuras}{31}{subsection.5.3}%
+\contentsline {section}{Bibliografía}{34}{section*.4}%

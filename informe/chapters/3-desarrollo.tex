@@ -1,8 +1,10 @@
 \section{Análisis Estadístico e Inferencial}
 
-En esta sección se presentan los resultados del análisis de los 19 atributos del dataset \textbf{Diabetic Retinopathy Debrecen}. Para el desarrollo técnico se emplearon las bibliotecas \textit{Pandas} \parencite{reback2020pandas} para el manejo y estadística descriptiva de los datos, \textit{SciPy} (\texttt{scipy.stats}) \parencite{virtanen2020scipy} para las pruebas estadísticas inferenciales, y \textit{ucimlrepo} \parencite{ucimlrepo2023} para la importación directa del dataset desde el repositorio UCI Machine Learning.
+En esta sección se presentan los resultados del análisis de los 19 atributos del dataset \textbf{Diabetic Retinopathy Debrecen}. Para el desarrollo técnico se emplearon las siguientes bibliotecas de Python: \textit{ucimlrepo} \parencite{ucimlrepo2023} para la importación directa del dataset, \textit{Pandas} \parencite{reback2020pandas} para el manejo y estadística descriptiva de los datos, \textit{NumPy} \parencite{harris2020numpy} para operaciones numéricas, \textit{SciPy} (\texttt{scipy.stats}) \parencite{virtanen2020scipy} para las pruebas estadísticas inferenciales, \textit{Matplotlib} \parencite{hunter2007matplotlib} y \textit{Seaborn} \parencite{Waskom2021} para la generación de visualizaciones, y \textit{Scikit-learn} \parencite{pedregosa2011sklearn} para el modelo de regresión logística y las métricas de evaluación.
 
 \subsection{Resumen Estadístico Descriptivo}
+
+La Tabla 1 presenta los estadísticos descriptivos de las 19 variables del dataset. Todas las variables cuentan con 1.151 retinografías completas, esto es importante ya que cada dato de cada celda es posible de utilizar para el análisis estadístico. 
 
 \begin{table}[htbp]
 \centering
@@ -34,6 +36,16 @@ am\_fm\_classification     & 1151 & 0.336229  & 0.472624  & 0        & 1        
 \bottomrule
 \end{tabular}
 \end{table}
+
+Del análisis de la tabla se extraen las siguientes observaciones relevantes:
+
+\begin{itemize}
+    \item \textbf{Calidad del dataset}: La variable \texttt{quality} presenta una media de 0,997, lo que indica que prácticamente la totalidad de las imágenes tienen calidad suficiente para el diagnóstico. Podemos garantizar entonces que nuestro analisis sobre los microaneurismas son confiables, ya que, las imagenes tienen excelente calidad para el analisis. 
+    \item \textbf{Patrón decreciente en microaneurismas}: Las medias de \texttt{ma1} a \texttt{ma6} disminuyen progresivamente (38,4 → 21,2), lo cual es coherente con el aumento del nivel de confianza del detector: a mayor exigencia, menos lesiones son contabilizadas.
+    \item \textbf{Alta variabilidad en exudados}: \texttt{exudate1} presenta una desviación estándar (58,5) casi igual a su media (64,1), lo que refleja una gran heterogeneidad entre pacientes respecto a la carga de exudados.
+    \item \textbf{Estabilidad de variables anatómicas}: \texttt{macula\_opticdisc\_distance} y \texttt{opticdisc\_diameter} Como estas variables apenas varían entre personas (son casi constantes), es poco probable que sirvan para distinguir a una persona enferma de una sana, a diferencia de los microaneurismas que varían mucho entre personas.
+    \item \textbf{Redundancia detectada}: Las columnas \texttt{exudate3} y \texttt{exudate4} presentan estadísticos idénticos en todos sus valores, confirmando que corresponden a la misma variable duplicada en el dataset original.
+\end{itemize}
 
 \subsection{Análisis de la Forma de la Distribución (Asimetría y Curtosis)}
 
