@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  4 MAY 2026 03:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  4 MAY 2026 03:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/Users/gonzaloahumada/Desktop/Universidad/ic/proyecto-1/lab-IC/informe/informe
-(/Users/gonzaloahumada/Desktop/Universidad/ic/proyecto-1/lab-IC/informe/informe.tex
+**informe.tex
+(./informe.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/article.cls
@@ -22,44 +22,60 @@ File: size12.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen141
-) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/inputenc.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
-) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/fontenc.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/biblatex.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
- (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (/usr/local/texlive/2025basic/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/iftex/iftex.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
-) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count270
-) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics/keyval.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks19
-) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/logreq/logreq.sty
+))
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count271
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/logreq/logreq.def
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-)) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/ifthen.sty
+))
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/url/url.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -122,12 +138,14 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \c@mincompwidth=\count317
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/blx-dm.def
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/blx-dm.def
 File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'apa.dbx' found.
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex-apa/apa.dbx
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex-apa/apa.dbx
 File: apa.dbx 2025/08/27 v9.20 APA biblatex style data model
 )
 Package biblatex Info: Trying to load biblatex custom data model...
@@ -226,12 +244,14 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \localshorteditorwidth=\skip72
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/blx-compat.def
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/blx-compat.def
 File: blx-compat.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/biblatex.def
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 \c@textcitecount=\count396
 \c@textcitetotal=\count397
@@ -249,26 +269,35 @@ File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load bibliography style 'apa'...
 Package biblatex Info: ... file 'apa.bbx' found.
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex-apa/apa.bbx
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex-apa/apa.bbx
 File: apa.bbx 2025/08/27 v9.20 APA biblatex references style
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count405
 \c@bbx:relatedtotal=\count406
 )
-Package biblatex Info: Delimiter 'nameyeardelim' in context 'bib' already defined, overwriting.
-Package biblatex Info: Delimiter 'nameyeardelim' in context 'biblist' already defined, overwriting.
-Package biblatex Info: Delimiter 'nonameyeardelim' in context 'bib' already defined, overwriting.
-Package biblatex Info: Delimiter 'nonameyeardelim' in context 'biblist' already defined, overwriting.
+Package biblatex Info: Delimiter 'nameyeardelim' in context 'bib' already defin
+ed, overwriting.
+Package biblatex Info: Delimiter 'nameyeardelim' in context 'biblist' already d
+efined, overwriting.
+Package biblatex Info: Delimiter 'nonameyeardelim' in context 'bib' already def
+ined, overwriting.
+Package biblatex Info: Delimiter 'nonameyeardelim' in context 'biblist' already
+ defined, overwriting.
 )
 Package biblatex Info: Trying to load citation style 'apa'...
 Package biblatex Info: ... file 'apa.cbx' found.
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex-apa/apa.cbx
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex-apa/apa.cbx
 File: apa.cbx 2025/08/27 v9.20 APA biblatex citation style
-Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined, overwriting.
-Package biblatex Info: Delimiter 'andothersdelim' in context '' already defined, overwriting.
+Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
+ overwriting.
+Package biblatex Info: Delimiter 'andothersdelim' in context '' already defined
+, overwriting.
 Package biblatex Info: Redefining '\fullcite'.
 Package biblatex Info: Redefining '\citeauthor'.
 Package biblatex Info: Redefining '\citeyear'.
@@ -287,14 +316,18 @@ Package biblatex Info: Redefining '\textcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/biblatex.cfg
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/l3kernel/expl3.sty
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2025-01-18 L3 programming layer (loader) 
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/l3backend/l3backend-pdftex.d
+ef
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count407
 \l__pdf_internal_box=\box52
@@ -303,42 +336,53 @@ Package biblatex Info: ... and expl3
 (biblatex)             2025-01-18 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty (/usr/local/texlive/2025basic/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2024-08-16 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
 )) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics/graphics.sty
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics/trig.sty
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics-def/pdftex.def
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen142
 \Gin@req@width=\dimen143
-) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/tools/indentfirst.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
-) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsmath/amsmath.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2024/11/05 v2.17t AMS math features
 \@mathmargin=\skip73
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsmath/amsgen.sty
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks20
 \ex@=\dimen144
-)) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen145
-) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count408
@@ -388,50 +432,66 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks24
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/amssymb.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/xurl/xurl.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/xurl/xurl.sty
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
 
 xurl: Set penalties for biblatex
 ) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
- (/usr/local/texlive/2025basic/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.
+sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/hycolor/hycolor.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/nameref.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/refcount/refcount.sty
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/gettitlestring/gettitlestr
+ing.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count420
-) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/stringenc/stringenc.sty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
 )
 \@linkdim=\dimen153
 \Hy@linkcounter=\count421
 \Hy@pagecounter=\count422
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/pd1enc.def
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/intcalc/intcalc.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count423
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/puenc.def
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -446,10 +506,13 @@ Package hyperref Info: Bookmarks ON on input line 4424.
 \c@Hy@tempcnt=\count424
 LaTeX Info: Redefining \url on input line 4763.
 \XeTeXLinkMargin=\dimen154
- (/usr/local/texlive/2025basic/texmf-dist/tex/generic/bitset/bitset.sty
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
- (/usr/local/texlive/2025basic/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
 ))
 \Fld@menulength=\count425
 \Field@Width=\dimen155
@@ -470,27 +533,563 @@ package with kernel methods
 \c@Hfootnote=\count428
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/hpdftex.def
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/atveryend-ltx.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
 with kernel methods
 )
 \Fld@listcount=\count429
 \c@bookmark@seq@number=\count430
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/rerunfilecheck/rerunfilechec
+k.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
- (/usr/local/texlive/2025basic/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/uniquecounter/uniquecounte
+r.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
 )
 \Hy@SectionHShift=\skip76
-) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/csquotes/csquotes.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
 \csq@reset=\count431
 \csq@gtype=\count432
 \csq@glevel=\count433
 \csq@qlevel=\count434
 \csq@maxlvl=\count435
-\csq@tshold=\coun
+\csq@tshold=\count436
+\csq@ltx@everypar=\toks25
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+))
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen157
+\lightrulewidth=\dimen158
+\cmidrulewidth=\dimen159
+\belowrulesep=\dimen160
+\belowbottomsep=\dimen161
+\aboverulesep=\dimen162
+\abovetopsep=\dimen163
+\cmidrulesep=\dimen164
+\cmidrulekern=\dimen165
+\defaultaddspace=\dimen166
+\@cmidla=\count437
+\@cmidlb=\count438
+\@aboverulesep=\dimen167
+\@belowrulesep=\dimen168
+\@thisruleclass=\count439
+\@lastruleclass=\count440
+\@thisrulewidth=\dimen169
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/tools/array.sty
+Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
+\col@sep=\dimen170
+\ar@mcellbox=\box55
+\extrarowheight=\dimen171
+\NC@list=\toks26
+\extratabsurround=\skip77
+\backup@length=\skip78
+\ar@cellbox=\box56
+)
+\TX@col@width=\dimen172
+\TX@old@table=\dimen173
+\TX@old@col=\dimen174
+\TX@target=\dimen175
+\TX@delta=\dimen176
+\TX@cols=\count441
+\TX@ftn=\toks27
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2025/02/14 v25.4 The multilingual framework for pdfLaTeX, LuaLaT
+eX and XeLaTeX
+\babel@savecnt=\count442
+\U@D=\dimen177
+\l@unhyphenated=\language24
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read3
+\bbl@dirlevel=\count443
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+\es@quottoks=\toks28
+\es@quotdepth=\count444
+Package babel Info: Making " an active character on input line 570.
+Package babel Info: Making . an active character on input line 675.
+Package babel Info: Making < an active character on input line 722.
+Package babel Info: Making > an active character on input line 722.
+))
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/babel/locale/es/babel-span
+ish.tex
+Package babel Info: Importing font and identification data for spanish
+(babel)             from babel-es.ini. Reported on input line 11.
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count445
+\Gm@cntv=\count446
+\c@Gm@tempcnt=\count447
+\Gm@bindingoffset=\dimen178
+\Gm@wd@mp=\dimen179
+\Gm@odd@mp=\dimen180
+\Gm@even@mp=\dimen181
+\Gm@layoutwidth=\dimen182
+\Gm@layoutheight=\dimen183
+\Gm@layouthoffset=\dimen184
+\Gm@layoutvoffset=\dimen185
+\Gm@dimlist=\toks29
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip79
+\multirow@cntb=\count448
+\multirow@dima=\skip80
+\bigstrutjot=\dimen186
+)
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'spanish'.
+
+(./informe.aux
+LaTeX Info: Redefining \. on input line 12.
+LaTeX Info: Redefining \% on input line 12.
+ (./chapters/1-introduccion.aux) (./chapters/2-MarcoTeorico.aux)
+(./chapters/3-desarrollo.aux) (./chapters/4-conclusion.aux)
+(./chapters/5-Anexo.aux))
+\openout1 = `informe.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+Package biblatex Info: Trying to load language 'spanish' -> 'spanish-apa'...
+Package biblatex Info: ... file 'spanish-apa.lbx' found.
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex-apa/spanish-apa.lbx
+File: spanish-apa.lbx 2025/08/27 v9.20 APA biblatex localisation
+Package biblatex Info: Trying to load language 'spanish'...
+Package biblatex Info: ... file 'spanish.lbx' found.
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx
+File: spanish.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'spanish'...
+Package biblatex Info: ... file 'spanish.lbx' found.
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx
+File: spanish.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+))
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `informe.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'informe.bbl' found.
+
+(./informe.bbl)
+Package biblatex Info: Reference section=0 on input line 30.
+Package biblatex Info: Reference segment=0 on input line 30.
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count449
+\scratchdimen=\dimen187
+\scratchbox=\box57
+\nofMPsegments=\count450
+\nofMParguments=\count451
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count452
+\MPscratchDim=\dimen188
+\MPnumerator=\count453
+\makeMPintoPDFobject=\count454
+\everyMPtoPDFconversion=\toks31
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.s
+ty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring OFF on input line 30.
+ (./informe.out) (./informe.out)
+\@outlinefile=\write4
+\openout4 = `informe.out'.
+
+LaTeX Info: Redefining \sptext on input line 30.
+LaTeX Info: Redefining \. on input line 30.
+LaTeX Info: Redefining \% on input line 30.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 443.57848pt, 85.35826pt)
+* v-part:(T,H,B)=(72.2698pt, 650.43037pt, 72.2698pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=443.57848pt
+* \textheight=650.43037pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-37.00018pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+! LaTeX hooks Error: Generic hooks cannot be added to '\@makecaption'.
+
+For immediate help type H <return>.
+ ...                                              
+                                                  
+l.30 \begin{document}
+                     
+
+You tried to add a hook to '\@makecaption', but LaTeX was unable to patch the
+command because it can't be retokenized cleanly.
+
+
+<./images/Logo_Usach.pdf, id=180, 411.28355pt x 536.11491pt>
+File: ./images/Logo_Usach.pdf Graphic file (type pdf)
+<use ./images/Logo_Usach.pdf>
+Package pdftex.def Info: ./images/Logo_Usach.pdf  used on input line 38.
+(pdftex.def)             Requested size: 65.8067pt x 85.78014pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
+
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+[1
+
+{/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./
+images/Logo_Usach.pdf>] (./informe.toc
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+
+[2])
+\tf@toc=\write5
+\openout5 = `informe.toc'.
+
+
+
+[3]
+\openout2 = `chapters/1-introduccion.aux'.
+
+ (./chapters/1-introduccion.tex
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14 
+      [1
+
+]
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.25 \end{enumerate}
+                     [2]
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.43 \subsubsection
+                   {Variables de Calidad y Pre-procesamiento} [3]
+
+[4])
+
+[5]
+\openout2 = `chapters/2-MarcoTeorico.aux'.
+
+ (./chapters/2-MarcoTeorico.tex
+
+[6
+
+
+
+]
+
+[7]
+
+[8]
+
+[9]
+
+[10])
+
+[11]
+\openout2 = `chapters/3-desarrollo.aux'.
+
+ (./chapters/3-desarrollo.tex
+
+[12
+
+
+
+]
+
+[13]
+Underfull \hbox (badness 2726) in paragraph at lines 46--47
+[]\T1/cmr/bx/n/12 Estabilidad de va-ria-bles ana-tó-mi-cas\T1/cmr/m/n/12 : \T1/
+cmtt/m/n/12 macula_opticdisc_distance \T1/cmr/m/n/12 y
+ []
+
+
+
+[14]
+
+[15]
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
+
+ []
+
+
+
+[17]
+<images/1-boxplot.png, id=398, 867.24pt x 361.35pt>
+File: images/1-boxplot.png Graphic file (type png)
+<use images/1-boxplot.png>
+Package pdftex.def Info: images/1-boxplot.png  used on input line 163.
+(pdftex.def)             Requested size: 443.57848pt x 184.8264pt.
+
+
+[18]
+<images/1-heatmap.png, id=409, 1011.78pt x 794.97pt>
+File: images/1-heatmap.png Graphic file (type png)
+<use images/1-heatmap.png>
+Package pdftex.def Info: images/1-heatmap.png  used on input line 182.
+(pdftex.def)             Requested size: 443.57848pt x 348.52634pt.
+
+
+[19 <./images/1-boxplot.png>]
+
+[20 <./images/1-heatmap.png>]
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 191.
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
+[]\T1/cmr/bx/n/12 Independencia de Ras-gos Ana-tó-mi-cos\T1/cmr/m/n/12 : Atri-b
+u-tos co-mo
+ []
+
+
+Underfull \hbox (badness 1281) in paragraph at lines 201--202
+\T1/cmtt/m/n/12 macula_opticdisc_distance \T1/cmr/m/n/12 (0,01) y \T1/cmtt/m/n/
+12 optic_disc_diameter \T1/cmr/m/n/12 (-0,03) mues-
+ []
+
+
+
+[21]
+
+[22]
+
+[23]
+
+[24]
+
+[25]
+
+[26]
+Underfull \hbox (badness 4913) in paragraph at lines 400--407
+[]\T1/cmr/bx/n/12 Representación mul-ti-di-men-sio-nal\T1/cmr/m/n/12 : El sub-c
+on-jun-to se-lec-cio-na-do abar-
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 400--407
+\T1/cmr/m/n/12 ca las tres di-men-sio-nes diag-nós-ti-cas del da-ta-set: le-sio
+-nes mi-cro-vas-cu-la-res
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 400--407
+\T1/cmr/m/n/12 (\T1/cmtt/m/n/12 ma1\T1/cmr/m/n/12 ), de-pó-si-tos de lí-pi-dos 
+(\T1/cmtt/m/n/12 exudate1\T1/cmr/m/n/12 ) y ras-gos ana-tó-mi-cos es-truc-tu-ra
+-les
+ []
+
+
+
+[27]
+<images/1-matrix-rocauc.png, id=474, 867.24pt x 361.35pt>
+File: images/1-matrix-rocauc.png Graphic file (type png)
+<use images/1-matrix-rocauc.png>
+Package pdftex.def Info: images/1-matrix-rocauc.png  used on input line 423.
+(pdftex.def)             Requested size: 443.57848pt x 184.8264pt.
+
+
+[28 <./images/1-matrix-rocauc.png>]
+
+[29]
+
+[30]
+<images/1-histograms.png, id=497, 578.16pt x 361.35pt>
+File: images/1-histograms.png Graphic file (type png)
+<use images/1-histograms.png>
+Package pdftex.def Info: images/1-histograms.png  used on input line 515.
+(pdftex.def)             Requested size: 377.0444pt x 235.65216pt.
+)
+
+[31 <./images/1-histograms.png>]
+\openout2 = `chapters/4-conclusion.aux'.
+
+ (./chapters/4-conclusion.tex
+
+[32
+
+
+
+])
+
+[33]
+
+[34]
+\openout2 = `chapters/5-Anexo.aux'.
+
+ (./chapters/5-Anexo.tex)
+
+[35
+
+
+
+]
+
+[36
+
+
+
+]
+
+[37] (./informe.aux
+LaTeX Info: Redefining \sptext on input line 12.
+LaTeX Info: Redefining \. on input line 12.
+LaTeX Info: Redefining \% on input line 12.
+ (./chapters/1-introduccion.aux)
+(./chapters/2-MarcoTeorico.aux) (./chapters/3-desarrollo.aux)
+(./chapters/4-conclusion.aux) (./chapters/5-Anexo.aux))
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+Package rerunfilecheck Info: File `informe.out' has not changed.
+(rerunfilecheck)             Checksum: 193E0EB89421F960919B578BCE6BB1BC;11045.
+Package logreq Info: Writing requests to 'informe.run.xml'.
+\openout1 = `informe.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 21070 strings out of 474662
+ 370038 string characters out of 5751110
+ 1301215 words of memory out of 5000000
+ 43705 multiletter control sequences out of 15000+600000
+ 573224 words of font info for 72 fonts, out of 8000000 for 9000
+ 319 hyphenation exceptions out of 8191
+ 66i,10n,81p,1367b,2803s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/j
+knappen/ec/ecrm0800.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/tex
+mf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </Users/gonzaloahumada/Libra
+ry/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1200.600pk> </Us
+ers/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen
+/ec/tcrm1200.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/
+fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </Users/gonzaloahumada/Library/texl
+ive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </Users/gon
+zaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecr
+m1200.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/p
+k/ljfour/jknappen/ec/ecbx1200.600pk> </Users/gonzaloahumada/Library/texlive/202
+5basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </Users/gonzaloahu
+mada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.6
+00pk></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy8.pfb>
+Output written on informe.pdf (40 pages, 1410229 bytes).
+PDF statistics:
+ 1051 PDF objects out of 1200 (max. 8388607)
+ 563 compressed objects within 6 object streams
+ 133 named destinations out of 1000 (max. 500000)
+ 378 words of extra memory for PDF output out of 10000 (max. 10000000)
+

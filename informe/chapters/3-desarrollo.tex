@@ -140,9 +140,19 @@ ma6 & 3 & [14, 271, 648] \\
 \end{tabular}
 \end{table}
 
-\paragraph{Validación Clínica y Correlación con la Patología}
+\paragraph{Validación Clínica y Correlación con la Patología}\mbox{}\\
 
-Al verificar la variable objetivo (\texttt{Class}) para cada outlier detectado, se determinó que \textbf{la gran mayoría pertenece a la Clase 1} (pacientes con signos de retinopatía diabética), lo que permite concluir que estos valores extremos representan \textbf{manifestaciones clínicas de alta severidad} y no errores de medición. La única excepción es el índice 14, identificado como outlier en \texttt{ma6} ($\alpha = 1{,}0$), que corresponde a un paciente de la \textbf{Clase 0} (sano). Este caso aislado puede explicarse porque, bajo el criterio de mayor confianza, el detector captura conteos elevados que no necesariamente implican patología confirmada, lo que refleja la naturaleza probabilística del sistema de clasificación automatizado. Esto respalda lo expuesto por \textcite{casanova2014application}, quienes establecen que el conteo de microaneurismas es la variable de mayor importancia para discriminar la presencia de la enfermedad. La disminución del número de outliers a medida que aumenta el nivel de confianza ($\alpha$) sugiere que solo las lesiones más evidentes y voluminosas persisten bajo criterios de detección estrictos.
+\textbf{El número de outliers disminuye.}
+El número de outliers disminuye a medida que aumenta el nivel de confianza: a mayor exigencia del detector, se contabilizan menos lesiones y, por ende, también se reducen los valores extremos.
+
+\textbf{Anomalía en ma6.}
+Se observa algo interesante en esta tendencia al llegar a ma6, donde el conteo de outliers sube a 3. Esto no es un error; el filtro ma6 es extremadamente selectivo y, al reducirse el conteo general de lesiones en toda la muestra, cualquier rastro de enfermedad se vuelve más evidente, haciendo que los pacientes con patología confirmada destaquen como casos excepcionales.
+
+\textbf{Índices recurrentes.}
+Revisando la columna \texttt{Índices}, varios números aparecen en múltiples filas. El paciente 339, por ejemplo, es outlier en ma1, ma2, ma3 y ma4: no es un error de un solo filtro, sino una persona con una carga de lesiones tan extrema que todos los niveles de confianza lo marcan como caso extraordinario. Es, probablemente, uno de los pacientes más graves del dataset.
+
+\textbf{Validación clínica.}
+Al cruzar los índices con la columna \texttt{Class}, prácticamente todos corresponden a pacientes con retinopatía diabética, confirmando que son casos reales de enfermedad severa y no errores de medición. La única excepción es el \textbf{Índice 14} (Clase~0, sano): bajo el criterio más estricto ($\alpha = 1{,}0$), el detector identificó estructuras en su retina como microaneurismas confirmados pese a que el paciente fue clasificado como sano. Posiblemente se trate de un caso \textit{borderline} o de una etapa muy temprana aún no diagnosticada.
 
 \subsubsection{Visualización mediante Boxplots por Clase}
 
@@ -157,9 +167,10 @@ Se generaron diagramas de cajas (Boxplots) para comparar la dispersión de las l
 \paragraph{Interpretación de la Figura}
 
 \begin{enumerate}
-    \item \textbf{Diferencia de tendencia}: La Clase 1 (naranja) muestra una mediana y un rango intercuartílico notablemente superiores a la Clase 0 (verde).
-    \item \textbf{Presencia de extremos}: Mientras que la Clase 0 se mantiene compacta, la Clase 1 presenta una serie de puntos aislados que superan los 140 microaneurismas, coincidiendo con los índices identificados previamente.
-    \item \textbf{Justificación de la no normalidad}: La existencia de estos valores atípicos extremos hacia el límite superior explica la asimetría positiva y el rechazo de la hipótesis de normalidad en las pruebas de Shapiro-Wilk, validando la necesidad de utilizar estadística no paramétrica en este estudio.
+    \item \textbf{Clase 1 siempre por encima de Clase 0}: En todas las variables ma1 a ma6, las cajas naranjas (enfermos) están consistentemente por encima de las verdes (sanos). Los pacientes con retinopatía diabética presentan mayor conteo de microaneurismas en todos los niveles de confianza del detector.
+    \item \textbf{Solapamiento entre clases}: Las cajas verde y naranja no están completamente separadas — se superponen en el rango medio. Esto indica que no todos los enfermos tienen valores extremadamente altos ni todos los sanos tienen valores extremadamente bajos, lo que justifica la necesidad de pruebas estadísticas formales para confirmar que la diferencia es real y no producto del azar.
+    \item \textbf{Outliers visibles}: Los puntos aislados que superan los 140 microaneurismas en ma1 corresponden exactamente a los índices identificados con el método de Tukey, todos pertenecientes a la Clase 1.
+    \item \textbf{Reducción de dispersión hacia ma6}: Tanto las cajas verdes como las naranjas se hacen más pequeñas y bajas de ma1 a ma6, confirmando visualmente el patrón decreciente de las medias observado en la estadística descriptiva.
 \end{enumerate}
 
 \subsection{Análisis de Correlación y Visualización (Heatmap)}
