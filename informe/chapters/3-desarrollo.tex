@@ -1,8 +1,10 @@
 \section{Análisis Estadístico e Inferencial}
 
-En esta sección se presentan los resultados del análisis de los 19 atributos del dataset \textbf{Diabetic Retinopathy Debrecen}, procesados mediante el lenguaje Python y las librerías \texttt{pandas} y \texttt{scipy.stats}.
+En esta sección se presentan los resultados del análisis de los 19 atributos del dataset \textbf{Diabetic Retinopathy Debrecen}. Para el desarrollo técnico se emplearon las siguientes bibliotecas de Python: \textit{ucimlrepo} \parencite{ucimlrepo2023} para la importación directa del dataset, \textit{Pandas} \parencite{reback2020pandas} para el manejo y estadística descriptiva de los datos, \textit{NumPy} \parencite{harris2020numpy} para operaciones numéricas, \textit{SciPy} (\texttt{scipy.stats}) \parencite{virtanen2020scipy} para las pruebas estadísticas inferenciales, \textit{Matplotlib} \parencite{hunter2007matplotlib} y \textit{Seaborn} \parencite{Waskom2021} para la generación de visualizaciones, y \textit{Scikit-learn} \parencite{pedregosa2011sklearn} para el modelo de regresión logística y las métricas de evaluación.
 
 \subsection{Resumen Estadístico Descriptivo}
+
+La Tabla 1 presenta los estadísticos descriptivos de las 19 variables del dataset. Todas las variables cuentan con 1.151 retinografías completas, esto es importante ya que cada dato de cada celda es posible de utilizar para el análisis estadístico. 
 
 \begin{table}[htbp]
 \centering
@@ -35,6 +37,16 @@ am\_fm\_classification     & 1151 & 0.336229  & 0.472624  & 0        & 1        
 \end{tabular}
 \end{table}
 
+Del análisis de la tabla se extraen las siguientes observaciones relevantes:
+
+\begin{itemize}
+    \item \textbf{Calidad del dataset}: La variable \texttt{quality} presenta una media de 0,997, lo que indica que prácticamente la totalidad de las imágenes tienen calidad suficiente para el diagnóstico. Podemos garantizar entonces que nuestro analisis sobre los microaneurismas son confiables, ya que, las imagenes tienen excelente calidad para el analisis. 
+    \item \textbf{Patrón decreciente en microaneurismas}: Las medias de \texttt{ma1} a \texttt{ma6} disminuyen progresivamente (38,4 → 21,2), lo cual concuerda con el aumento del nivel de confianza del algoritmo: a mayor exigencia, menos microaneurismas son contabilizadas para poder obtener un diagnostico mas confiable.
+    \item \textbf{Alta variabilidad en exudados}: \texttt{exudate1} La variable exudate1 muestra una desviación estándar (58,5) muy similar a su media (64,1). Esto indica una alta dispersión de los datos, reflejando la heterogeneidad de la muestra. Mientras que gran parte de los pacientes (sanos) presentan valores cercanos a cero, otros (enfermos críticos) alcanzan valores extremos de hasta 403,9. Esta variabilidad es fundamental para la clasificación, ya que permite al modelo identificar con mayor certeza una persona sana de una enferma. Recalcar que si todos los pacientes estuvieran en la misma etapa de la enfermedad, los valores serían más parecidos (homogéneos).
+    \item \textbf{Estabilidad de variables anatómicas}: \texttt{macula\_opticdisc\_distance} y \texttt{opticdisc\_diameter} Como estas variables apenas varían entre personas (son casi constantes), es poco probable que sirvan para distinguir a una persona enferma de una sana, a diferencia de los microaneurismas que varían mucho entre personas.
+    \item \textbf{Redundancia detectada}: Las columnas \texttt{exudate3} y \texttt{exudate4} Se identificó que las columnas exudate3 y exudate4 presentan valores estadísticos idénticos, lo que sugiere que ambas variables aportan la misma información diagnóstica. Para optimizar el análisis y evitar sesgos por duplicidad, es recomendable tratar estas columnas como una sola unidad informativa en etapas posteriores de modelado.
+\end{itemize}
+
 \subsection{Análisis de la Forma de la Distribución (Asimetría y Curtosis)}
 
 Para las variables críticas de microaneurismas (\texttt{ma1} a \texttt{ma6}), identificadas en la literatura \parencite{casanova2014application} como los predictores más importantes para la detección de la RD, se evaluó su asimetría y curtosis:
@@ -56,11 +68,18 @@ ma6 & 0.722384 & -0.102349  \\
 \end{tabular}
 \end{table}
 
-Todas las variables de MA presentan una asimetría positiva, lo que indica que la distribución tiene una cola alargada hacia la derecha. Esto es coherente con un dataset médico donde muchos pacientes tienen pocos signos de lesión y una minoría presenta conteos elevados.
+
+Todos los números de la columna \enquote{Asimetría} son positivos (entre 0.49 y 0.74). La mayoría de los 1,151 pacientes están \enquote{agrupados} en valores bajos (pocos microaneurismas) cercanos al cero. Pero existen casos mas graves que llevan a que la distribución tenga una cola larga hacia la derecha (valores altos de microaneurismas). Esto es típico en enfermedades donde la mayoría de los pacientes están en etapas iniciales o son sanos, y solo una minoría presenta formas avanzadas con muchos microaneurismas.
+La variable ma1 es la más asimétrica (0.74). Esto es lógico, porque al ser el filtro más permisivo utilizando el criterio de confianza (\(\alpha=0.5\)), es donde más se nota la diferencia entre un paciente sano y un enfermo grave, porque captura un espectro más amplio de lesiones en pacientes con la enfermedad avanzada.
+
+Los valores negativos de curtosis en las variables de microaneurismas (especialmente en ma4 y ma5 con -0,69) revelan distribuciones de tipo platicúrtico. Esto indica que los conteos de lesiones no tienen la forma de una campana o montaña, sino que presentan una dispersión más uniforme, más aplanada. Esta característica sugiere una transición gradual entre los distintos grados de severidad de la enfermedad, lo que facilita el entrenamiento de modelos de clasificación al contar con una representación equilibrada de la progresión patológica. En una curtosis negativa, los datos están más \enquote{repartidos} a lo largo del eje. No hay un solo valor que domine, sino que es una transición gradual entre pacientes sanos y enfermos.
+
+La variable ma1 es ligeramente más puntiaguda (Leptocúrtica), es decir curtosis positiva. Como esta variable cuenta con un filtro mas permisivo se detectan más lesiones hasta las mas pequeñas, generando este pequeño monte, esto ocurre porque una gran cantidad de pacientes se \enquote{amontonan} en valores bajos muy parecidos entre sí.
 
 \subsection{Validación de Normalidad (Prueba de Shapiro-Wilk)}
 
-Para formalizar la observación de la forma, se aplicó el test de \textbf{Shapiro-Wilk} bajo la hipótesis nula ($H_{0}$) de que los datos siguen una distribución normal:
+La prueba de Shapiro-Wilk aplicada a las variables de microaneurismas (ma1 a ma6) nos indica un resultado unánime: ninguna variable sigue una distribución normal.
+
 
 \begin{table}[htbp]
 \centering
@@ -79,21 +98,26 @@ ma6 & 0.929734 & $8{,}23 \times 10^{-23}$ & No Normal \\
 \end{tabular}
 \end{table}
 
-Dado que en todos los casos el \textbf{p-valor < 0,05}, se rechaza la hipótesis nula. Esto confirma matemáticamente que los conteos de microaneurismas no se distribuyen de forma normal, lo cual condiciona el uso de pruebas no paramétricas para las comparaciones de grupos posteriores.
+
+Debemos enfocarnos en los valores de la columna p-value, todos del orden de $10^{-20}$, $10^{-21}$, $10^{-23}$: números extremadamente pequeños, prácticamente cero.
+
+Para comprender la magnitud de estos valores, consideremos el siguiente ejemplo con \texttt{ma1}:
+
+\begin{itemize}
+    \item \textbf{Umbral de decisión (p-value):} $0{,}05$
+    \item \textbf{p-valor obtenido:} $2{,}94 \times 10^{-20} \approx 0{,}0000000000000000000294$
+    \item \textbf{Conclusión:} es decir, millones de veces más pequeño que el umbral (p-value $< 0{,}05$)
+\end{itemize}
+
+Lo anterior significa que la probabilidad de que estos datos provengan de una distribución normal es prácticamente inexistente.
+
+Enfocándonos en la columna Distribución, todos los resultados indican ``No Normal''. La conclusión es unánime para las 6 variables: la no normalidad es contundente. Los p-valores están muy lejos del umbral, por lo que no existe duda estadística.
+  
+El resultado de esta prueba es la \enquote{luz verde} para usar la Prueba de Mann-Whitney U. Como los datos no son normales, esta prueba no paramétrica es la única forma de comparar a los pacientes sanos frente a los enfermos.
 
 \subsection{Detección de Valores Atípicos (Outliers)}
 
-Para garantizar la robustez del análisis y comprender la variabilidad extrema en los datos, se realizó la detección de valores atípicos mediante el \textbf{método de Tukey}. Esta técnica es preferida en estudios clínicos debido a que utiliza medidas de posición no sensibles a los extremos, permitiendo identificar observaciones que se desvían significativamente del comportamiento central del grupo.
-
-\subsubsection{Metodología de Tukey}
-
-La identificación se basó en el cálculo del Rango Intercuartílico ($IQR = Q_{3} - Q_{1}$), estableciendo los siguientes límites:
-\begin{itemize}
-    \item \textbf{Límite Inferior}: $Q_{1} - 1{,}5 \times IQR$
-    \item \textbf{Límite Superior}: $Q_{3} + 1{,}5 \times IQR$
-\end{itemize}
-
-Cualquier valor fuera de este rango se considera un \textit{outlier}. En el contexto de este dataset médico, estas observaciones representan pacientes con recuentos de lesiones (microaneurismas o exudados) inusualmente altos o bajos en comparación con la población general de la muestra.
+Aplicando el método de Tukey sobre las variables de microaneurismas (cuya formulación se detalla en el Marco Teórico), se identificaron los pacientes con conteos de lesiones inusualmente altos o bajos respecto al comportamiento general de la muestra. Los resultados se presentan a continuación:
 
 \subsubsection{Resultados de la Detección}
 
@@ -116,13 +140,23 @@ ma6 & 3 & [14, 271, 648] \\
 \end{tabular}
 \end{table}
 
-\paragraph{Validación Clínica y Correlación con la Patología}
+\paragraph{Validación Clínica y Correlación con la Patología}\mbox{}\\
 
-Al verificar la variable objetivo (\texttt{Class}) para cada outlier detectado, se determinó que \textbf{la gran mayoría pertenece a la Clase 1} (pacientes con signos de retinopatía diabética), lo que permite concluir que estos valores extremos representan \textbf{manifestaciones clínicas de alta severidad} y no errores de medición. La única excepción es el índice 14, identificado como outlier en \texttt{ma6} ($\alpha = 1{,}0$), que corresponde a un paciente de la \textbf{Clase 0} (sano). Este caso aislado puede explicarse porque, bajo el criterio de mayor confianza, el detector captura conteos elevados que no necesariamente implican patología confirmada, lo que refleja la naturaleza probabilística del sistema de clasificación automatizado. Esto respalda lo expuesto por \textcite{casanova2014application}, quienes establecen que el conteo de microaneurismas es la variable de mayor importancia para discriminar la presencia de la enfermedad. La disminución del número de outliers a medida que aumenta el nivel de confianza ($\alpha$) sugiere que solo las lesiones más evidentes y voluminosas persisten bajo criterios de detección estrictos.
+\textbf{El número de outliers disminuye.}
+El número de outliers disminuye a medida que aumenta el nivel de confianza: a mayor exigencia del detector, se contabilizan menos lesiones y, por ende, también se reducen los valores extremos.
+
+\textbf{Anomalía en ma6.}
+Se observa algo interesante en esta tendencia al llegar a ma6, donde el conteo de outliers sube a 3. Esto no es un error; el filtro ma6 es extremadamente selectivo y, al reducirse el conteo general de lesiones en toda la muestra, cualquier rastro de enfermedad se vuelve más evidente, haciendo que los pacientes con patología confirmada destaquen como casos excepcionales.
+
+\textbf{Índices recurrentes.}
+Revisando la columna \texttt{Índices}, varios números aparecen en múltiples filas. El paciente 339, por ejemplo, es outlier en ma1, ma2, ma3 y ma4: no es un error de un solo filtro, sino una persona con una carga de lesiones tan extrema que todos los niveles de confianza lo marcan como caso extraordinario. Es, probablemente, uno de los pacientes más graves del dataset.
+
+\textbf{Validación clínica.}
+Al cruzar los índices con la columna \texttt{Class}, prácticamente todos corresponden a pacientes con retinopatía diabética, confirmando que son casos reales de enfermedad severa y no errores de medición. La única excepción es el \textbf{Índice 14} (Clase~0, sano): bajo el criterio más estricto ($\alpha = 1{,}0$), el detector identificó estructuras en su retina como microaneurismas confirmados pese a que el paciente fue clasificado como sano. Posiblemente se trate de un caso \textit{borderline} o de una etapa muy temprana aún no diagnosticada.
 
 \subsubsection{Visualización mediante Boxplots por Clase}
 
-Se generaron diagramas de cajas (Boxplots) para comparar la dispersión de las lesiones entre los grupos de control (\textbf{Clase 0}) y pacientes con signos de RD (\textbf{Clase 1}).
+Los boxplots (o diagramas de caja) permiten comparar cómo se distribuyen los microaneurismas entre personas sanas y enfermas. Podemos ver claramente cómo están repartidos los datos de los pacientes dentro de cada grupo.
 
 \begin{figure}[htbp]
 \centering
@@ -133,14 +167,15 @@ Se generaron diagramas de cajas (Boxplots) para comparar la dispersión de las l
 \paragraph{Interpretación de la Figura}
 
 \begin{enumerate}
-    \item \textbf{Diferencia de tendencia}: La Clase 1 (naranja) muestra una mediana y un rango intercuartílico notablemente superiores a la Clase 0 (verde).
-    \item \textbf{Presencia de extremos}: Mientras que la Clase 0 se mantiene compacta, la Clase 1 presenta una serie de puntos aislados que superan los 140 microaneurismas, coincidiendo con los índices identificados previamente.
-    \item \textbf{Justificación de la no normalidad}: La existencia de estos valores atípicos extremos hacia el límite superior explica la asimetría positiva y el rechazo de la hipótesis de normalidad en las pruebas de Shapiro-Wilk, validando la necesidad de utilizar estadística no paramétrica en este estudio.
+    \item \textbf{Clase 1 siempre por encima de Clase 0}: En todas las variables ma1 a ma6, las cajas naranjas (enfermos) están siempre por encima de las verdes (sanos). Los pacientes con retinopatía diabética presentan mayor conteo de microaneurismas en todos los niveles de confianza del detector.
+    \item \textbf{Solapamiento entre clases}: Si miramos el diagrama, veremos que en algún punto del eje y ambas cajas comparten espacio (cantidad de lesiones), a esto se le llama solapamiento y nos indica que por ejemplo existen pacientes sanos con 30 MA y pacientes enfermos con 30 MA. Si, solo nos enfocamos en esa zona, no podemos infenir que paciente es quien. Esto puede ocurrir porque en etapas tempranas de la enfermedad un paciente grado 1 tiene pocas lesiones y puede parecerse mucho al estado clinico de un paciente sano con respecto a la cantidad de lesiones. Debido a lo anterior es que necesitamos la Prueba de Mann-Whitney U para determinar si la diferencia entre ambos grupos es estadísticamente significativa y real a pesar del solapamiento.
+    \item \textbf{Outliers visibles}: Los puntos aislados que superan los 140 microaneurismas en ma1 corresponden exactamente a los índices identificados con el método de Tukey, todos pertenecientes a la Clase 1. Es importante recalcar que ambos grupos presentan valores atípicos (outliers); sin embargo, existe una diferencia cualitativa entre ellos. Los outliers del grupo con Retinopatía (Clase 1) no solo son más frecuentes, sino que alcanzan magnitudes significativamente superiores (superando los 140 microaneurismas en ma1). Por otro lado, la presencia de outliers en el grupo sano (Clase 0) sugiere la existencia de variabilidad biológica o casos en etapas subclínicas muy tempranas que, si bien son estadísticamente atípicos para su grupo, no alcanzan los niveles críticos observados en los grupos con enfermedad, por ende no se diagnosticó la enfermedad. Esto sucede en la variable ma1, ma5 y ma6, donde podemos observar los circulos arriba de las cajas verdes.
+    \item \textbf{Reducción de dispersión hacia ma6}: Tanto las cajas verdes como las naranjas se hacen más pequeñas y bajas de ma1 a ma6, confirmando visualmente el patrón decreciente en ambos grupos a mayor nivel de confianza del algoritmo porque se detectan menos lesiones y por ende existe menos variabilidad.
 \end{enumerate}
 
 \subsection{Análisis de Correlación y Visualización (Heatmap)}
 
-Para identificar las relaciones lineales entre los 19 atributos y la variable de diagnóstico (\texttt{Class}), se calculó la matriz de correlación de Pearson utilizando las librerías \texttt{pandas} \parencite{reback2020pandas} y \texttt{seaborn} \parencite{Waskom2021} en Python. Este análisis es fundamental para detectar redundancias (colinealidad) y determinar cuáles rasgos anatómicos o lesiones tienen un mayor vínculo con la presencia de la patología.
+Para identificar las relaciones lineales entre los 19 atributos y la variable de diagnóstico (\texttt{Class}), se calculó la matriz de correlación de Pearson utilizando las librerías \texttt{pandas} \parencite{reback2020pandas} y \texttt{seaborn} \parencite{Waskom2021} en Python. Sirve para identificar patrones de asociación. Si una variable sube, ¿la otra también sube (correlación positiva)? ¿O baja (correlación negativa)? Esto ayuda a entender qué variables \enquote{trabajan juntas} para detectar la enfermedad.
 
 \begin{figure}[htbp]
 \centering
@@ -153,22 +188,24 @@ Para identificar las relaciones lineales entre los 19 atributos y la variable de
 El análisis visual del mapa de calor permite extraer las siguientes conclusiones técnicas:
 
 \begin{enumerate}
-    \item \textbf{Alta Colinealidad en Microaneurismas (\texttt{ma1} a \texttt{ma6})}: Se observa una correlación positiva extremadamente alta, cercana a 1,00 en la mayoría de los casos. Por ejemplo, la correlación entre \texttt{ma1} y \texttt{ma2} es de 1,00, y entre \texttt{ma1} y \texttt{ma3} es de 0,99.
+    \item \textbf{Alta Colinealidad en Microaneurismas (\texttt{ma1} a \texttt{ma6})}: Se observa una correlación positiva extremadamente alta, cercana a 1,00 en la mayoría de los casos. Por ejemplo, la correlación entre \texttt{ma1} y \texttt{ma2} es de 1,00, y entre \texttt{ma1} y \texttt{ma3} es de 0,99. Es lógico: si un filtro detecta muchos microaneurismas, los otros también lo harán.
     \begin{itemize}
         \item \textit{Fundamentación}: Esto confirma que estos atributos representan el mismo fenómeno clínico (conteo de microaneurismas) detectado con niveles de confianza ($\alpha$) crecientes. La alta redundancia sugiere que, para futuros modelos de clasificación, se podría realizar una reducción de dimensionalidad sin perder información crítica.
     \end{itemize}
-    \item \textbf{Correlación con la Variable Objetivo (\texttt{Class})}: Los resultados muestran que los microaneurismas son los descriptores con la relación más fuerte hacia el diagnóstico final.
+    \item \textbf{Correlación con la Variable Objetivo (\texttt{Class})}: Si miramos el mapa de calor veremos valores como 0.29 para ma1 o 0.18 para exudate8.
     \begin{itemize}
-        \item Las variables \texttt{ma1} (0,29) y \texttt{ma2} (0,27) presentan los coeficientes de correlación más altos con \texttt{Class} dentro de su grupo.
+        \item Aunque parecen números bajos, en medicina son significativos. Indican que a medida que aumentan las lesiones, aumenta la probabilidad de estar enfermo. Confirma que los microaneurismas (ma1) tienen la correlación más alta con la enfermedad, por encima del diámetro del disco óptico.
         \item \textit{Significancia}: Este hallazgo es coherente con el estudio de \textcite{casanova2014application}, el cual establece mediante criterios de importancia de variables que el conteo de microaneurismas desempeña el papel más relevante en la discriminación de la enfermedad.
     \end{itemize}
-    \item \textbf{Relación entre Exudados}: Al igual que con los microaneurismas, se observan clústeres de alta correlación entre los niveles de detección de exudados, particularmente entre \texttt{exudate2}, \texttt{exudate3} y \texttt{exudate4} (valores entre 0,92 y 1,00). Su correlación con la variable \texttt{Class} es positiva pero moderada (máximo de 0,18 en \texttt{exudate7}), indicando que, aunque son indicadores de RD, su peso diagnóstico individual en este dataset es menor al de los microaneurismas.
-    \item \textbf{Independencia de Rasgos Anatómicos}: Atributos como \texttt{macula\_opticdisc\_distance} (0,01) y \texttt{optic\_disc\_diameter} (-0,03) muestran una correlación prácticamente nula con la presencia de la enfermedad en este conjunto de datos. Esto sugiere que la patología se manifiesta principalmente a través de lesiones detectables (MA y exudados) antes de generar cambios anatómicos macroscópicos detectables por estos descriptores específicos.
+    \item \textbf{Relación entre Exudados}: Al igual que con los microaneurismas, se observan clústeres de alta correlación entre los niveles de detección de exudados, particularmente entre \texttt{exudate2}, \texttt{exudate3} y \texttt{exudate4} (valores entre 0,92 y 1,00). Su correlación con la variable \texttt{Class} es positiva pero moderada (máximo de 0,18 en \texttt{exudate7} y \texttt{exudate8}), indicando que, aunque son indicadores de RD, su peso diagnóstico individual en este dataset es menor al de los microaneurismas, ya que dentro de este grupo existe \texttt{ma1} con 0,29, siendo un mejor indicador para indicar que el paciente pueda estar enfermo.
+    \item \textbf{Independencia de Rasgos Anatómicos}: Atributos como \texttt{macula\_opticdisc\_distance} (0,01) y \texttt{optic\_disc\_diameter} (-0,03) muestran una correlación prácticamente nula con la presencia de la enfermedad en este conjunto de datos. Esto sugiere que la patología se manifiesta principalmente a través de lesiones detectables (MA y exudados) antes de generar cambios anatómicos macroscópicos detectables por estos descriptores específicos. Por lo tanto, la anatomía del ojo es independiente de la patología.
+    \item \textbf{Correlación Negativa con AM/FM}: La correlación negativa observada entre el análisis AM/FM y los microaneurismas (valores entre -0,34 y -0,44) indica una relación inversa: a medida que aumenta la carga de lesiones, la regularidad de la textura retinal disminuye. Debemos tener claro que los microaneurismas aparecen como \enquote{ruido} o manchas que interfieren con la textura suave. Al detectar este desorden, el valor de la señal AM/FM cae o baja. Podemos entonces indicar que el algoritmo tiene una doble verificación. Si el conteo sube (microaneurismas) y la calidad de la textura baja (correlación negativa), el sistema está 100\% seguro de que hay una patología.
+
 \end{enumerate}
 
 \subsubsection{Conclusión del Análisis de Correlación}
 
-El mapa de calor valida la hipótesis de que las lesiones retinales, específicamente los \textbf{microaneurismas detectados con niveles de confianza iniciales}, son los mejores predictores lineales de la patología en este dataset. Además, la fuerte colinealidad interna entre las variables de lesiones justifica el uso de pruebas de significancia que traten estos grupos como una dimensión común de daño neurovascular \parencite{casanova2014application}.
+El mapa de calor confirma que los microaneurismas son los predictores lineales más relevantes para el diagnóstico, seguidos por los exudados con menor peso. Las variables anatómicas no aportan información diagnóstica en este dataset, es decir, la anatomia del disco optico no interfiere a la hora de decidir si un paciente esta enfermo. La alta colinealidad interna entre variables MA y entre variables de exudados justifica usar solo representantes de cada grupo en modelos futuros para evitar redundancia.
 
 \subsection{Comparación de Grupos (Prueba Mann-Whitney U)}
 

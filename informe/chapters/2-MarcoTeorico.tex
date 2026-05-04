@@ -30,7 +30,7 @@ En estadística descriptiva buscamos indicadores que sean claves para comprender
 \begin{itemize}
     \item \textbf{Medidas de tendencia central y dispersión}: Parametros basicos que nos permiten comprender que tan variados son los datos de nuestro conjunto, que tan diferentes son entre si, este analisis nos permite descubrir patrones de enfermedad. 
     
-    \textbf{Media aritmética}: Es el promedio tradicional. Nos da una idea del valor "típico" de la variable sumando todos los casos y dividiendo por el total.
+    \textbf{Media aritmética}: Es el promedio tradicional. Nos da una idea del valor \enquote{típico} de la variable sumando todos los casos y dividiendo por el total.
 
     \textbf{Mediana}: Es el valor central cuando ordenamos los datos de menor a mayor. A diferencia de la media, es una medida robusta, lo que significa que no se ve afectada por valores extremadamente altos o bajos que no permitirian representar el comportamiento general de los datos.
 
@@ -46,17 +46,73 @@ En estadística descriptiva buscamos indicadores que sean claves para comprender
     
     ¿Por qué importa detectarlos? Porque pueden distorsionar el análisis. Podriamos obtener el promedio de un conjunto de datos y no representar la realidad del mismo al considerar datos que salen de lo comun y son poco representativos con respecto al conjunto general.
 
-    Se basa en el \textbf{Rango Intercuartílico (IQR)}, que es la distancia entre el 25\% y el 75\% de los datos (el ``corazón'' del dataset). Se establecen límites (\textit{fences}) sumando o restando 1,5 veces el IQR a estos cuartiles. Todo lo que quede fuera de estos rangos se considera un valor atípico y debe ser analizado con cuidado para decidir si se mantiene o se elimina del estudio.
+    ¿Qué es el método de Tukey?
+
+    Es la técnica más usada para detectar outliers de forma objetiva. Funciona de la siguiente manera:
+
+    \begin{enumerate}
+        \item Toma el 25\% inferior de los datos (Q1) y el 75\% superior (Q3).
+        \item Calcula la distancia entre ellos: $IQR = Q3 - Q1$.
+        \item Define un límite inferior: $Q1 - 1.5 \times IQR$.
+        \item Define un límite superior: $Q3 + 1.5 \times IQR$.
+        \item Todo lo que queda fuera de esos límites es un outlier.
+    \end{enumerate}
 \end{itemize}
 
 \subsection{Fundamentos de Estadística Inferencial y Pruebas de Hipótesis}
 
-La estadística inferencial busca obtener conclusiones sobre la población a partir de la muestra mediante pruebas de significación.
+  Mientras que el análisis descriptivo solo describe lo que vemos, la inferencial va más allá — te permite sacar conclusiones y tomar decisiones basadas en los datos. La pregunta clave es: ¿lo 
+  que observo en mi muestra es real o es producto de la suerte?                                                                                                                         
+   
+  Por ejemplo: veo que los pacientes enfermos tienen más microaneurismas que los sanos. Pero ¿esa diferencia es real o simplemente mi elección al seleccionar los pacientes del estudio no fue la mejor?                                                                                                                                                                        
+                                                                                                                                                                                    
+  Las pruebas de hipótesis responden esa pregunta matemáticamente.
+
+  Entre las pruebas de hipótesis que se utilizan en este análisis se encuentran:
 
 \begin{itemize}
-    \item \textbf{Prueba de normalidad (Shapiro-Wilk)}: Evalúa si los datos siguen una distribución normal. Un p-valor menor a 0,05 permite rechazar la hipótesis nula de normalidad.
-    \item \textbf{Comparación de grupos (prueba Mann-Whitney U)}: Se utiliza para determinar si existe una diferencia significativa entre las distribuciones de dos grupos independientes cuando los datos no siguen una distribución normal.
-    \item \textbf{Homocedasticidad (Test de Levene)}: Evalúa si las varianzas de los grupos son iguales, siendo relevante para comprender la variabilidad de las lesiones entre pacientes sanos y enfermos.
+    \item \textbf{Prueba de normalidad (Shapiro-Wilk)}:
+
+    Antes de aplicar cualquier prueba estadística, necesitas saber cómo se distribuyen nuestros datos — si siguen una distribución normal o no.
+
+    ¿Por qué importa? Porque muchas pruebas estadísticas asumen que los datos son normales. Si no lo son, debemos usar pruebas distintas.
+
+    Shapiro-Wilk responde: ¿mis datos se comportan como una distribución normal?
+
+    Para responder la pregunta anterior es que tenemos el p-valor, una medida que nos permite decidir si rechazamos o no la hipótesis de normalidad y su límite es 0.05.
+
+    \begin{itemize}
+        \item Si p-valor $< 0.05$ $\rightarrow$ No son normales $\rightarrow$ usas pruebas no paramétricas (Pruebas más robustas).
+        \item Si p-valor $> 0.05$ $\rightarrow$ Podrían ser normales $\rightarrow$ puedes usar pruebas paramétricas.
+    \end{itemize}
+
+
+    \item \textbf{Comparación de grupos (prueba Mann-Whitney U)}:
+
+    Una vez que sabemos que los datos no son normales, necesitamos una prueba que compare dos grupos sin asumir normalidad. Es la herramienta que decide si hay una diferencia real entre los sanos y los enfermos.
+
+    Mann-Whitney U responde: ¿la distribución de esta variable es significativamente distinta entre pacientes sanos y enfermos?
+
+    \begin{itemize}
+        \item Si p-valor $< 0.05$ $\rightarrow$ Sí hay diferencia real entre los grupos.
+        \item Si p-valor $> 0.05$ $\rightarrow$ No hay evidencia de diferencia.
+    \end{itemize}
+
+    \item \textbf{Homocedasticidad (Test de Levene)}:
+
+    Se utiliza para evaluar la igualdad de varianzas entre diferentes grupos, en este caso grupo de pacientes sanos y enfermos.
+
+    Homocedasticidad es una palabra técnica que significa simplemente: ¿las varianzas de los dos grupos son iguales?
+    
+    La varianza mide qué tan dispersos están los datos. Si los pacientes sanos tienen todos valores similares de microaneurismas pero los enfermos tienen valores muy dispersos, las varianzas son distintas — hay heterocedasticidad.
+
+    Levene responde: ¿la dispersión de esta variable es igual en ambos grupos?
+
+    Sirve para entender cómo se comporta la enfermedad. Si los enfermos tienen una varianza mucho más alta que los sanos, confirmas que la retinopatía afecta a cada persona de forma muy distinta (mucha variabilidad), mientras que los sanos son un grupo muy uniforme.
+
+    \begin{itemize}
+        \item Si p-valor $< 0.05$ $\rightarrow$ Las varianzas son distintas.
+        \item Si p-valor $> 0.05$ $\rightarrow$ Las varianzas son iguales.
+    \end{itemize}
 \end{itemize}
 
-Para el desarrollo técnico se emplean las bibliotecas \textit{Pandas} \parencite{reback2020pandas} para estructuras de datos y estadísticas descriptivas, \textit{SciPy} (\texttt{scipy.stats}) \parencite{virtanen2020scipy} para pruebas estadísticas inferenciales, y \textit{ucimlrepo} \parencite{ucimlrepo2023} para la importación directa del dataset desde el repositorio UCI Machine Learning.
