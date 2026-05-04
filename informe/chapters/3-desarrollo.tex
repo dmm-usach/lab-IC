@@ -68,11 +68,18 @@ ma6 & 0.722384 & -0.102349  \\
 \end{tabular}
 \end{table}
 
-Todas las variables de MA presentan una asimetría positiva, lo que indica que la distribución tiene una cola alargada hacia la derecha. Esto es coherente con un dataset médico donde muchos pacientes tienen pocos signos de lesión y una minoría presenta conteos elevados.
+
+Todos los números de la columna \enquote{Asimetría} son positivos (entre 0.49 y 0.74). La mayoría de los 1,151 pacientes están \enquote{agrupados} en valores bajos (pocos microaneurismas) cercanos al cero. Pero existen casos mas graves que llevan a que la distribución tenga una cola larga hacia la derecha (valores altos de microaneurismas). Esto es típico en enfermedades donde la mayoría de los pacientes están en etapas iniciales o son sanos, y solo una minoría presenta formas avanzadas con muchos microaneurismas.
+La variable ma1 es la más asimétrica (0.74). Esto es lógico, porque al ser el filtro más permisivo utilizando el criterio de confianza (\(\alpha=0.5\)), es donde más se nota la diferencia entre un paciente sano y un enfermo grave, porque captura un espectro más amplio de lesiones en pacientes con la enfermedad avanzada.
+
+Los valores negativos de curtosis en las variables de microaneurismas (especialmente en ma4 y ma5 con -0,69) revelan distribuciones de tipo platicúrtico. Esto indica que los conteos de lesiones no tienen la forma de una campana o montaña, sino que presentan una dispersión más uniforme, más aplanada. Esta característica sugiere una transición gradual entre los distintos grados de severidad de la enfermedad, lo que facilita el entrenamiento de modelos de clasificación al contar con una representación equilibrada de la progresión patológica. En una curtosis negativa, los datos están más \enquote{repartidos} a lo largo del eje. No hay un solo valor que domine, sino que es una transición gradual entre pacientes sanos y enfermos.
+
+La variable ma1 es ligeramente más puntiaguda (Leptocúrtica), es decir curtosis positiva. Como esta variable cuenta con un filtro mas permisivo se detectan más lesiones hasta las mas pequeñas, generando este pequeño monte, esto ocurre porque una gran cantidad de pacientes se \enquote{amontonan} en valores bajos muy parecidos entre sí.
 
 \subsection{Validación de Normalidad (Prueba de Shapiro-Wilk)}
 
-Para formalizar la observación de la forma, se aplicó el test de \textbf{Shapiro-Wilk} bajo la hipótesis nula ($H_{0}$) de que los datos siguen una distribución normal:
+La prueba de Shapiro-Wilk aplicada a las variables de microaneurismas (ma1 a ma6) nos indica un resultado unánime: ninguna variable sigue una distribución normal.
+
 
 \begin{table}[htbp]
 \centering
@@ -91,7 +98,22 @@ ma6 & 0.929734 & $8{,}23 \times 10^{-23}$ & No Normal \\
 \end{tabular}
 \end{table}
 
-Dado que en todos los casos el \textbf{p-valor < 0,05}, se rechaza la hipótesis nula. Esto confirma matemáticamente que los conteos de microaneurismas no se distribuyen de forma normal, lo cual condiciona el uso de pruebas no paramétricas para las comparaciones de grupos posteriores.
+
+Debemos enfocarnos en los valores de la columna p-value, todos del orden de $10^{-20}$, $10^{-21}$, $10^{-23}$: números extremadamente pequeños, prácticamente cero.
+
+Para comprender la magnitud de estos valores, consideremos el siguiente ejemplo con \texttt{ma1}:
+
+\begin{itemize}
+    \item \textbf{Umbral de decisión (p-value):} $0{,}05$
+    \item \textbf{p-valor obtenido:} $2{,}94 \times 10^{-20} \approx 0{,}0000000000000000000294$
+    \item \textbf{Conclusión:} es decir, millones de veces más pequeño que el umbral (p-value $< 0{,}05$)
+\end{itemize}
+
+Lo anterior significa que la probabilidad de que estos datos provengan de una distribución normal es prácticamente inexistente.
+
+Enfocándonos en la columna Distribución, todos los resultados indican ``No Normal''. La conclusión es unánime para las 6 variables: la no normalidad es contundente. Los p-valores están muy lejos del umbral, por lo que no existe duda estadística.
+  
+El resultado de esta prueba es la "luz verde" para usar la Prueba de Mann-Whitney U. Como los datos no son normales, esta prueba no paramétrica es la única forma de comparar a los pacientes sanos frente a los enfermos.
 
 \subsection{Detección de Valores Atípicos (Outliers)}
 
