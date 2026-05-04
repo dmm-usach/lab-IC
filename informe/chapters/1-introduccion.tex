@@ -2,7 +2,7 @@
 
 \subsection{Contextualización y Antecedentes}
 
-Las personas con diabetes pueden tener una enfermedad ocular llamada retinopatía diabética. Esta enfermedad ocurre por niveles altos de azúcar en la sangre los cuales causan daño a los vasos sanguíneos en la retina, estos pueden hincharse y tener fugas o también pueden cerrarse e impedir que la sangre fluya e incluso a veces, se generan nuevos vasos sanguíneos anormales en la retina. Todos estos cambios pueden provocar la perdida de visión.
+Las personas con diabetes pueden tener una enfermedad ocular llamada retinopatía diabética. Esta enfermedad ocurre por niveles altos de azúcar en la sangre los cuales causan daño a los vasos sanguíneos en la retina, estos pueden hincharse y tener fugas o también pueden cerrarse e impedir que la sangre fluya e incluso a veces, se generan nuevos vasos sanguíneos anormales en la retina. Todos estos cambios pueden provocar la pérdida de visión.
 
 La retinopatía diabética (RD) representa una de las principales causas de pérdida de visión a nivel mundial y es considerada una ``enfermedad silenciosa'', ya que a menudo progresa sin síntomas visibles hasta etapas avanzadas en que las posibilidades de recuperación visual son reducidas \parencite{casanova2014application}. 
 
@@ -55,9 +55,9 @@ A continuación, se detalla la naturaleza y relevancia de cada una de las 19 var
     \begin{itemize}
         \item \textbf{Nota técnica sobre los niveles de confianza}: La distinción entre estas seis variables radica en el nivel de confianza ($\alpha$) del algoritmo, que escala desde $\alpha = 0{,}5$ (\texttt{ma1}) hasta $\alpha = 1{,}0$ (\texttt{ma6}). Un nivel de confianza más elevado indica criterios de detección más estrictos, lo que reduce la probabilidad de falsos positivos pero incrementa el riesgo de omitir lesiones reales y sutiles.
     \end{itemize}
-    \item \texttt{exudate1} a \texttt{exudate8}: Representan la presencia de exudados (principalmente depósitos de lípidos y proteínas). A diferencia de los microaneurismas, estos valores no son conteos simples, sino que están normalizados: Se divide el número de lesiones detectadas por el diámetro de la Región de Interés (ROI). Esto permite identificar cuanta densidad de exudados existe en la retina, independiente de cuán cerca o lejos se tomó la imagen.
+    \item \texttt{exudate1} a \texttt{exudate8}: Representan la presencia de exudados (principalmente depósitos de lípidos y proteínas). A diferencia de los microaneurismas, estos valores no son conteos simples, sino que están normalizados: Se divide el número de lesiones detectadas por el diámetro de la Región de Interés (ROI). Esto permite identificar cuánta densidad de exudados existe en la retina, independiente de cuán cerca o lejos se tomó la imagen.
     \begin{itemize}
-        \item \textbf{Nota sobre calidad del dataset}: El análisis exploratorio reveló que las columnas \texttt{exudate3} y \texttt{exudate4} son \textbf{idénticas} en todos los registros del dataset. Esta redundancia es una característica del conjunto de datos original publicado en UCI y es propio del diseño del algoritmo original y debe considerarse en futuros análisis de reducción de variables, para no dar mas peso a una variable que contiene el mismo dato.
+        \item \textbf{Nota sobre calidad del dataset}: El análisis exploratorio reveló que las columnas \texttt{exudate3} y \texttt{exudate4} son \textbf{idénticas} en todos los registros del dataset. Esta redundancia es una característica del conjunto de datos original publicado en UCI y es propio del diseño del algoritmo original y debe considerarse en futuros análisis de reducción de variables, para no dar más peso a una variable que contiene el mismo dato.
     \end{itemize}
 \end{itemize}
 
