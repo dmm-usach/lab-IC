@@ -117,17 +117,7 @@ El resultado de esta prueba es la "luz verde" para usar la Prueba de Mann-Whitne
 
 \subsection{Detección de Valores Atípicos (Outliers)}
 
-Para garantizar la robustez del análisis y comprender la variabilidad extrema en los datos, se realizó la detección de valores atípicos mediante el \textbf{método de Tukey}. Esta técnica es preferida en estudios clínicos debido a que utiliza medidas de posición no sensibles a los extremos, permitiendo identificar observaciones que se desvían significativamente del comportamiento central del grupo.
-
-\subsubsection{Metodología de Tukey}
-
-La identificación se basó en el cálculo del Rango Intercuartílico ($IQR = Q_{3} - Q_{1}$), estableciendo los siguientes límites:
-\begin{itemize}
-    \item \textbf{Límite Inferior}: $Q_{1} - 1{,}5 \times IQR$
-    \item \textbf{Límite Superior}: $Q_{3} + 1{,}5 \times IQR$
-\end{itemize}
-
-Cualquier valor fuera de este rango se considera un \textit{outlier}. En el contexto de este dataset médico, estas observaciones representan pacientes con recuentos de lesiones (microaneurismas o exudados) inusualmente altos o bajos en comparación con la población general de la muestra.
+Aplicando el método de Tukey sobre las variables de microaneurismas (cuya formulación se detalla en el Marco Teórico), se identificaron los pacientes con conteos de lesiones inusualmente altos o bajos respecto al comportamiento general de la muestra. Los resultados se presentan a continuación:
 
 \subsubsection{Resultados de la Detección}
 
