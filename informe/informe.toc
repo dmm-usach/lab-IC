@@ -25,19 +25,19 @@
 \contentsline {paragraph}{Interpretación de la Figura}{18}{section*.3}%
 \contentsline {subsection}{\numberline {4.5}Análisis de Correlación y Visualización (Heatmap)}{20}{subsection.4.5}%
 \contentsline {subsubsection}{\numberline {4.5.1}Interpretación del Mapa de Calor}{20}{subsubsection.4.5.1}%
-\contentsline {subsubsection}{\numberline {4.5.2}Conclusión del Análisis de Correlación}{22}{subsubsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2}Conclusión del Análisis de Correlación}{23}{subsubsection.4.5.2}%
 \contentsline {subsection}{\numberline {4.6}Comparación de Grupos (Prueba Mann-Whitney U)}{23}{subsection.4.6}%
-\contentsline {subsubsection}{\numberline {4.6.1}Planteamiento de Hipótesis}{23}{subsubsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.1}Planteamiento de Hipótesis}{24}{subsubsection.4.6.1}%
 \contentsline {subsubsection}{\numberline {4.6.2}Resultados de la Prueba}{24}{subsubsection.4.6.2}%
 \contentsline {subsubsection}{\numberline {4.6.3}Interpretación de los Hallazgos}{24}{subsubsection.4.6.3}%
-\contentsline {subsection}{\numberline {4.7}Homogeneidad de Varianzas (Test de Levene)}{25}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.7}Homogeneidad de Varianzas (Test de Levene)}{26}{subsection.4.7}%
 \contentsline {subsubsection}{\numberline {4.7.1}Planteamiento de Hipótesis}{26}{subsubsection.4.7.1}%
 \contentsline {subsubsection}{\numberline {4.7.2}Resultados}{26}{subsubsection.4.7.2}%
-\contentsline {subsubsection}{\numberline {4.7.3}Interpretación}{26}{subsubsection.4.7.3}%
+\contentsline {subsubsection}{\numberline {4.7.3}Interpretación}{27}{subsubsection.4.7.3}%
 \contentsline {subsection}{\numberline {4.8}Modelamiento mediante Regresión Logística}{27}{subsection.4.8}%
-\contentsline {subsubsection}{\numberline {4.8.1}Justificación de la Selección de Atributos}{27}{subsubsection.4.8.1}%
-\contentsline {subsubsection}{\numberline {4.8.2}Evaluación Global y Bondad de Ajuste}{28}{subsubsection.4.8.2}%
-\contentsline {subsubsection}{\numberline {4.8.3}Interpretación de los Coeficientes y Significancia}{29}{subsubsection.4.8.3}%
+\contentsline {subsubsection}{\numberline {4.8.1}Justificación de la Selección de Atributos}{28}{subsubsection.4.8.1}%
+\contentsline {subsubsection}{\numberline {4.8.2}Evaluación Global y Bondad de Ajuste}{29}{subsubsection.4.8.2}%
+\contentsline {subsubsection}{\numberline {4.8.3}Interpretación de los Coeficientes y Significancia}{30}{subsubsection.4.8.3}%
 \contentsline {subsubsection}{\numberline {4.8.4}Evaluación de Desempeño (Matriz de Confusión y ROC)}{30}{subsubsection.4.8.4}%
 \contentsline {subsubsection}{\numberline {4.8.5}Validación de Residuos}{31}{subsubsection.4.8.5}%
 \contentsline {section}{\numberline {5}Conclusiones}{33}{section.5}%

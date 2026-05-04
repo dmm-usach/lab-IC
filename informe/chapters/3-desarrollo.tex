@@ -113,7 +113,7 @@ Lo anterior significa que la probabilidad de que estos datos provengan de una di
 
 Enfocándonos en la columna Distribución, todos los resultados indican ``No Normal''. La conclusión es unánime para las 6 variables: la no normalidad es contundente. Los p-valores están muy lejos del umbral, por lo que no existe duda estadística.
   
-El resultado de esta prueba es la "luz verde" para usar la Prueba de Mann-Whitney U. Como los datos no son normales, esta prueba no paramétrica es la única forma de comparar a los pacientes sanos frente a los enfermos.
+El resultado de esta prueba es la \enquote{luz verde} para usar la Prueba de Mann-Whitney U. Como los datos no son normales, esta prueba no paramétrica es la única forma de comparar a los pacientes sanos frente a los enfermos.
 
 \subsection{Detección de Valores Atípicos (Outliers)}
 
@@ -175,7 +175,7 @@ Los boxplots (o diagramas de caja) permiten comparar cómo se distribuyen los mi
 
 \subsection{Análisis de Correlación y Visualización (Heatmap)}
 
-Para identificar las relaciones lineales entre los 19 atributos y la variable de diagnóstico (\texttt{Class}), se calculó la matriz de correlación de Pearson utilizando las librerías \texttt{pandas} \parencite{reback2020pandas} y \texttt{seaborn} \parencite{Waskom2021} en Python. Sirve para identificar patrones de asociación. Si una variable sube, ¿la otra también sube (correlación positiva)? ¿O baja (correlación negativa)? Esto ayuda a entender qué variables "trabajan juntas" para detectar la enfermedad.
+Para identificar las relaciones lineales entre los 19 atributos y la variable de diagnóstico (\texttt{Class}), se calculó la matriz de correlación de Pearson utilizando las librerías \texttt{pandas} \parencite{reback2020pandas} y \texttt{seaborn} \parencite{Waskom2021} en Python. Sirve para identificar patrones de asociación. Si una variable sube, ¿la otra también sube (correlación positiva)? ¿O baja (correlación negativa)? Esto ayuda a entender qué variables \enquote{trabajan juntas} para detectar la enfermedad.
 
 \begin{figure}[htbp]
 \centering
@@ -198,12 +198,14 @@ El análisis visual del mapa de calor permite extraer las siguientes conclusione
         \item \textit{Significancia}: Este hallazgo es coherente con el estudio de \textcite{casanova2014application}, el cual establece mediante criterios de importancia de variables que el conteo de microaneurismas desempeña el papel más relevante en la discriminación de la enfermedad.
     \end{itemize}
     \item \textbf{Relación entre Exudados}: Al igual que con los microaneurismas, se observan clústeres de alta correlación entre los niveles de detección de exudados, particularmente entre \texttt{exudate2}, \texttt{exudate3} y \texttt{exudate4} (valores entre 0,92 y 1,00). Su correlación con la variable \texttt{Class} es positiva pero moderada (máximo de 0,18 en \texttt{exudate7} y \texttt{exudate8}), indicando que, aunque son indicadores de RD, su peso diagnóstico individual en este dataset es menor al de los microaneurismas, ya que dentro de este grupo existe \texttt{ma1} con 0,29, siendo un mejor indicador para indicar que el paciente pueda estar enfermo.
-    \item \textbf{Independencia de Rasgos Anatómicos}: Atributos como \texttt{macula\_opticdisc\_distance} (0,01) y \texttt{optic\_disc\_diameter} (-0,03) muestran una correlación prácticamente nula con la presencia de la enfermedad en este conjunto de datos. Esto sugiere que la patología se manifiesta principalmente a través de lesiones detectables (MA y exudados) antes de generar cambios anatómicos macroscópicos detectables por estos descriptores específicos.
+    \item \textbf{Independencia de Rasgos Anatómicos}: Atributos como \texttt{macula\_opticdisc\_distance} (0,01) y \texttt{optic\_disc\_diameter} (-0,03) muestran una correlación prácticamente nula con la presencia de la enfermedad en este conjunto de datos. Esto sugiere que la patología se manifiesta principalmente a través de lesiones detectables (MA y exudados) antes de generar cambios anatómicos macroscópicos detectables por estos descriptores específicos. Por lo tanto, la anatomía del ojo es independiente de la patología.
+    \item \textbf{Correlación Negativa con AM/FM}: La correlación negativa observada entre el análisis AM/FM y los microaneurismas (valores entre -0,34 y -0,44) indica una relación inversa: a medida que aumenta la carga de lesiones, la regularidad de la textura retinal disminuye. Debemos tener claro que los microaneurismas aparecen como \enquote{ruido} o manchas que interfieren con la textura suave. Al detectar este desorden, el valor de la señal AM/FM cae o baja. Podemos entonces indicar que el algoritmo tiene una doble verificación. Si el conteo sube (microaneurismas) y la calidad de la textura baja (correlación negativa), el sistema está 100\% seguro de que hay una patología.
+
 \end{enumerate}
 
 \subsubsection{Conclusión del Análisis de Correlación}
 
-El mapa de calor valida la hipótesis de que las lesiones retinales, específicamente los \textbf{microaneurismas detectados con niveles de confianza iniciales}, son los mejores predictores lineales de la patología en este dataset. Además, la fuerte colinealidad interna entre las variables de lesiones justifica el uso de pruebas de significancia que traten estos grupos como una dimensión común de daño neurovascular \parencite{casanova2014application}.
+El mapa de calor confirma que los microaneurismas son los predictores lineales más relevantes para el diagnóstico, seguidos por los exudados con menor peso. Las variables anatómicas no aportan información diagnóstica en este dataset, es decir, la anatomia del disco optico no interfiere a la hora de decidir si un paciente esta enfermo. La alta colinealidad interna entre variables MA y entre variables de exudados justifica usar solo representantes de cada grupo en modelos futuros para evitar redundancia.
 
 \subsection{Comparación de Grupos (Prueba Mann-Whitney U)}
 

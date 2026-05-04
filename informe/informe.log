@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  4 MAY 2026 15:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  4 MAY 2026 15:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -863,40 +863,41 @@ Underfull \hbox (badness 1281) in paragraph at lines 201--202
 [26]
 
 [27]
-Underfull \hbox (badness 4913) in paragraph at lines 400--407
+Underfull \hbox (badness 4913) in paragraph at lines 402--409
 []\T1/cmr/bx/n/12 Representación mul-ti-di-men-sio-nal\T1/cmr/m/n/12 : El sub-con-jun-to se-lec-cio-na-do abar-
  []
 
 
-Underfull \hbox (badness 1852) in paragraph at lines 400--407
+Underfull \hbox (badness 1852) in paragraph at lines 402--409
 \T1/cmr/m/n/12 ca las tres di-men-sio-nes diag-nós-ti-cas del da-ta-set: le-sio-nes mi-cro-vas-cu-la-res
  []
 
 
-Underfull \hbox (badness 1701) in paragraph at lines 400--407
+Underfull \hbox (badness 1701) in paragraph at lines 402--409
 \T1/cmr/m/n/12 (\T1/cmtt/m/n/12 ma1\T1/cmr/m/n/12 ), de-pó-si-tos de lí-pi-dos (\T1/cmtt/m/n/12 exudate1\T1/cmr/m/n/12 ) y ras-gos ana-tó-mi-cos es-truc-tu-ra-les
  []
 
-<images/1-matrix-rocauc.png, id=474, 867.24pt x 361.35pt>
-File: images/1-matrix-rocauc.png Graphic file (type png)
-<use images/1-matrix-rocauc.png>
-Package pdftex.def Info: images/1-matrix-rocauc.png  used on input line 423.
-(pdftex.def)             Requested size: 443.57848pt x 184.8264pt.
 
 
 [28]
+<images/1-matrix-rocauc.png, id=479, 867.24pt x 361.35pt>
+File: images/1-matrix-rocauc.png Graphic file (type png)
+<use images/1-matrix-rocauc.png>
+Package pdftex.def Info: images/1-matrix-rocauc.png  used on input line 425.
+(pdftex.def)             Requested size: 443.57848pt x 184.8264pt.
+
 
 [29 <./images/1-matrix-rocauc.png>]
 
 [30]
-<images/1-histograms.png, id=494, 578.16pt x 361.35pt>
-File: images/1-histograms.png Graphic file (type png)
-<use images/1-histograms.png>
-Package pdftex.def Info: images/1-histograms.png  used on input line 515.
-(pdftex.def)             Requested size: 377.0444pt x 235.65216pt.
-)
 
 [31]
+<images/1-histograms.png, id=501, 578.16pt x 361.35pt>
+File: images/1-histograms.png Graphic file (type png)
+<use images/1-histograms.png>
+Package pdftex.def Info: images/1-histograms.png  used on input line 517.
+(pdftex.def)             Requested size: 377.0444pt x 235.65216pt.
+)
 
 [32 <./images/1-histograms.png>]
 \openout2 = `chapters/4-conclusion.aux'.
@@ -944,18 +945,18 @@ Package logreq Info: Writing requests to 'informe.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21072 strings out of 474662
- 370256 string characters out of 5751110
- 1301215 words of memory out of 5000000
- 43705 multiletter control sequences out of 15000+600000
+ 21063 strings out of 474662
+ 370129 string characters out of 5751110
+ 1301210 words of memory out of 5000000
+ 43695 multiletter control sequences out of 15000+600000
  573224 words of font info for 72 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  66i,10n,81p,1434b,2803s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1200.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </Users/gonzaloahumada/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on informe.pdf (41 pages, 1412001 bytes).
+Output written on informe.pdf (41 pages, 1412507 bytes).
 PDF statistics:
  1055 PDF objects out of 1200 (max. 8388607)
  566 compressed objects within 6 object streams
- 134 named destinations out of 1000 (max. 500000)
+ 135 named destinations out of 1000 (max. 500000)
  378 words of extra memory for PDF output out of 10000 (max. 10000000)
 
