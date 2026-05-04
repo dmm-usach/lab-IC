@@ -4,9 +4,9 @@
 
 La retinopatía diabética (RD) es una de las principales causas de ceguera en el mundo y se caracteriza por ser una ``enfermedad silenciosa'' que progresa sin síntomas hasta etapas críticas \parencite{casanova2014application}. 
 
-Ya por el año 2003 el estudio de la retinopatía diabética hacia patente que esta enfermedad no se diagnostica por cambios de nervio optico, sino que por una serie de lesiones jerarquicas: primero aparecen los microaneurismas, luego las hemorragias y por ultimo los exudados. \parencite{wilkinson2003proposed}. En este punto entendemos la riqueza en la información proporcionada por el dataset utilizado. 
+Ya en el año 2003 el estudio de la retinopatía diabética hacía patente que esta enfermedad no se diagnostica por cambios de nervio óptico, sino que por una serie de lesiones jerárquicas: primero aparecen los microaneurismas, luego las hemorragias y por último los exudados. \parencite{wilkinson2003proposed}. En este punto entendemos la riqueza en la información proporcionada por el dataset utilizado. 
 
-Importante recalcar que gracias al procesamiento digital de imágenes retinales y a los modelos de aprendizaje automatico es que podemos llegar a saber que partes del ojo delatan esta enfermedad y tambien que tan avanzada esta.
+Importante recalcar que gracias al procesamiento digital de imágenes retinales y a los modelos de aprendizaje automático es que podemos llegar a saber qué partes del ojo delatan esta enfermedad y también qué tan avanzada está.
 
 Existen dos indicadores clave para clasificar a un paciente como sano o enfermo: los microaneurismas y los exudados.
 
@@ -23,12 +23,12 @@ Existen dos indicadores clave para clasificar a un paciente como sano o enfermo:
 
 \subsection{Fundamentos de Estadística Descriptiva y Forma de Distribución}
 
-En estadística descriptiva buscamos indicadores que sean claves para comprender el comportamiento de las variables del conjunto de datos. En este analisis se responden preguntas como ¿dónde están concentrados los datos? ¿qué tan dispersos están? ¿hay valores extremos?
+En estadística descriptiva buscamos indicadores que sean claves para comprender el comportamiento de las variables del conjunto de datos. En este análisis se responden preguntas como ¿dónde están concentrados los datos? ¿qué tan dispersos están? ¿hay valores extremos?
 
 \textit{``Este análisis descriptivo permitirá confirmar si la distribución de los microaneurismas y exudados presenta una variabilidad significativa entre pacientes sanos y enfermos, validando su importancia como indicadores diagnósticos''}
 
 \begin{itemize}
-    \item \textbf{Medidas de tendencia central y dispersión}: Parametros basicos que nos permiten comprender que tan variados son los datos de nuestro conjunto, que tan diferentes son entre si, este analisis nos permite descubrir patrones de enfermedad. 
+    \item \textbf{Medidas de tendencia central y dispersión}: Parámetros básicos que nos permiten comprender qué tan variados son los datos de nuestro conjunto, qué tan diferentes son entre sí; este análisis nos permite descubrir patrones de enfermedad. 
     
     \textbf{Media aritmética}: Es el promedio tradicional. Nos da una idea del valor \enquote{típico} de la variable sumando todos los casos y dividiendo por el total.
 
@@ -40,11 +40,11 @@ En estadística descriptiva buscamos indicadores que sean claves para comprender
 
     \textbf{Asimetría (\textit{Skewness})}: Nos dice si los datos se inclinan hacia un lado. Nos indica si la mayoría de los pacientes tienen valores bajos o altos de una lesión.  Se responde a la pregunta: ¿Hacia dónde se inclina la balanza de pacientes? (Sanos vs. Graves).
 
-    \textbf{Curtosis}: Esta medición nos sirve para encontrar las sorpresas en el conjunto de datos, como por ejemplo, si hay muchos pacientes con valores similares (alta curtosis) o concentración de datos, inferimos entonces que la mayoría de los pacientes tienen valores de la variable similares o iguales, pero hay una probabilidad real de encontrar casos con valores que salen de lo común y se van a los extremos. Es una medición que nos invita a fijarnos en los datos extremos para que podamos identificarlos y que estos no afecten nuestros cálculos. Podemos encontrar donde estan concentrados nuestros datos y también podamos saber si estos casos extremos son raros o son comunes dependiendo si el curtois es alto o bajo. 
+    \textbf{Curtosis}: Esta medición nos sirve para encontrar las sorpresas en el conjunto de datos, como por ejemplo, si hay muchos pacientes con valores similares (alta curtosis) o concentración de datos, inferimos entonces que la mayoría de los pacientes tienen valores de la variable similares o iguales, pero hay una probabilidad real de encontrar casos con valores que salen de lo común y se van a los extremos. Es una medición que nos invita a fijarnos en los datos extremos para que podamos identificarlos y que estos no afecten nuestros cálculos. Podemos encontrar dónde están concentrados nuestros datos y también podemos saber si estos casos extremos son raros o son comunes dependiendo de si la curtosis es alta o baja. 
 
     \item \textbf{Detección de valores atípicos (\textit{Outliers})}: ¿Qué es un outlier? Es un valor que se aleja tanto del resto que puede parecer no pertenecer al mismo grupo o conjunto de datos. Una vez que la asimetría y la curtosis nos advierten que existen datos extremos, utilizamos el Método de Tukey para identificarlos con precisión.
     
-    ¿Por qué importa detectarlos? Porque pueden distorsionar el análisis. Podriamos obtener el promedio de un conjunto de datos y no representar la realidad del mismo al considerar datos que salen de lo comun y son poco representativos con respecto al conjunto general.
+    ¿Por qué importa detectarlos? Porque pueden distorsionar el análisis. Podríamos obtener el promedio de un conjunto de datos y no representar la realidad del mismo al considerar datos que salen de lo común y son poco representativos con respecto al conjunto general.
 
     ¿Qué es el método de Tukey?
 
