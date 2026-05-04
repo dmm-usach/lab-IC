@@ -175,7 +175,7 @@ Los boxplots (o diagramas de caja) permiten comparar cómo se distribuyen los mi
 
 \subsection{Análisis de Correlación y Visualización (Heatmap)}
 
-Para identificar las relaciones lineales entre los 19 atributos y la variable de diagnóstico (\texttt{Class}), se calculó la matriz de correlación de Pearson utilizando las librerías \texttt{pandas} \parencite{reback2020pandas} y \texttt{seaborn} \parencite{Waskom2021} en Python. Este análisis es fundamental para detectar redundancias (colinealidad) y determinar cuáles rasgos anatómicos o lesiones tienen un mayor vínculo con la presencia de la patología.
+Para identificar las relaciones lineales entre los 19 atributos y la variable de diagnóstico (\texttt{Class}), se calculó la matriz de correlación de Pearson utilizando las librerías \texttt{pandas} \parencite{reback2020pandas} y \texttt{seaborn} \parencite{Waskom2021} en Python. Sirve para identificar patrones de asociación. Si una variable sube, ¿la otra también sube (correlación positiva)? ¿O baja (correlación negativa)? Esto ayuda a entender qué variables "trabajan juntas" para detectar la enfermedad.
 
 \begin{figure}[htbp]
 \centering
@@ -188,16 +188,16 @@ Para identificar las relaciones lineales entre los 19 atributos y la variable de
 El análisis visual del mapa de calor permite extraer las siguientes conclusiones técnicas:
 
 \begin{enumerate}
-    \item \textbf{Alta Colinealidad en Microaneurismas (\texttt{ma1} a \texttt{ma6})}: Se observa una correlación positiva extremadamente alta, cercana a 1,00 en la mayoría de los casos. Por ejemplo, la correlación entre \texttt{ma1} y \texttt{ma2} es de 1,00, y entre \texttt{ma1} y \texttt{ma3} es de 0,99.
+    \item \textbf{Alta Colinealidad en Microaneurismas (\texttt{ma1} a \texttt{ma6})}: Se observa una correlación positiva extremadamente alta, cercana a 1,00 en la mayoría de los casos. Por ejemplo, la correlación entre \texttt{ma1} y \texttt{ma2} es de 1,00, y entre \texttt{ma1} y \texttt{ma3} es de 0,99. Es lógico: si un filtro detecta muchos microaneurismas, los otros también lo harán.
     \begin{itemize}
         \item \textit{Fundamentación}: Esto confirma que estos atributos representan el mismo fenómeno clínico (conteo de microaneurismas) detectado con niveles de confianza ($\alpha$) crecientes. La alta redundancia sugiere que, para futuros modelos de clasificación, se podría realizar una reducción de dimensionalidad sin perder información crítica.
     \end{itemize}
-    \item \textbf{Correlación con la Variable Objetivo (\texttt{Class})}: Los resultados muestran que los microaneurismas son los descriptores con la relación más fuerte hacia el diagnóstico final.
+    \item \textbf{Correlación con la Variable Objetivo (\texttt{Class})}: Si miramos el mapa de calor veremos valores como 0.29 para ma1 o 0.18 para exudate8.
     \begin{itemize}
-        \item Las variables \texttt{ma1} (0,29) y \texttt{ma2} (0,27) presentan los coeficientes de correlación más altos con \texttt{Class} dentro de su grupo.
+        \item Aunque parecen números bajos, en medicina son significativos. Indican que a medida que aumentan las lesiones, aumenta la probabilidad de estar enfermo. Confirma que los microaneurismas (ma1) tienen la correlación más alta con la enfermedad, por encima del diámetro del disco óptico.
         \item \textit{Significancia}: Este hallazgo es coherente con el estudio de \textcite{casanova2014application}, el cual establece mediante criterios de importancia de variables que el conteo de microaneurismas desempeña el papel más relevante en la discriminación de la enfermedad.
     \end{itemize}
-    \item \textbf{Relación entre Exudados}: Al igual que con los microaneurismas, se observan clústeres de alta correlación entre los niveles de detección de exudados, particularmente entre \texttt{exudate2}, \texttt{exudate3} y \texttt{exudate4} (valores entre 0,92 y 1,00). Su correlación con la variable \texttt{Class} es positiva pero moderada (máximo de 0,18 en \texttt{exudate7}), indicando que, aunque son indicadores de RD, su peso diagnóstico individual en este dataset es menor al de los microaneurismas.
+    \item \textbf{Relación entre Exudados}: Al igual que con los microaneurismas, se observan clústeres de alta correlación entre los niveles de detección de exudados, particularmente entre \texttt{exudate2}, \texttt{exudate3} y \texttt{exudate4} (valores entre 0,92 y 1,00). Su correlación con la variable \texttt{Class} es positiva pero moderada (máximo de 0,18 en \texttt{exudate7} y \texttt{exudate8}), indicando que, aunque son indicadores de RD, su peso diagnóstico individual en este dataset es menor al de los microaneurismas, ya que dentro de este grupo existe \texttt{ma1} con 0,29, siendo un mejor indicador para indicar que el paciente pueda estar enfermo.
     \item \textbf{Independencia de Rasgos Anatómicos}: Atributos como \texttt{macula\_opticdisc\_distance} (0,01) y \texttt{optic\_disc\_diameter} (-0,03) muestran una correlación prácticamente nula con la presencia de la enfermedad en este conjunto de datos. Esto sugiere que la patología se manifiesta principalmente a través de lesiones detectables (MA y exudados) antes de generar cambios anatómicos macroscópicos detectables por estos descriptores específicos.
 \end{enumerate}
 

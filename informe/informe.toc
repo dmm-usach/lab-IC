@@ -28,10 +28,10 @@
 \contentsline {subsubsection}{\numberline {4.5.2}Conclusión del Análisis de Correlación}{22}{subsubsection.4.5.2}%
 \contentsline {subsection}{\numberline {4.6}Comparación de Grupos (Prueba Mann-Whitney U)}{23}{subsection.4.6}%
 \contentsline {subsubsection}{\numberline {4.6.1}Planteamiento de Hipótesis}{23}{subsubsection.4.6.1}%
-\contentsline {subsubsection}{\numberline {4.6.2}Resultados de la Prueba}{23}{subsubsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.2}Resultados de la Prueba}{24}{subsubsection.4.6.2}%
 \contentsline {subsubsection}{\numberline {4.6.3}Interpretación de los Hallazgos}{24}{subsubsection.4.6.3}%
 \contentsline {subsection}{\numberline {4.7}Homogeneidad de Varianzas (Test de Levene)}{25}{subsection.4.7}%
-\contentsline {subsubsection}{\numberline {4.7.1}Planteamiento de Hipótesis}{25}{subsubsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.7.1}Planteamiento de Hipótesis}{26}{subsubsection.4.7.1}%
 \contentsline {subsubsection}{\numberline {4.7.2}Resultados}{26}{subsubsection.4.7.2}%
 \contentsline {subsubsection}{\numberline {4.7.3}Interpretación}{26}{subsubsection.4.7.3}%
 \contentsline {subsection}{\numberline {4.8}Modelamiento mediante Regresión Logística}{27}{subsection.4.8}%
