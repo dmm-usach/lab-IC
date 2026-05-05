@@ -51,6 +51,18 @@ varianza en el diagnóstico, subrayando que el problema de clasificación involu
 interacciones entre variables y patrones de alta dimensionalidad que escapan al alcance
 de la regresión logística estándar.
 
+\subsection{Reflexiones del Análisis}
+
+Durante el desarrollo de este laboratorio surgieron observaciones que van más allá de los resultados numéricos y que consideramos relevante destacar.
+
+Resultó sorprendente comprobar que las variables anatómicas de la retina — como la distancia entre la mácula y el disco óptico o el diámetro del disco — no tienen relevancia para determinar si un paciente presenta la enfermedad. Intuitivamente, uno podría suponer que cambios en la estructura del ojo estarían asociados al diagnóstico, pero el análisis demostró que la retinopatía diabética se manifiesta a través de lesiones vasculares microscópicas mucho antes de generar cambios estructurales visibles. La enfermedad habla a través de los microaneurismas y los exudados, no a través de la anatomía.
+
+La correlación negativa observada entre \texttt{am\_fm\_classification} y los microaneurismas representa uno de los hallazgos más interesantes del análisis. A medida que aumenta el conteo de lesiones, la textura retinal detectada por el algoritmo AM/FM disminuye. Esto no es una contradicción — es una señal de validación cruzada: cuando el conteo de microaneurismas sube y la calidad de la textura retinal baja simultáneamente, ambas variables apuntan en la misma dirección diagnóstica desde perspectivas distintas. Una mide cuántas lesiones hay; la otra mide cómo el daño vascular altera la superficie de la retina. Que ambas coincidan refuerza la certeza del diagnóstico y demuestra que los datos, analizados en conjunto, adquieren un significado que ninguna variable por sí sola podría entregar.
+
+Una de las lecciones más valiosas fue comprobar que observar con atención los gráficos entrega información que los números solos no muestran. El diagrama de cajas permitió identificar visualmente el solapamiento entre pacientes sanos y enfermos, y comprender que esa zona de mezcla no es ruido sino información real. Ver ese solapamiento y luego confirmar con Mann-Whitney que la diferencia era estadísticamente significativa fue el ejemplo más claro de cómo el análisis visual y el numérico se complementan.
+
+Finalmente, resultó especialmente revelador comprender el significado de la asimetría positiva. Solo con observar que todos los valores de skewness eran positivos fue posible anticipar la forma de la distribución: la mayoría de los pacientes concentrados en valores bajos de lesiones, y una minoría que estira la distribución hacia la derecha. Eso no es solo un número estadístico — es información clínica concreta que nos dice que predominan los pacientes sanos o en estadios iniciales, pero existe un grupo reducido con una carga de lesiones extremadamente alta. La asimetría permitió anticipar la existencia de esos outliers antes incluso de aplicar el método de Tukey.
+
 \subsection{Limitaciones y Proyecciones Futuras}
 
 Las principales limitaciones de este análisis son de dos órdenes. En primer lugar, de
